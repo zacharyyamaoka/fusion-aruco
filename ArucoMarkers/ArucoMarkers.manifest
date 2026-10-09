@@ -1,0 +1,13 @@
+{
+    "autodeskProduct": "Fusion360",
+    "type": "addin",
+    "id": "dd21ee5b-7459-41b1-9541-6c910d9e27ed",
+    "author": "Zach Yamaoka",
+    "description": {
+        "": "ArUco Tags 0.2.0 (prototype) — ArUco Extrude: model 3D-printable ArUco markers and boards as one timeline feature, give each copy its own ID at any assembly level, export a true-size PDF print sheet and a PrusaSlicer project"
+    },
+    "version": "0.2.0",
+    "runOnStartup": false,
+    "supportedOS": "windows|mac",
+    "editEnabled": true
+}

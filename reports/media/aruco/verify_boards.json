@@ -1,0 +1,936 @@
+{
+ "generated": "2026-10-07T19:00:52",
+ "opencv": "5.0.0",
+ "numpy": "2.4.6",
+ "tolerances": {
+  "side_mm": 0.15,
+  "corner_mm": 0.2,
+  "rot_deg": 0.5,
+  "trans_mm": 2.0
+ },
+ "ink": [
+  {
+   "board": "grid DICT_4X4_50 3x2 #10",
+   "px_per_module": 5,
+   "size_px": [
+    110,
+    70
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 3.799796102765818e-10,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_6X6_250 2x3 #0",
+   "px_per_module": 4,
+   "size_px": [
+    72,
+    112
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 5.513429643388967e-10,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_APRILTAG_36h11 4x5 #100",
+   "px_per_module": 3,
+   "size_px": [
+    114,
+    144
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 7.390975938909028e-10,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_5X5_100 1x4 #90",
+   "px_per_module": 4,
+   "size_px": [
+    28,
+    124
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 7.271766661043344e-10,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_7X7_1000 5x5 #975",
+   "px_per_module": 3,
+   "size_px": [
+    171,
+    171
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 1.1086463934384394e-09,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_ARUCO_ORIGINAL 3x3 #1000",
+   "px_per_module": 3,
+   "size_px": [
+    73,
+    73
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 2.935528747166627e-10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_50 5x4 #0",
+   "px_per_module": 5,
+   "size_px": [
+    200,
+    160
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 9.53674316600539e-10,
+   "chess_corners_max_err_m": 7.599592205531636e-10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_50 5x4 #0 legacy",
+   "px_per_module": 5,
+   "size_px": [
+    200,
+    160
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 9.53674316600539e-10,
+   "chess_corners_max_err_m": 7.599592205531636e-10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_5X5_100 5x7 #20",
+   "px_per_module": 4,
+   "size_px": [
+    200,
+    280
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 2.2590160367319534e-09,
+   "chess_corners_max_err_m": 1.4156103129991937e-09,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_5X5_100 5x7 #20 legacy",
+   "px_per_module": 4,
+   "size_px": [
+    200,
+    280
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 2.2590160367319534e-09,
+   "chess_corners_max_err_m": 1.4156103129991937e-09,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_6X6_250 4x5 #7 legacy",
+   "px_per_module": 4,
+   "size_px": [
+    192,
+    240
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 1.5676021591914946e-09,
+   "chess_corners_max_err_m": 9.119510667454644e-10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_APRILTAG_36h11 6x6 #300",
+   "px_per_module": 3,
+   "size_px": [
+    216,
+    216
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 2.1457672097491276e-09,
+   "chess_corners_max_err_m": 7.748603807200549e-10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_APRILTAG_36h11 6x6 #300 legacy",
+   "px_per_module": 3,
+   "size_px": [
+    216,
+    216
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 2.1457672097491276e-09,
+   "chess_corners_max_err_m": 7.748603807200549e-10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_ARUCO_ORIGINAL 3x3 #1015",
+   "px_per_module": 3,
+   "size_px": [
+    93,
+    93
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 2.600252634737954e-10,
+   "chess_corners_max_err_m": 1.7806887648436076e-10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_250 3x4 #200",
+   "px_per_module": 4,
+   "size_px": [
+    96,
+    128
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 7.271766661043344e-10,
+   "chess_corners_max_err_m": 4.753470429774698e-10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_250 3x4 #200 legacy",
+   "px_per_module": 4,
+   "size_px": [
+    96,
+    128
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 7.271766661043344e-10,
+   "chess_corners_max_err_m": 4.753470429774698e-10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_7X7_100 7x5 #50",
+   "px_per_module": 3,
+   "size_px": [
+    259,
+    185
+   ],
+   "raster_mismatch_px": 0,
+   "png_mismatch_px": 0,
+   "ids_match": true,
+   "objpoints_max_err_m": 2.1696090722611583e-09,
+   "chess_corners_max_err_m": 4.589557657530552e-10,
+   "pass": true
+  }
+ ],
+ "detection": [
+  {
+   "board": "grid DICT_4X4_50 3x2 #10",
+   "markers_found": 6,
+   "reproj_rms_px": 0.10542578995227814,
+   "markers_expected": 6,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_6X6_250 2x3 #0",
+   "markers_found": 6,
+   "reproj_rms_px": 0.10376487672328949,
+   "markers_expected": 6,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_APRILTAG_36h11 4x5 #100",
+   "markers_found": 20,
+   "reproj_rms_px": 0.11500551551580429,
+   "markers_expected": 20,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_5X5_100 1x4 #90",
+   "markers_found": 4,
+   "reproj_rms_px": 0.10545400530099869,
+   "markers_expected": 4,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_7X7_1000 5x5 #975",
+   "markers_found": 25,
+   "reproj_rms_px": 0.11650559306144714,
+   "markers_expected": 25,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_ARUCO_ORIGINAL 3x3 #1000",
+   "markers_found": 9,
+   "reproj_rms_px": 0.3064219057559967,
+   "markers_expected": 9,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_50 5x4 #0",
+   "markers_found": 10,
+   "charuco_corners_found": 12,
+   "charuco_corners_expected": 12,
+   "reproj_rms_px": 3.114687388006132e-06,
+   "markers_expected": 10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_50 5x4 #0 legacy",
+   "markers_found": 10,
+   "charuco_corners_found": 12,
+   "charuco_corners_expected": 12,
+   "reproj_rms_px": 3.114687388006132e-06,
+   "markers_expected": 10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_5X5_100 5x7 #20",
+   "markers_found": 17,
+   "charuco_corners_found": 24,
+   "charuco_corners_expected": 24,
+   "reproj_rms_px": 3.114687388006132e-06,
+   "markers_expected": 17,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_5X5_100 5x7 #20 legacy",
+   "markers_found": 17,
+   "charuco_corners_found": 24,
+   "charuco_corners_expected": 24,
+   "reproj_rms_px": 3.114687388006132e-06,
+   "markers_expected": 17,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_6X6_250 4x5 #7 legacy",
+   "markers_found": 10,
+   "charuco_corners_found": 12,
+   "charuco_corners_expected": 12,
+   "reproj_rms_px": 0.0,
+   "markers_expected": 10,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_APRILTAG_36h11 6x6 #300",
+   "markers_found": 18,
+   "charuco_corners_found": 25,
+   "charuco_corners_expected": 25,
+   "reproj_rms_px": 4.315837031754199e-06,
+   "markers_expected": 18,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_APRILTAG_36h11 6x6 #300 legacy",
+   "markers_found": 18,
+   "charuco_corners_found": 25,
+   "charuco_corners_expected": 25,
+   "reproj_rms_px": 4.315837031754199e-06,
+   "markers_expected": 18,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_ARUCO_ORIGINAL 3x3 #1015",
+   "markers_found": 4,
+   "charuco_corners_found": 4,
+   "charuco_corners_expected": 4,
+   "reproj_rms_px": 0.0,
+   "markers_expected": 4,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_250 3x4 #200",
+   "markers_found": 6,
+   "charuco_corners_found": 6,
+   "charuco_corners_expected": 6,
+   "reproj_rms_px": 0.0,
+   "markers_expected": 6,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_250 3x4 #200 legacy",
+   "markers_found": 6,
+   "charuco_corners_found": 6,
+   "charuco_corners_expected": 6,
+   "reproj_rms_px": 0.0,
+   "markers_expected": 6,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_7X7_100 7x5 #50",
+   "markers_found": 17,
+   "charuco_corners_found": 24,
+   "charuco_corners_expected": 24,
+   "reproj_rms_px": 0.3587334454059601,
+   "markers_expected": 17,
+   "pass": true
+  }
+ ],
+ "frames": [
+  {
+   "board": "single DICT_4X4_50 1x1 #7",
+   "pose_rvec": [
+    0.35,
+    -0.45,
+    0.2
+   ],
+   "pose_t_m": [
+    0.015,
+    -0.01,
+    0.42
+   ],
+   "method": "IPPE_SQUARE, standard object points",
+   "rot_err_deg": 0.0439,
+   "trans_err_mm": 0.498,
+   "identity_hypothesis_rot_err_deg": 0.04,
+   "identity_hypothesis_trans_err_mm": 0.5,
+   "pass": true
+  },
+  {
+   "board": "single DICT_4X4_50 1x1 #7",
+   "pose_rvec": [
+    -0.5,
+    0.3,
+    2.6
+   ],
+   "pose_t_m": [
+    -0.02,
+    0.012,
+    0.5
+   ],
+   "method": "IPPE_SQUARE, standard object points",
+   "rot_err_deg": 0.0476,
+   "trans_err_mm": 0.589,
+   "identity_hypothesis_rot_err_deg": 0.05,
+   "identity_hypothesis_trans_err_mm": 0.6,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_4X4_50 3x2 #10",
+   "pose_rvec": [
+    0.35,
+    -0.45,
+    0.2
+   ],
+   "pose_t_m": [
+    0.015,
+    -0.01,
+    0.42
+   ],
+   "method": "detectMarkers + GridBoard.matchImagePoints + solvePnP",
+   "rot_err_deg": 0.0462,
+   "trans_err_mm": 0.145,
+   "identity_hypothesis_rot_err_deg": 179.96,
+   "identity_hypothesis_trans_err_mm": 83.1,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_4X4_50 3x2 #10",
+   "pose_rvec": [
+    -0.5,
+    0.3,
+    2.6
+   ],
+   "pose_t_m": [
+    -0.02,
+    0.012,
+    0.5
+   ],
+   "method": "detectMarkers + GridBoard.matchImagePoints + solvePnP",
+   "rot_err_deg": 0.0697,
+   "trans_err_mm": 0.129,
+   "identity_hypothesis_rot_err_deg": 179.94,
+   "identity_hypothesis_trans_err_mm": 83.3,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_ARUCO_ORIGINAL 3x3 #1000",
+   "pose_rvec": [
+    0.35,
+    -0.45,
+    0.2
+   ],
+   "pose_t_m": [
+    0.015,
+    -0.01,
+    0.42
+   ],
+   "method": "detectMarkers + GridBoard.matchImagePoints + solvePnP",
+   "rot_err_deg": 0.0197,
+   "trans_err_mm": 0.493,
+   "identity_hypothesis_rot_err_deg": 179.99,
+   "identity_hypothesis_trans_err_mm": 84.3,
+   "pass": true
+  },
+  {
+   "board": "grid DICT_ARUCO_ORIGINAL 3x3 #1000",
+   "pose_rvec": [
+    -0.5,
+    0.3,
+    2.6
+   ],
+   "pose_t_m": [
+    -0.02,
+    0.012,
+    0.5
+   ],
+   "method": "detectMarkers + GridBoard.matchImagePoints + solvePnP",
+   "rot_err_deg": 0.0294,
+   "trans_err_mm": 0.624,
+   "identity_hypothesis_rot_err_deg": 179.99,
+   "identity_hypothesis_trans_err_mm": 83.9,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_50 5x4 #0",
+   "pose_rvec": [
+    0.35,
+    -0.45,
+    0.2
+   ],
+   "pose_t_m": [
+    0.015,
+    -0.01,
+    0.42
+   ],
+   "method": "CharucoDetector + CharucoBoard.matchImagePoints + solvePnP",
+   "rot_err_deg": 0.0149,
+   "trans_err_mm": 0.053,
+   "identity_hypothesis_rot_err_deg": 179.99,
+   "identity_hypothesis_trans_err_mm": 128.0,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_50 5x4 #0",
+   "pose_rvec": [
+    -0.5,
+    0.3,
+    2.6
+   ],
+   "pose_t_m": [
+    -0.02,
+    0.012,
+    0.5
+   ],
+   "method": "CharucoDetector + CharucoBoard.matchImagePoints + solvePnP",
+   "rot_err_deg": 0.007,
+   "trans_err_mm": 0.02,
+   "identity_hypothesis_rot_err_deg": 179.99,
+   "identity_hypothesis_trans_err_mm": 128.1,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_50 5x4 #0 legacy",
+   "pose_rvec": [
+    0.35,
+    -0.45,
+    0.2
+   ],
+   "pose_t_m": [
+    0.015,
+    -0.01,
+    0.42
+   ],
+   "method": "CharucoDetector + CharucoBoard.matchImagePoints + solvePnP",
+   "rot_err_deg": 0.013,
+   "trans_err_mm": 0.05,
+   "identity_hypothesis_rot_err_deg": 179.99,
+   "identity_hypothesis_trans_err_mm": 128.0,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_4X4_50 5x4 #0 legacy",
+   "pose_rvec": [
+    -0.5,
+    0.3,
+    2.6
+   ],
+   "pose_t_m": [
+    -0.02,
+    0.012,
+    0.5
+   ],
+   "method": "CharucoDetector + CharucoBoard.matchImagePoints + solvePnP",
+   "rot_err_deg": 0.0079,
+   "trans_err_mm": 0.02,
+   "identity_hypothesis_rot_err_deg": 179.99,
+   "identity_hypothesis_trans_err_mm": 128.1,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_5X5_100 5x7 #20",
+   "pose_rvec": [
+    0.35,
+    -0.45,
+    0.2
+   ],
+   "pose_t_m": [
+    0.015,
+    -0.01,
+    0.42
+   ],
+   "method": "CharucoDetector + CharucoBoard.matchImagePoints + solvePnP",
+   "rot_err_deg": 0.0123,
+   "trans_err_mm": 0.025,
+   "identity_hypothesis_rot_err_deg": 179.99,
+   "identity_hypothesis_trans_err_mm": 129.0,
+   "pass": true
+  },
+  {
+   "board": "charuco DICT_5X5_100 5x7 #20",
+   "pose_rvec": [
+    -0.5,
+    0.3,
+    2.6
+   ],
+   "pose_t_m": [
+    -0.02,
+    0.012,
+    0.5
+   ],
+   "method": "CharucoDetector + CharucoBoard.matchImagePoints + solvePnP",
+   "rot_err_deg": 0.0244,
+   "trans_err_mm": 0.039,
+   "identity_hypothesis_rot_err_deg": 179.99,
+   "identity_hypothesis_trans_err_mm": 129.0,
+   "pass": true
+  }
+ ],
+ "sheet": {
+  "pages": 1,
+  "rejected": [],
+  "items": [
+   {
+    "key": "charuco",
+    "layout": "charuco",
+    "page": 1,
+    "dictionary": "DICT_5X5_100",
+    "ids_expected": 17,
+    "ids_found_once": 17,
+    "ids_unexpected": [],
+    "worst_side_err_mm": 0.0104,
+    "worst_corner_err_mm": 0.0086,
+    "scan_first_marker_w_mm": 15.0003,
+    "charuco_corners_found": 24,
+    "charuco_corners_expected": 24,
+    "square_mm_mean": 19.9992,
+    "worst_square_err_mm": 0.0071,
+    "worst_chess_corner_err_mm": 0.004,
+    "pass": true
+   },
+   {
+    "key": "grid",
+    "layout": "grid",
+    "page": 1,
+    "dictionary": "DICT_4X4_50",
+    "ids_expected": 6,
+    "ids_found_once": 6,
+    "ids_unexpected": [],
+    "worst_side_err_mm": 0.0117,
+    "worst_corner_err_mm": 0.0087,
+    "scan_first_marker_w_mm": 25.0002,
+    "pass": true
+   },
+   {
+    "key": "charuco_legacy",
+    "layout": "charuco",
+    "page": 1,
+    "dictionary": "DICT_6X6_250",
+    "ids_expected": 8,
+    "ids_found_once": 8,
+    "ids_unexpected": [],
+    "worst_side_err_mm": 0.0105,
+    "worst_corner_err_mm": 0.0085,
+    "scan_first_marker_w_mm": 11.0002,
+    "charuco_corners_found": 9,
+    "charuco_corners_expected": 9,
+    "square_mm_mean": 15.0019,
+    "worst_square_err_mm": 0.0064,
+    "worst_chess_corner_err_mm": 0.0048,
+    "pass": true
+   },
+   {
+    "key": "single",
+    "layout": "single",
+    "page": 1,
+    "dictionary": "DICT_APRILTAG_36h11",
+    "ids_expected": 1,
+    "ids_found_once": 1,
+    "ids_unexpected": [],
+    "worst_side_err_mm": 0.0108,
+    "worst_corner_err_mm": 0.0087,
+    "scan_first_marker_w_mm": 30.0001,
+    "pass": true
+   }
+  ],
+  "rulers": [
+   {
+    "page": 1,
+    "mm_bar_mm": 100.0003,
+    "in_bar_mm": 101.6002
+   }
+  ],
+  "stray": [],
+  "pass": true,
+  "layout": {
+   "page": "letter",
+   "page_mm": [
+    215.9,
+    279.4
+   ],
+   "landscape": false,
+   "printable_mm": {
+    "x": 10.0,
+    "y": 10.0,
+    "w": 195.9,
+    "h": 233.4
+   },
+   "origin": "page top-left, y down, millimetres",
+   "scale": 1.0,
+   "pages": 1,
+   "placed": [
+    {
+     "key": "charuco",
+     "dictionary": "DICT_5X5_100",
+     "marker_id": 20,
+     "marker_length_mm": 15.0,
+     "module_mm": 2.1429,
+     "quiet_modules": 1.5,
+     "sticker_mm": 106.4286,
+     "sticker_w_mm": 106.4286,
+     "sticker_h_mm": 146.4286,
+     "layout": "charuco",
+     "extent_mm": [
+      100.0,
+      140.0
+     ],
+     "page_number": 1,
+     "x_mm": 10.0,
+     "y_mm": 10.0,
+     "marker_x_mm": 13.2143,
+     "marker_y_mm": 13.2143,
+     "label_lines": [
+      "DICT_5X5_100 ChArUco 5x7 #20\u201336 \u00b7 square 20.0 / marker 15.0 mm"
+     ],
+     "rows": 7,
+     "cols": 5,
+     "ids": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+     ],
+     "separation_mm": 0.0,
+     "square_length_mm": 20.0,
+     "legacy": false,
+     "opencv_frame": [
+      1.0,
+      0.0,
+      0.0,
+      -0.05,
+      0.0,
+      -1.0,
+      0.0,
+      0.07,
+      0.0,
+      0.0,
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "key": "grid",
+     "dictionary": "DICT_4X4_50",
+     "marker_id": 10,
+     "marker_length_mm": 25.0,
+     "module_mm": 4.1667,
+     "quiet_modules": 1.0,
+     "sticker_mm": 63.3333,
+     "sticker_w_mm": 63.3333,
+     "sticker_h_mm": 93.3333,
+     "layout": "grid",
+     "extent_mm": [
+      55.0,
+      85.0
+     ],
+     "page_number": 1,
+     "x_mm": 120.4286,
+     "y_mm": 10.0,
+     "marker_x_mm": 124.5952,
+     "marker_y_mm": 14.1667,
+     "label_lines": [
+      "DICT_4X4_50 grid 2x3 #10\u201315 \u00b7 25.0 mm, gap 5.0 mm"
+     ],
+     "rows": 3,
+     "cols": 2,
+     "ids": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "separation_mm": 5.0,
+     "square_length_mm": 0.0,
+     "legacy": false,
+     "opencv_frame": [
+      1.0,
+      0.0,
+      0.0,
+      -0.0275,
+      0.0,
+      -1.0,
+      0.0,
+      0.0425,
+      0.0,
+      0.0,
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "key": "charuco_legacy",
+     "dictionary": "DICT_6X6_250",
+     "marker_id": 50,
+     "marker_length_mm": 11.0,
+     "module_mm": 1.375,
+     "quiet_modules": 1.0,
+     "sticker_mm": 62.75,
+     "sticker_w_mm": 62.75,
+     "sticker_h_mm": 62.75,
+     "layout": "charuco",
+     "extent_mm": [
+      60.0,
+      60.0
+     ],
+     "page_number": 1,
+     "x_mm": 10.0,
+     "y_mm": 163.7686,
+     "marker_x_mm": 11.375,
+     "marker_y_mm": 165.1436,
+     "label_lines": [
+      "DICT_6X6_250 ChArUco 4x4 legacy #50\u201357",
+      "Base:1 \u00b7 top"
+     ],
+     "rows": 4,
+     "cols": 4,
+     "ids": [
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+     ],
+     "separation_mm": 0.0,
+     "square_length_mm": 15.0,
+     "legacy": true,
+     "opencv_frame": [
+      1.0,
+      0.0,
+      0.0,
+      -0.03,
+      0.0,
+      -1.0,
+      0.0,
+      0.03,
+      0.0,
+      0.0,
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    {
+     "key": "single",
+     "dictionary": "DICT_APRILTAG_36h11",
+     "marker_id": 5,
+     "marker_length_mm": 30.0,
+     "module_mm": 3.75,
+     "quiet_modules": 1.0,
+     "sticker_mm": 37.5,
+     "sticker_w_mm": 37.5,
+     "sticker_h_mm": 37.5,
+     "layout": "single",
+     "extent_mm": [
+      30.0,
+      30.0
+     ],
+     "page_number": 1,
+     "x_mm": 76.75,
+     "y_mm": 163.7686,
+     "marker_x_mm": 80.5,
+     "marker_y_mm": 167.5186,
+     "label_lines": [
+      "DICT_APRILTAG_36h11 #5 \u00b7 30.0 mm"
+     ]
+    }
+   ],
+   "rejected": [],
+   "ruler": {
+    "top": 246.4,
+    "mm_bar": [
+     10.0,
+     256.9,
+     100.0,
+     1.2
+    ],
+    "in_bar": [
+     10.0,
+     259.7,
+     101.6,
+     1.2
+    ]
+   },
+   "warnings": []
+  }
+ },
+ "elapsed_s": 1.6,
+ "pass": true
+}

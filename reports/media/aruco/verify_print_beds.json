@@ -1,0 +1,1683 @@
+{
+  "tool": "tools/verify_print_beds.py",
+  "prusaslicer": "C:\\Program Files\\Prusa3D\\PrusaSlicer\\prusa-slicer-console.exe",
+  "scratch": "%USERPROFILE%\\AppData\\Local\\Temp\\claude\\C--Users-USER-Documents-cad-exporter--claude-worktrees-aruco-fusion-plugin-0e9bcb\\cbfa3931-78c7-4c3b-99b9-eb2fab490a69\\scratchpad\\verify",
+  "checks": 122,
+  "failed": [],
+  "runs": [
+    {
+      "run": "demo",
+      "beds": 1,
+      "placed": 12,
+      "utilisation": [
+        0.4
+      ],
+      "presets": {
+        "extruders": 5,
+        "filament": "Generic PLA @PGIS",
+        "print": "0.20mm STRUCTURAL @MK4IS 0.4",
+        "printer": "Original Prusa MK4 MMU3 0.4 nozzle",
+        "source": "%USERPROFILE%\\AppData\\Roaming\\PrusaSlicer\\vendor\\PrusaResearch.ini",
+        "vendor": "Prusa Research 2.5.11"
+      },
+      "files": {
+        "aruco_tags.3mf": {
+          "file": "aruco_tags.3mf",
+          "objects": 12,
+          "instances": 12,
+          "volumes": 24,
+          "per_bed": {
+            "1": 12
+          },
+          "towers": [
+            [
+              0,
+              183.0,
+              187.0
+            ]
+          ],
+          "has_config": true
+        },
+        "bed_01.3mf": {
+          "file": "bed_01.3mf",
+          "objects": 12,
+          "instances": 12,
+          "volumes": 24,
+          "per_bed": {
+            "1": 12
+          },
+          "towers": [
+            [
+              0,
+              183.0,
+              187.0
+            ]
+          ],
+          "has_config": true
+        }
+      },
+      "info": {
+        "aruco_tags.3mf": {
+          "exit": 0,
+          "objects": 12,
+          "manifold": [
+            "yes"
+          ],
+          "parts_per_object": [
+            "2"
+          ]
+        },
+        "bed_01.3mf": {
+          "exit": 0,
+          "objects": 12,
+          "manifold": [
+            "yes"
+          ],
+          "parts_per_object": [
+            "2"
+          ]
+        }
+      },
+      "slices": {
+        "aruco_tags.3mf (CLI: bed 1 only)": {
+          "file": "aruco_tags.3mf",
+          "objects": 12,
+          "toolchanges": 4,
+          "toolchange_layers": [
+            [
+              0.0,
+              0
+            ],
+            [
+              0.0,
+              0
+            ],
+            [
+              0.2,
+              1
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              0.6,
+              1
+            ],
+            [
+              0.8,
+              0
+            ]
+          ],
+          "filament_mm": [
+            15300.54,
+            2202.15,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "filament_g": [
+            45.63,
+            6.57,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "wipe_tower_g": "0.68",
+          "time": "2h 20m 24s",
+          "printer": "Original Prusa MK4 MMU3 0.4 nozzle",
+          "printer_model": "MK4ISMMU3",
+          "wipe_tower_extent": [
+            181.17,
+            185.17,
+            244.83,
+            200.33
+          ],
+          "extrusion_extent": {
+            "Custom": [
+              0.0,
+              -4.0,
+              125.0,
+              -4.0
+            ],
+            "Perimeter": [
+              15.63,
+              40.63,
+              234.37,
+              169.37
+            ],
+            "External perimeter": [
+              15.22,
+              40.23,
+              234.78,
+              169.78
+            ],
+            "Solid infill": [
+              15.77,
+              40.76,
+              234.24,
+              169.24
+            ],
+            "Wipe tower": [
+              181.17,
+              185.17,
+              244.83,
+              200.33
+            ],
+            "Internal infill": [
+              15.98,
+              40.98,
+              234.02,
+              169.02
+            ],
+            "Bridge infill": [
+              15.8,
+              41.0,
+              234.0,
+              169.2
+            ],
+            "Top solid infill": [
+              15.79,
+              40.79,
+              234.21,
+              169.21
+            ]
+          }
+        },
+        "bed_01.3mf": {
+          "file": "bed_01.3mf",
+          "objects": 12,
+          "toolchanges": 4,
+          "toolchange_layers": [
+            [
+              0.0,
+              0
+            ],
+            [
+              0.0,
+              0
+            ],
+            [
+              0.2,
+              1
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              0.6,
+              1
+            ],
+            [
+              0.8,
+              0
+            ]
+          ],
+          "filament_mm": [
+            15300.54,
+            2202.15,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "filament_g": [
+            45.63,
+            6.57,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "wipe_tower_g": "0.68",
+          "time": "2h 20m 24s",
+          "printer": "Original Prusa MK4 MMU3 0.4 nozzle",
+          "printer_model": "MK4ISMMU3",
+          "wipe_tower_extent": [
+            181.12,
+            185.17,
+            244.78,
+            200.33
+          ],
+          "extrusion_extent": {
+            "Custom": [
+              0.0,
+              -4.0,
+              125.0,
+              -4.0
+            ],
+            "Perimeter": [
+              15.63,
+              40.63,
+              234.37,
+              169.37
+            ],
+            "External perimeter": [
+              15.22,
+              40.23,
+              234.78,
+              169.78
+            ],
+            "Solid infill": [
+              15.77,
+              40.76,
+              234.24,
+              169.24
+            ],
+            "Wipe tower": [
+              181.12,
+              185.17,
+              244.78,
+              200.33
+            ],
+            "Internal infill": [
+              15.98,
+              40.98,
+              234.02,
+              169.02
+            ],
+            "Bridge infill": [
+              15.8,
+              41.0,
+              234.0,
+              169.2
+            ],
+            "Top solid infill": [
+              15.79,
+              40.79,
+              234.21,
+              169.21
+            ]
+          }
+        }
+      },
+      "pngs": [
+        "%USERPROFILE%\\Documents\\cad-exporter\\.claude\\worktrees\\aruco-fusion-plugin-0e9bcb\\reports\\media\\aruco\\print_bed_01.png"
+      ],
+      "warnings": [],
+      "written_to": "%USERPROFILE%\\CADExporter\\ArUco_Demo\\aruco\\print3d"
+    },
+    {
+      "run": "stress x4",
+      "beds": 3,
+      "placed": 48,
+      "utilisation": [
+        0.6667,
+        0.6667,
+        0.2667
+      ],
+      "presets": {
+        "extruders": 5,
+        "filament": "Generic PLA @PGIS",
+        "print": "0.20mm STRUCTURAL @MK4IS 0.4",
+        "printer": "Original Prusa MK4 MMU3 0.4 nozzle",
+        "source": "%USERPROFILE%\\AppData\\Roaming\\PrusaSlicer\\vendor\\PrusaResearch.ini",
+        "vendor": "Prusa Research 2.5.11"
+      },
+      "files": {
+        "aruco_tags.3mf": {
+          "file": "aruco_tags.3mf",
+          "objects": 48,
+          "instances": 48,
+          "volumes": 96,
+          "per_bed": {
+            "1": 20,
+            "2": 20,
+            "3": 8
+          },
+          "towers": [
+            [
+              0,
+              183.0,
+              187.0
+            ],
+            [
+              1,
+              183.0,
+              187.0
+            ],
+            [
+              2,
+              183.0,
+              187.0
+            ]
+          ],
+          "has_config": true
+        },
+        "bed_01.3mf": {
+          "file": "bed_01.3mf",
+          "objects": 20,
+          "instances": 20,
+          "volumes": 40,
+          "per_bed": {
+            "1": 20
+          },
+          "towers": [
+            [
+              0,
+              183.0,
+              187.0
+            ]
+          ],
+          "has_config": true
+        },
+        "bed_02.3mf": {
+          "file": "bed_02.3mf",
+          "objects": 20,
+          "instances": 20,
+          "volumes": 40,
+          "per_bed": {
+            "1": 20
+          },
+          "towers": [
+            [
+              0,
+              183.0,
+              187.0
+            ]
+          ],
+          "has_config": true
+        },
+        "bed_03.3mf": {
+          "file": "bed_03.3mf",
+          "objects": 8,
+          "instances": 8,
+          "volumes": 16,
+          "per_bed": {
+            "1": 8
+          },
+          "towers": [
+            [
+              0,
+              183.0,
+              187.0
+            ]
+          ],
+          "has_config": true
+        }
+      },
+      "info": {
+        "aruco_tags.3mf": {
+          "exit": 0,
+          "objects": 48,
+          "manifold": [
+            "yes"
+          ],
+          "parts_per_object": [
+            "2"
+          ]
+        },
+        "bed_01.3mf": {
+          "exit": 0,
+          "objects": 20,
+          "manifold": [
+            "yes"
+          ],
+          "parts_per_object": [
+            "2"
+          ]
+        },
+        "bed_02.3mf": {
+          "exit": 0,
+          "objects": 20,
+          "manifold": [
+            "yes"
+          ],
+          "parts_per_object": [
+            "2"
+          ]
+        },
+        "bed_03.3mf": {
+          "exit": 0,
+          "objects": 8,
+          "manifold": [
+            "yes"
+          ],
+          "parts_per_object": [
+            "2"
+          ]
+        }
+      },
+      "slices": {
+        "aruco_tags.3mf (CLI: bed 1 only)": {
+          "file": "aruco_tags.3mf",
+          "objects": 20,
+          "toolchanges": 4,
+          "toolchange_layers": [
+            [
+              0.0,
+              0
+            ],
+            [
+              0.0,
+              0
+            ],
+            [
+              0.2,
+              1
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              0.6,
+              1
+            ],
+            [
+              0.8,
+              0
+            ]
+          ],
+          "filament_mm": [
+            25346.37,
+            3667.52,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "filament_g": [
+            75.6,
+            10.94,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "wipe_tower_g": "0.68",
+          "time": "3h 49m 32s",
+          "printer": "Original Prusa MK4 MMU3 0.4 nozzle",
+          "printer_model": "MK4ISMMU3",
+          "wipe_tower_extent": [
+            181.31,
+            185.17,
+            244.97,
+            200.33
+          ],
+          "extrusion_extent": {
+            "Custom": [
+              0.0,
+              -4.0,
+              125.0,
+              -4.0
+            ],
+            "Perimeter": [
+              15.63,
+              5.63,
+              234.37,
+              179.37
+            ],
+            "External perimeter": [
+              15.22,
+              5.22,
+              234.78,
+              179.78
+            ],
+            "Solid infill": [
+              15.77,
+              5.76,
+              234.24,
+              179.24
+            ],
+            "Wipe tower": [
+              181.31,
+              185.17,
+              244.97,
+              200.33
+            ],
+            "Internal infill": [
+              15.98,
+              5.98,
+              234.02,
+              179.02
+            ],
+            "Bridge infill": [
+              15.8,
+              6.0,
+              234.0,
+              179.2
+            ],
+            "Top solid infill": [
+              15.79,
+              5.79,
+              234.21,
+              179.21
+            ]
+          }
+        },
+        "bed_01.3mf": {
+          "file": "bed_01.3mf",
+          "objects": 20,
+          "toolchanges": 4,
+          "toolchange_layers": [
+            [
+              0.0,
+              0
+            ],
+            [
+              0.0,
+              0
+            ],
+            [
+              0.2,
+              1
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              0.6,
+              1
+            ],
+            [
+              0.8,
+              0
+            ]
+          ],
+          "filament_mm": [
+            25346.37,
+            3667.52,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "filament_g": [
+            75.6,
+            10.94,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "wipe_tower_g": "0.68",
+          "time": "3h 49m 31s",
+          "printer": "Original Prusa MK4 MMU3 0.4 nozzle",
+          "printer_model": "MK4ISMMU3",
+          "wipe_tower_extent": [
+            181.17,
+            185.17,
+            244.83,
+            200.33
+          ],
+          "extrusion_extent": {
+            "Custom": [
+              0.0,
+              -4.0,
+              125.0,
+              -4.0
+            ],
+            "Perimeter": [
+              15.63,
+              5.63,
+              234.37,
+              179.37
+            ],
+            "External perimeter": [
+              15.22,
+              5.22,
+              234.78,
+              179.78
+            ],
+            "Solid infill": [
+              15.77,
+              5.76,
+              234.24,
+              179.24
+            ],
+            "Wipe tower": [
+              181.17,
+              185.17,
+              244.83,
+              200.33
+            ],
+            "Internal infill": [
+              15.98,
+              5.98,
+              234.02,
+              179.02
+            ],
+            "Bridge infill": [
+              15.8,
+              6.0,
+              234.0,
+              179.2
+            ],
+            "Top solid infill": [
+              15.79,
+              5.79,
+              234.21,
+              179.21
+            ]
+          }
+        },
+        "bed_02.3mf": {
+          "file": "bed_02.3mf",
+          "objects": 20,
+          "toolchanges": 4,
+          "toolchange_layers": [
+            [
+              0.0,
+              0
+            ],
+            [
+              0.0,
+              0
+            ],
+            [
+              0.2,
+              1
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              0.6,
+              1
+            ],
+            [
+              0.8,
+              0
+            ]
+          ],
+          "filament_mm": [
+            25396.34,
+            3620.88,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "filament_g": [
+            75.75,
+            10.8,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "wipe_tower_g": "0.68",
+          "time": "3h 51m 31s",
+          "printer": "Original Prusa MK4 MMU3 0.4 nozzle",
+          "printer_model": "MK4ISMMU3",
+          "wipe_tower_extent": [
+            181.17,
+            185.17,
+            244.83,
+            200.33
+          ],
+          "extrusion_extent": {
+            "Custom": [
+              0.0,
+              -4.0,
+              125.0,
+              -4.0
+            ],
+            "Perimeter": [
+              15.63,
+              5.63,
+              234.37,
+              179.37
+            ],
+            "External perimeter": [
+              15.22,
+              5.22,
+              234.78,
+              179.78
+            ],
+            "Solid infill": [
+              15.77,
+              5.76,
+              234.24,
+              179.24
+            ],
+            "Wipe tower": [
+              181.17,
+              185.17,
+              244.83,
+              200.33
+            ],
+            "Internal infill": [
+              15.98,
+              5.98,
+              234.02,
+              179.02
+            ],
+            "Bridge infill": [
+              15.8,
+              6.0,
+              234.0,
+              179.2
+            ],
+            "Top solid infill": [
+              15.79,
+              5.79,
+              234.21,
+              179.21
+            ]
+          }
+        },
+        "bed_03.3mf": {
+          "file": "bed_03.3mf",
+          "objects": 8,
+          "toolchanges": 4,
+          "toolchange_layers": [
+            [
+              0.0,
+              0
+            ],
+            [
+              0.0,
+              0
+            ],
+            [
+              0.2,
+              1
+            ],
+            [
+              0.4,
+              0
+            ],
+            [
+              0.6,
+              1
+            ],
+            [
+              0.8,
+              0
+            ]
+          ],
+          "filament_mm": [
+            10352.68,
+            1393.71,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "filament_g": [
+            30.88,
+            4.16,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "wipe_tower_g": "0.68",
+          "time": "1h 35m 14s",
+          "printer": "Original Prusa MK4 MMU3 0.4 nozzle",
+          "printer_model": "MK4ISMMU3",
+          "wipe_tower_extent": [
+            181.17,
+            185.17,
+            244.83,
+            200.33
+          ],
+          "extrusion_extent": {
+            "Custom": [
+              0.0,
+              -4.0,
+              125.0,
+              -4.0
+            ],
+            "Perimeter": [
+              15.63,
+              63.13,
+              234.37,
+              146.87
+            ],
+            "External perimeter": [
+              15.22,
+              62.73,
+              234.78,
+              147.28
+            ],
+            "Solid infill": [
+              15.77,
+              63.26,
+              234.24,
+              146.74
+            ],
+            "Wipe tower": [
+              181.17,
+              185.17,
+              244.83,
+              200.33
+            ],
+            "Internal infill": [
+              15.98,
+              63.48,
+              234.02,
+              146.52
+            ],
+            "Bridge infill": [
+              15.8,
+              63.5,
+              234.0,
+              146.7
+            ],
+            "Top solid infill": [
+              15.79,
+              63.29,
+              234.21,
+              146.71
+            ]
+          }
+        }
+      },
+      "pngs": [
+        "%USERPROFILE%\\Documents\\cad-exporter\\.claude\\worktrees\\aruco-fusion-plugin-0e9bcb\\reports\\media\\aruco\\print_beds_stress_overview.png"
+      ]
+    },
+    {
+      "run": "selection (cad)",
+      "beds": 1,
+      "placed": 3,
+      "utilisation": [
+        0.1177
+      ],
+      "presets": {
+        "printer": "Original Prusa MK4 MMU3 0.4 nozzle",
+        "print": "0.20mm STRUCTURAL @MK4IS 0.4",
+        "filament": "Generic PLA @PGIS",
+        "vendor": "Prusa Research 2.5.11",
+        "source": "%USERPROFILE%\\AppData\\Roaming\\PrusaSlicer\\vendor\\PrusaResearch.ini",
+        "extruders": 5
+      },
+      "files": {
+        "aruco_selection.3mf": {
+          "file": "aruco_selection.3mf",
+          "objects": 3,
+          "instances": 3,
+          "volumes": 6,
+          "per_bed": {
+            "1": 3
+          },
+          "towers": [
+            [
+              0,
+              183.0,
+              187.0
+            ]
+          ],
+          "has_config": true
+        }
+      },
+      "info": {
+        "aruco_selection.3mf": {
+          "exit": 0,
+          "objects": 3,
+          "manifold": [
+            "yes"
+          ],
+          "parts_per_object": [
+            "1",
+            "2",
+            "3"
+          ]
+        }
+      },
+      "slices": {
+        "aruco_selection.3mf (CLI: bed 1 only)": {
+          "file": "aruco_selection.3mf",
+          "objects": 3,
+          "toolchanges": 7,
+          "toolchange_layers": [
+            [
+              0.0,
+              0
+            ],
+            [
+              0.0,
+              0
+            ],
+            [
+              2.6,
+              1
+            ],
+            [
+              2.8,
+              0
+            ],
+            [
+              3.0,
+              1
+            ],
+            [
+              3.2,
+              0
+            ],
+            [
+              12.6,
+              1
+            ],
+            [
+              12.8,
+              0
+            ],
+            [
+              13.0,
+              1
+            ]
+          ],
+          "filament_mm": [
+            8664.1,
+            552.07,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "filament_g": [
+            25.84,
+            1.65,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "wipe_tower_g": "3.58",
+          "time": "1h 6m 37s",
+          "printer": "Original Prusa MK4 MMU3 0.4 nozzle",
+          "printer_model": "MK4ISMMU3",
+          "wipe_tower_extent": [
+            181.17,
+            185.17,
+            244.83,
+            200.33
+          ],
+          "extrusion_extent": {
+            "Custom": [
+              0.0,
+              -4.0,
+              125.0,
+              -4.0
+            ],
+            "Wipe tower": [
+              181.17,
+              185.17,
+              244.83,
+              200.33
+            ],
+            "Perimeter": [
+              95.63,
+              43.13,
+              154.37,
+              166.87
+            ],
+            "External perimeter": [
+              95.22,
+              42.73,
+              154.78,
+              167.28
+            ],
+            "Solid infill": [
+              95.77,
+              43.26,
+              154.24,
+              166.73
+            ],
+            "Internal infill": [
+              95.98,
+              43.48,
+              154.02,
+              166.52
+            ],
+            "Bridge infill": [
+              96.0,
+              43.3,
+              154.0,
+              166.7
+            ],
+            "Top solid infill": [
+              95.79,
+              43.29,
+              154.21,
+              166.71
+            ]
+          }
+        }
+      },
+      "pngs": [
+        "%USERPROFILE%\\Documents\\cad-exporter\\.claude\\worktrees\\aruco-fusion-plugin-0e9bcb\\reports\\media\\aruco\\print_selection_bed_01.png"
+      ],
+      "summary": {
+        "files": [
+          "%USERPROFILE%\\AppData\\Local\\Temp\\claude\\C--Users-USER-Documents-cad-exporter--claude-worktrees-aruco-fusion-plugin-0e9bcb\\cbfa3931-78c7-4c3b-99b9-eb2fab490a69\\scratchpad\\verify\\selection\\aruco_selection.3mf"
+        ],
+        "beds": 1,
+        "bed_mm": [
+          250.0,
+          210.0
+        ],
+        "presets": {
+          "printer": "Original Prusa MK4 MMU3 0.4 nozzle",
+          "print": "0.20mm STRUCTURAL @MK4IS 0.4",
+          "filament": "Generic PLA @PGIS",
+          "vendor": "Prusa Research 2.5.11",
+          "source": "%USERPROFILE%\\AppData\\Roaming\\PrusaSlicer\\vendor\\PrusaResearch.ini",
+          "extruders": 5
+        },
+        "placed": 3,
+        "objects": [
+          "Spacer",
+          "Tag · 4X4_50 #1",
+          "Mount with Tag · 4X4_50 #2"
+        ],
+        "orientation": {
+          "Tag · 4X4_50 #1": "cad",
+          "Mount with Tag · 4X4_50 #2": "cad",
+          "Spacer": "cad"
+        },
+        "rejected": [],
+        "skipped": [],
+        "warnings": [],
+        "prusaslicer_exe": "C:\\Program Files\\Prusa3D\\PrusaSlicer\\prusa-slicer.exe"
+      }
+    }
+  ],
+  "all": [
+    {
+      "check": "demo: write_beds placed every copy (12 of 12), nothing rejected",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "demo: the all-beds project was written",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "aruco_tags.3mf exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: volume triangle ranges tile each object's mesh exactly",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: every volume is a closed, consistently oriented mesh",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: cells volumes on extruder 2, every other body on extruder 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: face-down parts' cells sit on the bed (z min = 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: instances_count matches the build items",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: every copy lies wholly on exactly one bed, inside the margin",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "aruco_tags.3mf: every 3MF object is a placed copy of a known part",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: --info reads 12 objects, all manifold, one shell per body",
+      "ok": true,
+      "detail": "({'exit': 0, 'objects': 12, 'manifold': ['yes'], 'parts_per_object': ['2']}, ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2'], ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2'])"
+    },
+    {
+      "check": "bed_01.3mf: volume triangle ranges tile each object's mesh exactly",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: every volume is a closed, consistently oriented mesh",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: cells volumes on extruder 2, every other body on extruder 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: face-down parts' cells sit on the bed (z min = 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: instances_count matches the build items",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: every copy lies wholly on exactly one bed, inside the margin",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "bed_01.3mf: every 3MF object is a placed copy of a known part",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: --info reads 12 objects, all manifold, one shell per body",
+      "ok": true,
+      "detail": "({'exit': 0, 'objects': 12, 'manifold': ['yes'], 'parts_per_object': ['2']}, ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2'], ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2'])"
+    },
+    {
+      "check": "aruco_tags.3mf: copies per PrusaSlicer bed match the layout [12]",
+      "ok": true,
+      "detail": "{'1': 12}"
+    },
+    {
+      "check": "aruco_tags.3mf: one wipe tower per bed, each inside its hole",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "project config = the vendor bundle's Original Prusa MK4 MMU3 0.4 nozzle / 0.20mm STRUCTURAL @MK4IS 0.4 / Generic PLA @PGIS chain, key for key (256 keys)",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "project config names the presets",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "extruder 1 shows white, extruder 2 black (extruder_colour and filament_colour)",
+      "ok": true,
+      "detail": "(['#FFFFFF', '#000000', '#3EC0FF', '#FF4F4F', '#FBEB7D'], ['#FFFFFF', '#000000', '#FF8000', '#FF8000', '#FF8000'])"
+    },
+    {
+      "check": "aruco_tags.3mf: sliced with Original Prusa MK4 MMU3 0.4 nozzle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: 12 objects in the G-code (expected 12)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: both filaments used (white 45.63 g, black 6.57 g) with 4 tool changes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: black (T1) only in layers that hold black cells [[0.0, 0.6]]",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "aruco_tags.3mf: every part's extrusion inside the 5 mm margin",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "aruco_tags.3mf: wipe tower 63.7 x 15.2 mm at (181.2, 185.2) inside its kept hole [181.0, 185.0, 64.0, 20.0]",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: sliced with Original Prusa MK4 MMU3 0.4 nozzle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: 12 objects in the G-code (expected 12)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: both filaments used (white 45.63 g, black 6.57 g) with 4 tool changes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: black (T1) only in layers that hold black cells [[0.0, 0.6]]",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "bed_01.3mf: every part's extrusion inside the 5 mm margin",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "bed_01.3mf: wipe tower 63.7 x 15.2 mm at (181.1, 185.2) inside its kept hole [181.0, 185.0, 64.0, 20.0]",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "demo folder written (%USERPROFILE%\\CADExporter\\ArUco_Demo\\aruco\\print3d) with the same bytes as the scratch run",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: volume triangle ranges tile each object's mesh exactly",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: every volume is a closed, consistently oriented mesh",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: cells volumes on extruder 2, every other body on extruder 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: face-down parts' cells sit on the bed (z min = 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: instances_count matches the build items",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: every copy lies wholly on exactly one bed, inside the margin",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "aruco_tags.3mf: every 3MF object is a placed copy of a known part",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: --info reads 48 objects, all manifold, one shell per body",
+      "ok": true,
+      "detail": "({'exit': 0, 'objects': 48, 'manifold': ['yes'], 'parts_per_object': ['2']}, ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2'], ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', "
+    },
+    {
+      "check": "bed_01.3mf: volume triangle ranges tile each object's mesh exactly",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: every volume is a closed, consistently oriented mesh",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: cells volumes on extruder 2, every other body on extruder 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: face-down parts' cells sit on the bed (z min = 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: instances_count matches the build items",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: every copy lies wholly on exactly one bed, inside the margin",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "bed_01.3mf: every 3MF object is a placed copy of a known part",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: --info reads 20 objects, all manifold, one shell per body",
+      "ok": true,
+      "detail": "({'exit': 0, 'objects': 20, 'manifold': ['yes'], 'parts_per_object': ['2']}, ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2'], ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2'])"
+    },
+    {
+      "check": "bed_02.3mf: volume triangle ranges tile each object's mesh exactly",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_02.3mf: every volume is a closed, consistently oriented mesh",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_02.3mf: cells volumes on extruder 2, every other body on extruder 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_02.3mf: face-down parts' cells sit on the bed (z min = 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_02.3mf: instances_count matches the build items",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_02.3mf: every copy lies wholly on exactly one bed, inside the margin",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "bed_02.3mf: every 3MF object is a placed copy of a known part",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_02.3mf: --info reads 20 objects, all manifold, one shell per body",
+      "ok": true,
+      "detail": "({'exit': 0, 'objects': 20, 'manifold': ['yes'], 'parts_per_object': ['2']}, ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2'], ['2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2'])"
+    },
+    {
+      "check": "bed_03.3mf: volume triangle ranges tile each object's mesh exactly",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_03.3mf: every volume is a closed, consistently oriented mesh",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_03.3mf: cells volumes on extruder 2, every other body on extruder 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_03.3mf: face-down parts' cells sit on the bed (z min = 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_03.3mf: instances_count matches the build items",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_03.3mf: every copy lies wholly on exactly one bed, inside the margin",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "bed_03.3mf: every 3MF object is a placed copy of a known part",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_03.3mf: --info reads 8 objects, all manifold, one shell per body",
+      "ok": true,
+      "detail": "({'exit': 0, 'objects': 8, 'manifold': ['yes'], 'parts_per_object': ['2']}, ['2', '2', '2', '2', '2', '2', '2', '2'], ['2', '2', '2', '2', '2', '2', '2', '2'])"
+    },
+    {
+      "check": "aruco_tags.3mf: copies per PrusaSlicer bed match the layout [20, 20, 8]",
+      "ok": true,
+      "detail": "{'1': 20, '2': 20, '3': 8}"
+    },
+    {
+      "check": "aruco_tags.3mf: one wipe tower per bed, each inside its hole",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "project config = the vendor bundle's Original Prusa MK4 MMU3 0.4 nozzle / 0.20mm STRUCTURAL @MK4IS 0.4 / Generic PLA @PGIS chain, key for key (256 keys)",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "project config names the presets",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "extruder 1 shows white, extruder 2 black (extruder_colour and filament_colour)",
+      "ok": true,
+      "detail": "(['#FFFFFF', '#000000', '#3EC0FF', '#FF4F4F', '#FBEB7D'], ['#FFFFFF', '#000000', '#FF8000', '#FF8000', '#FF8000'])"
+    },
+    {
+      "check": "aruco_tags.3mf: sliced with Original Prusa MK4 MMU3 0.4 nozzle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: 20 objects in the G-code (expected 20)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: both filaments used (white 75.60 g, black 10.94 g) with 4 tool changes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_tags.3mf: black (T1) only in layers that hold black cells [[0.0, 0.6]]",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "aruco_tags.3mf: every part's extrusion inside the 5 mm margin",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "aruco_tags.3mf: wipe tower 63.7 x 15.2 mm at (181.3, 185.2) inside its kept hole [181.0, 185.0, 64.0, 20.0]",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: sliced with Original Prusa MK4 MMU3 0.4 nozzle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: 20 objects in the G-code (expected 20)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: both filaments used (white 75.60 g, black 10.94 g) with 4 tool changes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_01.3mf: black (T1) only in layers that hold black cells [[0.0, 0.6]]",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "bed_01.3mf: every part's extrusion inside the 5 mm margin",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "bed_01.3mf: wipe tower 63.7 x 15.2 mm at (181.2, 185.2) inside its kept hole [181.0, 185.0, 64.0, 20.0]",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_02.3mf: sliced with Original Prusa MK4 MMU3 0.4 nozzle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_02.3mf: 20 objects in the G-code (expected 20)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_02.3mf: both filaments used (white 75.75 g, black 10.80 g) with 4 tool changes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_02.3mf: black (T1) only in layers that hold black cells [[0.0, 0.6]]",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "bed_02.3mf: every part's extrusion inside the 5 mm margin",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "bed_02.3mf: wipe tower 63.7 x 15.2 mm at (181.2, 185.2) inside its kept hole [181.0, 185.0, 64.0, 20.0]",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_03.3mf: sliced with Original Prusa MK4 MMU3 0.4 nozzle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_03.3mf: 8 objects in the G-code (expected 8)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_03.3mf: both filaments used (white 30.88 g, black 4.16 g) with 4 tool changes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bed_03.3mf: black (T1) only in layers that hold black cells [[0.0, 0.6]]",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "bed_03.3mf: every part's extrusion inside the 5 mm margin",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "bed_03.3mf: wipe tower 63.7 x 15.2 mm at (181.2, 185.2) inside its kept hole [181.0, 185.0, 64.0, 20.0]",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "selection: 3 objects placed on 1 bed(s), nothing rejected",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "selection: every object kept as modelled (orientation 'cad')",
+      "ok": true,
+      "detail": "{'Tag · 4X4_50 #1': 'cad', 'Mount with Tag · 4X4_50 #2': 'cad', 'Spacer': 'cad'}"
+    },
+    {
+      "check": "selection: PrusaSlicer GUI found for the add-in to open the file (C:\\Program Files\\Prusa3D\\PrusaSlicer\\prusa-slicer.exe)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_selection.3mf exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_selection.3mf: volume triangle ranges tile each object's mesh exactly",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_selection.3mf: every volume is a closed, consistently oriented mesh",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_selection.3mf: cells volumes on extruder 2, every other body on extruder 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_selection.3mf: face-down parts' cells sit on the bed (z min = 0)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_selection.3mf: instances_count matches the build items",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_selection.3mf: every copy lies wholly on exactly one bed, inside the margin",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "aruco_selection.3mf: every 3MF object is a placed copy of a known part",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_selection.3mf: --info reads 3 objects, all manifold, one shell per body",
+      "ok": true,
+      "detail": "({'exit': 0, 'objects': 3, 'manifold': ['yes'], 'parts_per_object': ['1', '2', '3']}, ['3', '1', '2'], ['3', '1', '2'])"
+    },
+    {
+      "check": "aruco_selection.3mf: copies per PrusaSlicer bed match the layout [3]",
+      "ok": true,
+      "detail": "{'1': 3}"
+    },
+    {
+      "check": "aruco_selection.3mf: one wipe tower per bed, each inside its hole",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "project config = the vendor bundle's Original Prusa MK4 MMU3 0.4 nozzle / 0.20mm STRUCTURAL @MK4IS 0.4 / Generic PLA @PGIS chain, key for key (256 keys)",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "project config names the presets",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "extruder 1 shows white, extruder 2 black (extruder_colour and filament_colour)",
+      "ok": true,
+      "detail": "(['#FFFFFF', '#000000', '#3EC0FF', '#FF4F4F', '#FBEB7D'], ['#FFFFFF', '#000000', '#FF8000', '#FF8000', '#FF8000'])"
+    },
+    {
+      "check": "aruco_selection.3mf: sliced with Original Prusa MK4 MMU3 0.4 nozzle",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_selection.3mf: 3 objects in the G-code (expected 3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_selection.3mf: both filaments used (white 25.84 g, black 1.65 g) with 7 tool changes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "aruco_selection.3mf: black (T1) only in layers that hold black cells [[2.4, 3.0], [12.4, 13.0]]",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "aruco_selection.3mf: every part's extrusion inside the 5 mm margin",
+      "ok": true,
+      "detail": "{}"
+    },
+    {
+      "check": "aruco_selection.3mf: wipe tower 63.7 x 15.2 mm at (181.2, 185.2) inside its kept hole [181.0, 185.0, 64.0, 20.0]",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

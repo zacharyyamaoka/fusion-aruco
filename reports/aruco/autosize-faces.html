@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto-size on faces</title>
+<meta name="description" content="ArUco Extrude: the default size of a tag on a clicked face comes from the face's largest clear rectangle; ten faces checked offline, in Fusion and against a brute force.">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f7f6f2; --surface:#ffffff; --surface-2:#f1efe9; --surface-3:#e9e6de;
+  --line:#e2dfd6; --line-2:#cbc7bc; --ink:#1c1b19; --ink-2:#45433e; --muted:#6c6961;
+  --acc:#2459b8; --acc-weak:#e7eefb; --good:#0f7a3b; --good-weak:#e2f3e7;
+  --warn:#9a5a00; --warn-weak:#fcf0d6; --bad:#b3302d; --bad-weak:#fbe5e3;
+  --violet:#5a43c0; --vio-weak:#eeebfb; --decide:#a34d06; --decide-bg:#fff6e6; --decide-line:#ec9f2e;
+  --code-bg:#f0eee8;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4;
+  --sans:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"Cascadia Mono","Cascadia Code",Consolas,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#121211; --surface:#1b1b19; --surface-2:#232320; --surface-3:#2c2b28;
+    --line:#33322e; --line-2:#4a4843; --ink:#ecebe5; --ink-2:#c8c6bc; --muted:#9b988e;
+    --acc:#7ba7f2; --acc-weak:#1b2a44; --good:#5cc786; --good-weak:#15301f;
+    --warn:#e5a94d; --warn-weak:#382a12; --bad:#f07d78; --bad-weak:#3a1a19;
+    --violet:#a89af0; --vio-weak:#262143; --decide:#f3b65a; --decide-bg:#2a2112; --decide-line:#b37a22;
+    --code-bg:#252421;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
+  }
+}
+:root[data-theme="dark"]{
+    color-scheme: dark;
+    --bg:#121211; --surface:#1b1b19; --surface-2:#232320; --surface-3:#2c2b28;
+    --line:#33322e; --line-2:#4a4843; --ink:#ecebe5; --ink-2:#c8c6bc; --muted:#9b988e;
+    --acc:#7ba7f2; --acc-weak:#1b2a44; --good:#5cc786; --good-weak:#15301f;
+    --warn:#e5a94d; --warn-weak:#382a12; --bad:#f07d78; --bad-weak:#3a1a19;
+    --violet:#a89af0; --vio-weak:#262143; --decide:#f3b65a; --decide-bg:#2a2112; --decide-line:#b37a22;
+    --code-bg:#252421;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:72px; -webkit-text-size-adjust:100%}
+body{margin:0; background:var(--bg); color:var(--ink); font:17px/1.62 var(--sans); overflow-x:hidden}
+a{color:var(--acc); text-underline-offset:2px}
+a:hover{text-decoration-thickness:2px}
+code{font:0.86em/1.4 var(--mono); background:var(--code-bg); padding:.08em .35em; border-radius:4px;
+     overflow-wrap:anywhere}
+.topbar{position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+.topbar .in{max-width:1320px; margin:0 auto; padding:9px 16px; display:flex; gap:6px 16px;
+  align-items:center; flex-wrap:wrap; font-size:14px}
+.topbar .brand{font-weight:650; color:var(--ink); text-decoration:none; display:flex; gap:8px; align-items:center}
+.topbar .brand svg{width:22px; height:22px; border-radius:3px}
+.topbar nav{display:flex; gap:4px 14px; flex-wrap:wrap}
+.topbar nav a{color:var(--muted); text-decoration:none; padding:2px 0; border-bottom:2px solid transparent}
+.topbar nav a:hover{color:var(--ink)}
+.topbar nav a.on{color:var(--ink); border-bottom-color:var(--acc)}
+.topbar .sp{flex:1}
+#themebtn{font:inherit; font-size:13px; background:var(--surface); color:var(--ink-2); border:1px solid var(--line-2);
+  border-radius:999px; padding:3px 11px; cursor:pointer}
+.wrap{max-width:1320px; margin:0 auto; padding:0 16px 120px}
+.layout{display:block}
+.toc{font-size:14.5px; margin:18px 0 8px}
+.toc details{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:8px 14px}
+.toc summary{cursor:pointer; font-weight:600; color:var(--ink-2); padding:4px 0}
+.toc ol{list-style:none; margin:6px 0; padding:0}
+.toc li{margin:0}
+.toc a{display:block; color:var(--muted); text-decoration:none; padding:3px 0 3px 10px; border-left:2px solid transparent;
+  line-height:1.35}
+.toc a:hover{color:var(--ink)}
+.toc a.on{color:var(--ink); border-left-color:var(--acc); font-weight:600}
+.toc .l3 a{padding-left:24px; font-size:13.5px}
+@media (min-width:1180px){
+  .layout{display:grid; grid-template-columns:250px minmax(0,1fr); gap:52px}
+  .toc{position:sticky; top:62px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; margin-top:34px}
+  .toc details{background:none; border:0; padding:0}
+  .toc summary{list-style:none; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+  .toc summary::-webkit-details-marker{display:none}
+}
+main.content{min-width:0; max-width:1000px}
+main.content > :is(p,ul,ol,blockquote,h2,h3,h4,.narrow){max-width:75ch}
+.hero{padding:34px 0 8px}
+.eyebrow{font-size:13px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); font-weight:600}
+h1{font-size:clamp(30px,4.2vw,42px); line-height:1.12; margin:8px 0 14px; letter-spacing:-.01em}
+h2{font-size:27px; line-height:1.2; margin:64px 0 14px; padding-top:18px; border-top:1px solid var(--line); letter-spacing:-.005em}
+h3{font-size:20.5px; line-height:1.3; margin:40px 0 10px}
+.lede{font-size:19.5px; line-height:1.55; color:var(--ink-2); max-width:70ch}
+.meta{font-size:14px; color:var(--muted); margin:10px 0 0}
+p{margin:12px 0}
+ul,ol{padding-left:1.4em} li{margin:5px 0} li > ul, li > ol{margin:4px 0}
+blockquote.quote{margin:18px 0; padding:14px 20px; border-left:4px solid var(--acc); background:var(--surface);
+  border-radius:0 12px 12px 0; font-size:18.5px; color:var(--ink-2); font-style:italic}
+blockquote.quote p{margin:4px 0}
+.badge{display:inline-block; font:600 11.5px/1.3 var(--sans); letter-spacing:.02em; padding:1px 7px; border-radius:999px;
+  vertical-align:1px; white-space:nowrap}
+.badge.verify{color:var(--warn); background:var(--warn-weak); border:1px dashed var(--warn)}
+.verdict{padding:1px 8px; border-radius:6px; font-weight:650}
+.v-adopt{background:var(--good-weak); color:var(--good)}
+.v-adapt{background:var(--acc-weak); color:var(--acc)}
+.v-avoid{background:var(--bad-weak); color:var(--bad)}
+.v-own{background:var(--vio-weak); color:var(--violet)}
+.tablewrap{overflow-x:auto; margin:16px 0; border:1px solid var(--line); border-radius:12px; background:var(--surface)}
+table.md{border-collapse:collapse; width:100%; font-size:15px; line-height:1.45}
+table.md th{background:var(--surface-2); text-align:left; font-weight:620; color:var(--ink-2); padding:9px 12px;
+  border-bottom:1px solid var(--line); vertical-align:bottom}
+table.md td{padding:9px 12px; border-top:1px solid var(--line); vertical-align:top}
+table.md tr:first-child td{border-top:0}
+table.md td:first-child{font-weight:560}
+pre.code{background:var(--code-bg); border:1px solid var(--line); border-radius:10px; padding:12px 14px; overflow:auto;
+  font:13.5px/1.5 var(--mono); margin:14px 0}
+pre.code code{background:none; padding:0; font:inherit}
+pre.ascii{font-size:12.5px; line-height:1.32}
+.formula{font:15px/1.6 var(--mono); background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--violet);
+  border-radius:10px; padding:12px 16px; overflow-x:auto; white-space:pre; margin:14px 0}
+figure.fig{margin:26px 0; padding:0}
+.figbody{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:16px; overflow-x:auto}
+.figbody > svg{display:block; width:100%; height:auto}
+.fig.wire .figbody{padding:10px; background:var(--surface-2)}
+.fig.wire .figbody > svg{min-width:760px}
+.fig.wide .figbody > svg{min-width:680px}
+.fig.mid .figbody > svg{min-width:560px}
+figcaption{font-size:14.5px; color:var(--muted); margin:9px 4px 0; line-height:1.5; max-width:90ch}
+figcaption b{color:var(--ink-2)}
+.kind{display:inline-block; font:650 11px/1.4 var(--sans); letter-spacing:.06em; text-transform:uppercase; padding:1px 7px;
+  border-radius:5px; margin-right:4px; vertical-align:1px; background:var(--surface-3); color:var(--ink-2)}
+.k-generated-by-opencv{background:var(--good-weak); color:var(--good)}
+.k-schematic{background:var(--warn-weak); color:var(--warn)}
+.k-illustrative{background:var(--warn-weak); color:var(--warn)}
+.k-wireframe{background:var(--acc-weak); color:var(--acc)}
+.k-build-time-check{background:var(--vio-weak); color:var(--violet)}
+.k-from-the-doc{background:var(--acc-weak); color:var(--acc)}
+.k-design-response{background:var(--vio-weak); color:var(--violet)}
+.callout{border:1px solid var(--line); border-left:5px solid var(--acc); background:var(--surface); border-radius:12px;
+  padding:14px 18px; margin:20px 0; max-width:none}
+.callout p{margin:8px 0}
+.co-title{font-weight:680; margin-bottom:6px; color:var(--ink)}
+.co-note{border-left-color:var(--acc)}
+.co-warn{border-left-color:var(--warn); background:var(--warn-weak)}
+.co-good{border-left-color:var(--good)}
+.co-check{border-left-color:var(--violet); border-style:dashed; border-left-style:solid}
+.co-mini{font-size:15px; padding:9px 14px; margin:12px 0; border-left-width:4px; max-width:75ch}
+.co-mini.decal{border-left-color:var(--decide-line); background:var(--decide-bg)}
+.decisions{border:2px solid var(--decide-line); background:var(--decide-bg); border-radius:16px; padding:20px 22px 16px; margin:26px 0}
+.decisions h2.dtitle, .decisions .dtitle{border:0; margin:0 0 4px; padding:0; font-size:24px; color:var(--decide)}
+.decisions .dsub{color:var(--ink-2); margin:0 0 14px; font-size:15.5px}
+.dlist{list-style:none; padding:0; margin:0; counter-reset:dec}
+.dlist > li{counter-increment:dec; position:relative; padding:10px 12px 10px 50px; margin:8px 0; background:var(--surface);
+  border:1px solid var(--line); border-radius:12px}
+.dlist > li::before{content:counter(dec); position:absolute; left:12px; top:10px; width:26px; height:26px; border-radius:50%;
+  background:var(--decide-line); color:#fff; font-weight:700; font-size:14px; display:grid; place-items:center}
+.dlist .dh{font-weight:680}
+.dlist .tags{margin-top:5px; display:flex; gap:6px; flex-wrap:wrap}
+.qtag{font:600 12px/1.35 var(--sans); padding:2px 8px; border-radius:999px; border:1px solid var(--line-2); color:var(--ink-2); background:var(--surface-2)}
+.qtag.no{border-color:var(--bad); color:var(--bad); background:var(--bad-weak)}
+.qtag.yes{border-color:var(--good); color:var(--good); background:var(--good-weak)}
+.dgroup{margin:16px 0 4px; font-weight:700; font-size:14px; letter-spacing:.06em; text-transform:uppercase; color:var(--decide)}
+.response{border:1px dashed var(--violet); background:var(--vio-weak); border-radius:12px; padding:12px 16px; margin:12px 0}
+.response .rh{font-weight:700; color:var(--violet); font-size:14px; letter-spacing:.04em; text-transform:uppercase}
+.status{display:flex; gap:10px; align-items:flex-start; margin:14px 0 4px; font-size:15.5px}
+.status .dot{width:10px; height:10px; border-radius:50%; background:var(--good); margin-top:8px; flex:none;
+  box-shadow:0 0 0 4px var(--good-weak)}
+.dfigs{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); gap:14px; margin-top:16px}
+.dfigs figure.fig{margin:0}
+.cards{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr)); gap:14px; margin:18px 0}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:14px 16px; min-width:0}
+.card h4{margin:0 0 6px; font-size:16.5px}
+.card p{margin:6px 0; font-size:15px; color:var(--ink-2)}
+.card .tags{display:flex; gap:6px; flex-wrap:wrap; margin-top:8px}
+.stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:22px 0}
+.stat{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px 14px}
+.stat b{display:block; font-size:28px; line-height:1.1; letter-spacing:-.01em}
+.stat span{font-size:13.5px; color:var(--muted); line-height:1.35; display:block; margin-top:4px}
+details.src{margin:10px 0 18px; border:1px solid var(--line); border-radius:10px; background:var(--surface); max-width:none}
+details.src > summary{cursor:pointer; padding:7px 12px; font-size:14px; color:var(--muted)}
+details.src[open] > summary{border-bottom:1px solid var(--line)}
+details.src .srcbody{padding:4px 16px 8px}
+details.src pre.code{margin:8px 10px; border:0}
+.mkrow{display:flex; flex-wrap:wrap; gap:14px 18px; align-items:flex-end}
+.mkrow figure{margin:0; text-align:center}
+.mkrow figcaption{margin:5px 0 0; font:12.5px/1.3 var(--mono); color:var(--muted)}
+svg.mk{width:88px; height:88px; display:block; border-radius:3px; box-shadow:0 0 0 1px var(--line)}
+svg.mk.sm{width:56px; height:56px}
+svg.mk.lg{width:150px; height:150px}
+svg.board{display:block; height:auto; box-shadow:0 0 0 1px var(--line); border-radius:2px}
+.dg text{font-family:var(--sans); fill:var(--ink); font-size:13px}
+.dg .t-mut{fill:var(--muted)} .dg .t-ink2{fill:var(--ink-2)}
+.dg .t-mono{font-family:var(--mono); font-size:12px}
+.dg .t-b{font-weight:650}
+.dg .t-acc{fill:var(--acc)} .dg .t-good{fill:var(--good)} .dg .t-bad{fill:var(--bad)} .dg .t-warn{fill:var(--warn)}
+.dg .t-vio{fill:var(--violet)} .dg .t-dec{fill:var(--decide)}
+.dg .box{fill:var(--surface); stroke:var(--line-2); stroke-width:1.2}
+.dg .box2{fill:var(--surface-2); stroke:var(--line-2); stroke-width:1}
+.dg .box3{fill:var(--surface-3); stroke:none}
+.dg .b-acc{fill:var(--acc-weak); stroke:var(--acc); stroke-width:1.2}
+.dg .b-good{fill:var(--good-weak); stroke:var(--good); stroke-width:1.2}
+.dg .b-bad{fill:var(--bad-weak); stroke:var(--bad); stroke-width:1.2}
+.dg .b-warn{fill:var(--warn-weak); stroke:var(--warn); stroke-width:1.2}
+.dg .b-vio{fill:var(--vio-weak); stroke:var(--violet); stroke-width:1.2}
+.dg .b-dec{fill:var(--decide-bg); stroke:var(--decide-line); stroke-width:1.4}
+.dg .edge{stroke:var(--ink-2); stroke-width:1.4; fill:none}
+.dg .e-mut{stroke:var(--line-2)}
+.dg .e-bad{stroke:var(--bad)} .dg .e-good{stroke:var(--good)} .dg .e-acc{stroke:var(--acc)} .dg .e-vio{stroke:var(--violet)}
+.dg .dash{stroke-dasharray:5 4}
+.dg .ahf{fill:var(--ink-2)} .dg .ahf-bad{fill:var(--bad)} .dg .ahf-good{fill:var(--good)}
+.dg .f-s1{fill:var(--s1)} .dg .f-s2{fill:var(--s2)} .dg .f-s3{fill:var(--s3)} .dg .f-s4{fill:var(--s4)} .dg .f-s5{fill:var(--s5)}
+.dg .st-s1{stroke:var(--s1)} .dg .st-s2{stroke:var(--s2)} .dg .st-s3{stroke:var(--s3)} .dg .st-s4{stroke:var(--s4)} .dg .st-s5{stroke:var(--s5)}
+.dg .grid{stroke:var(--line); stroke-width:1}
+.dg .axis{stroke:var(--line-2); stroke-width:1}
+.dg .band{fill:var(--acc-weak); opacity:.7}
+.dg [data-tip]{cursor:default}
+.dg .lane{fill:var(--surface-2)}
+/* feature matrix */
+.matrix{border-collapse:separate; border-spacing:0; font-size:13.5px; min-width:900px; width:100%}
+.matrix th{position:sticky; top:0; background:var(--surface-2); font-weight:600; color:var(--ink-2); padding:8px 6px;
+  border-bottom:1px solid var(--line); text-align:center; vertical-align:bottom; line-height:1.25}
+.matrix th.tool{text-align:left; min-width:210px}
+.matrix td{padding:5px 6px; border-top:1px solid var(--line); text-align:center; vertical-align:middle}
+.matrix td.tool{text-align:left; line-height:1.3}
+.matrix td.tool .plat{display:block; font-size:12px; color:var(--muted)}
+.matrix tr.fusion td.tool{box-shadow:inset 3px 0 0 var(--acc)}
+.matrix tr.wish td{background:var(--decide-bg); border-top:2px solid var(--decide-line)}
+.cell{display:inline-grid; place-items:center; width:26px; height:26px; border-radius:7px; font-weight:700; font-size:14px}
+.c-y{background:var(--good-weak); color:var(--good)}
+.c-p{background:var(--warn-weak); color:var(--warn)}
+.c-n{background:var(--surface-2); color:var(--muted); font-weight:500}
+.c-q{background:transparent; color:var(--muted); border:1px dashed var(--line-2); font-weight:500}
+.c-w{background:var(--decide-line); color:#fff}
+.price{font:12.5px var(--mono); color:var(--ink-2); white-space:nowrap}
+.legend{display:flex; flex-wrap:wrap; gap:8px 18px; font-size:14px; color:var(--ink-2); margin:10px 2px 0; align-items:center}
+.legend .cell{width:22px; height:22px; font-size:12px; margin-right:6px; vertical-align:middle}
+.legend i{display:inline-block; width:14px; height:14px; border-radius:4px; vertical-align:-2px; margin-right:6px}
+/* score table */
+.scores{width:100%; border-collapse:collapse; font-size:14px; min-width:860px}
+.scores th{text-align:left; padding:8px; color:var(--ink-2); font-weight:620; border-bottom:1px solid var(--line); vertical-align:bottom}
+.scores td{padding:8px; border-top:1px solid var(--line); vertical-align:top; width:17%}
+.scores td.crit{width:15%; font-weight:600}
+.sb{display:flex; align-items:center; gap:8px}
+.sb .track{flex:1; height:9px; border-radius:5px; background:var(--surface-3); overflow:hidden}
+.sb .fill{height:100%; border-radius:5px}
+.sb .num{font:700 15px var(--sans); width:14px; text-align:right}
+.sb .num.top{color:var(--good)}
+.scores .note{font-size:12.5px; color:var(--muted); margin-top:3px; line-height:1.35}
+.scores tr.total td{border-top:2px solid var(--line-2); font-weight:700}
+.chip{display:inline-block; font:600 12.5px/1.35 var(--sans); padding:2px 9px; border-radius:999px; background:var(--surface-2);
+  border:1px solid var(--line); color:var(--ink-2); margin:2px 3px 2px 0}
+.chip.s1{border-color:var(--s1)} .chip.s2{border-color:var(--s2)} .chip.s3{border-color:var(--s3)} .chip.s4{border-color:var(--s4)} .chip.s5{border-color:var(--s5)}
+.swatch{display:inline-block; width:11px; height:11px; border-radius:3px; margin-right:6px; vertical-align:0}
+.steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr)); gap:10px; counter-reset:st; margin:16px 0;
+  padding:0; list-style:none}
+.steps li{counter-increment:st; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px 14px 12px;
+  position:relative; margin:0; font-size:14.5px}
+.steps li::before{content:counter(st); display:inline-grid; place-items:center; width:22px; height:22px; border-radius:50%;
+  background:var(--acc); color:#fff; font-size:12px; font-weight:700; margin-bottom:6px}
+.steps li b{display:block; font-size:15px}
+.steps code{font-size:.78em}
+.qlist{list-style:none; padding:0; margin:14px 0; counter-reset:q}
+.qlist > li{counter-increment:q; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px 16px 12px 56px;
+  position:relative; margin:10px 0}
+.qlist > li::before{content:"Q" counter(q); position:absolute; left:14px; top:12px; font-weight:800; color:var(--muted)}
+.qlist .qd{font-size:14.5px; color:var(--ink-2); margin-top:4px}
+.qlist .qs{margin-top:8px; display:flex; gap:8px; flex-wrap:wrap; align-items:center; font-size:14px}
+.reports{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr)); gap:16px; margin:22px 0}
+.feature{display:grid; grid-template-columns:auto minmax(0,1fr); gap:18px 22px; align-items:center; margin:26px 0 8px;
+  padding:18px 20px; background:var(--surface); border:2px solid var(--acc); border-radius:18px; text-decoration:none;
+  color:inherit; transition:transform .15s}
+.feature:hover{transform:translateY(-2px)}
+.feature .fthumb{display:grid; grid-template-columns:repeat(6,34px); gap:5px}
+.feature .fthumb svg{width:34px; height:34px; display:block; border-radius:2px; box-shadow:0 0 0 1px var(--line)}
+.feature .fe{font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--acc); font-weight:700}
+.feature h3{margin:4px 0 6px; font-size:22px}
+.feature p{margin:0; color:var(--ink-2); font-size:15.5px}
+.feature .go{display:inline-block; margin-top:10px; font-weight:650; color:var(--acc)}
+@media (max-width:640px){ .feature{grid-template-columns:1fr} }
+.rcard{display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line); border-radius:16px;
+  overflow:hidden; text-decoration:none; color:inherit; transition:border-color .15s, transform .15s}
+.rcard:hover{border-color:var(--acc); transform:translateY(-2px)}
+.rcard .thumb{background:var(--surface-2); padding:14px; display:flex; gap:8px; align-items:center; justify-content:center; min-height:140px}
+.rcard .rb{padding:14px 16px 16px}
+.rcard h3{margin:0 0 6px; font-size:19px}
+.rcard p{margin:0; font-size:15px; color:var(--ink-2)}
+.rcard .rm{font-size:13px; color:var(--muted); margin-top:10px}
+.toggle{display:inline-flex; border:1px solid var(--line-2); border-radius:999px; overflow:hidden; margin:0 0 10px}
+.toggle button{font:inherit; font-size:13.5px; border:0; background:var(--surface); color:var(--ink-2); padding:4px 14px; cursor:pointer}
+.toggle button.on{background:var(--acc); color:#fff}
+.hide{display:none !important}
+.tip{position:fixed; z-index:99; pointer-events:none; background:var(--ink); color:var(--bg); font:13px/1.35 var(--sans);
+  padding:5px 9px; border-radius:7px; max-width:320px; opacity:0; transition:opacity .08s}
+.twocol{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:16px; align-items:start}
+.foot{margin-top:70px; padding-top:16px; border-top:1px solid var(--line); font-size:14px; color:var(--muted)}
+.foot code{font-size:12.5px}
+@media (max-width:640px){
+  body{font-size:16.5px}
+  h2{font-size:23px; margin-top:48px}
+  .lede{font-size:18px}
+  .decisions{padding:16px 14px 12px}
+  .dlist > li{padding-left:44px}
+}
+@media print{ .topbar,.toc{display:none} .figbody{break-inside:avoid} }
+
+.dg .face{fill:#fff; stroke:var(--line-2); stroke-width:1.2}
+.dg .quiet{fill:var(--acc-weak); opacity:.55; stroke:none}
+.dg .extent{fill:none; stroke:var(--acc); stroke-width:.9; stroke-dasharray:4 3}
+.dg .dim{stroke:var(--violet); stroke-width:1}
+.dg .t-dim{fill:var(--violet); font-family:var(--mono)}
+.k-computed-from-the-code{background:var(--good-weak); color:var(--good)}
+.k-mock{background:var(--acc-weak); color:var(--acc)}
+.trio{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:14px; margin:22px 0; align-items:start}
+.trio figure.fig{margin:0}
+.pc{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:14px; margin:14px 0}
+.pc div{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:10px 14px; font-size:15px}
+.pc div b{display:block; margin-bottom:4px}
+.pc ul{margin:0; padding-left:1.2em}
+.req{counter-reset:rq; list-style:none; padding:0}
+.req li{counter-increment:rq; position:relative; padding-left:46px; margin:6px 0}
+.req li::before{content:"R" counter(rq); position:absolute; left:0; top:0; font-weight:800; color:var(--muted); font-family:var(--mono)}
+.badge.ok{color:var(--good); background:var(--good-weak); border:1px solid var(--good)}
+.badge.part{color:var(--warn); background:var(--warn-weak); border:1px solid var(--warn)}
+.badge.no{color:var(--bad); background:var(--bad-weak); border:1px solid var(--bad)}
+.badge.rec{color:#fff; background:var(--good); border:1px solid var(--good)}
+table.md td.num{font-family:var(--mono); font-size:13.5px; white-space:nowrap}
+.cands span{display:inline-block; font:12.5px/1.4 var(--mono); padding:1px 7px; margin:2px 3px 2px 0; border-radius:6px; background:var(--surface-2); border:1px solid var(--line)}
+.cands span.pick{border-color:var(--good); background:var(--good-weak)}
+
+.gal{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:14px 0 8px}
+@media (max-width:980px){.gal{grid-template-columns:1fr}}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:10px 10px 12px; min-width:0}
+.card h4{margin:0 0 8px; font-size:15px; display:flex; gap:8px; align-items:baseline; flex-wrap:wrap}
+.card h4 .k{font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); font-weight:650}
+.pair{display:grid; grid-template-columns:1fr 1fr; gap:6px}
+.pair figure{margin:0}
+.pair img{display:block; width:100%; aspect-ratio:1/1; object-fit:cover; object-position:top; border-radius:7px;
+  border:1px solid var(--line); background:var(--surface-2)}
+.pair figcaption{font-size:11.5px; color:var(--muted); margin:3px 2px 0; letter-spacing:.04em; text-transform:uppercase}
+.nums{font-size:13.5px; line-height:1.45; color:var(--ink-2); margin:8px 2px 0}
+.nums b{color:var(--ink)}
+.nums .m{color:var(--muted)}
+.match{font:650 11px/1.4 var(--sans); padding:1px 7px; border-radius:999px}
+.match.ok{color:var(--good); background:var(--good-weak); border:1px solid var(--good)}
+.match.no{color:var(--bad); background:var(--bad-weak); border:1px solid var(--bad)}
+.match.na{color:var(--warn); background:var(--warn-weak); border:1px solid var(--warn)}
+.duo{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin:16px 0}
+@media (max-width:760px){.duo{grid-template-columns:1fr}}
+.duo img{display:block; width:100%; height:auto; border-radius:10px; border:1px solid var(--line)}
+.duo figcaption{font-size:14px; color:var(--muted); margin:6px 2px 0}
+.sheet img{display:block; width:100%; height:auto; border-radius:10px; border:1px solid var(--line)}
+ol.steps li{margin:6px 0}
+</style></head>
+<body>
+<header class="topbar"><div class="in">
+<a class="brand" href="index.html"><svg class="" viewBox="0 0 7.2 7.2" role="img" aria-label="ArUco DICT_4X4_50 id 7"><title>ArUco DICT_4X4_50 id 7</title><g transform="translate(0 0) scale(1)" shape-rendering="crispEdges"><rect width="7.2" height="7.2" fill="#fff"/><g fill="#000"><rect x="0.6" y="0.6" width="6" height="1"/><rect x="0.6" y="1.6" width="1" height="1"/><rect x="3.6" y="1.6" width="3" height="1"/><rect x="0.6" y="2.6" width="2" height="1"/><rect x="3.6" y="2.6" width="3" height="1"/><rect x="0.6" y="3.6" width="1" height="1"/><rect x="5.6" y="3.6" width="1" height="1"/><rect x="0.6" y="4.6" width="3" height="1"/><rect x="4.6" y="4.6" width="2" height="1"/><rect x="0.6" y="5.6" width="6" height="1"/></g></g></svg><span>ArUco in Fusion</span></a>
+<nav aria-label="Reports"><a href="index.html">Overview</a><a href="how-it-works.html">How it works</a><a href="prior-art.html">Prior art</a><a href="fusion-architecture.html">Fusion architecture</a><a href="charuco-studio-proposals.html">Studio proposals</a><a href="autosize-proposals.html">Auto-sizing</a><a href="autosize-faces.html" class="on" aria-current="page">Auto-size faces</a></nav><span class="sp"></span>
+<button id="themebtn" type="button" aria-label="Switch colour theme">Theme: auto</button>
+</div></header>
+<div class="wrap"><div class="layout">
+<nav class="toc" aria-label="Contents"><details><summary>Contents</summary><ol><li class="l2"><a href="#disc">His disc</a></li><li class="l2"><a href="#how">How the default is found</a></li><li class="l2"><a href="#gallery">The gallery</a></li><li class="l2"><a href="#typed">Typed sizes</a></li><li class="l2"><a href="#check">Checked against a brute force</a></li><li class="l2"><a href="#fusion">In Fusion</a></li><li class="l2"><a href="#dialog">In the dialog</a></li><li class="l2"><a href="#changed">What changed</a></li></ol></details></nav>
+<main class="content">
+<div class="hero"><div class="eyebrow">Verification · 2026-10-08 · branch <code>claude/aruco-fusion-plugin-0e9bcb</code></div><h1>Auto size on a clicked face: the largest clear rectangle</h1><p class="lede">Click a face and the default size now comes from the largest rectangle that is clear of its outline, holes and notches, not from the face's bounding box. Ten faces, each sized offline and by the real add-in in Fusion, all checked against a brute force.</p><p class="meta">Code: <code>CADExporter/bam_cad_core/aruco_autosize.py</code> (<code>fit_on_loops</code>, <code>largest_clear_rect</code>, <code>face_default</code>). Faces: <code>ArucoMarkers/aruco_autosize_gallery.py</code>. Tests: <code>tests/test_aruco_autosize.py</code>.</p></div>
+<aside class="callout co-good"><div class="co-title">In short</div><p><b>His Ø53 disc now defaults to a 28.0 mm marker, a 37.3 mm sticker</b> (marker + a 1-module white border) in its 37.4 mm largest clear square. Before, the 70 % rule ran on the bounding box (37.0 mm), was shrunk to 27.5 mm by a coarse search, and said “shrunk for the face shape: 37.0 mm does not fit”.</p><p><b>One rule on every face:</b> a single marker's sticker fills the largest clear square (never exactly flush); a grid or ChArUco board follows the doc's 70 % rule inside the largest clear rectangle. In Fusion, <b>30 of 30</b> tags built through the face-click path match the offline numbers exactly.</p></aside>
+<h2 id="disc">His disc</h2><blockquote class="quote"><p>“When I click the face I want it to also detect the largest rectangle and then use that to intelligently set the default, but then I can of course override it afterwards.”</p><p>— Zach, 2026-10-08, on the Ø53 mm disc with four Ø2.85 mm holes</p></blockquote><div class="duo"><figure><img src="../media/aruco/autosize/offline_disc4_single.png" alt="Offline: the disc with its largest clear square dashed and the 28 mm marker"><figcaption>Offline (<code>tools/render_autosize_gallery.py</code>): blue dashes are the largest clear square, orange the sticker.</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_disc4_single.png" alt="Fusion: the same disc with the ArUco Extrude built by the add-in"><figcaption>Fusion: the add-in's ArUco Extrude on the same face (black only; the disc is the white), top view, joint glyphs hidden.</figcaption></figure></div><div class="tablewrap"><table class="md"><tr><th></th><th>Before</th><th>Now</th></tr><tr><td>Sized from</td><td>the bounding box, 53 × 53 mm (70 % → 37.0)</td><td>the largest clear square, 37.41 mm (the rim binds at the corners; the holes on the axes do not)</td></tr><tr><td>Single, auto</td><td class="num">27.5 mm</td><td class="num">28.0 mm marker · 37.33 mm sticker</td></tr><tr><td>Note</td><td>“shrunk for the face shape: 37.0 mm does not fit, using 27.5 mm”</td><td>“not a rectangle: the sticker fills the face&#x27;s largest clear square, 37.4 mm (holes and notches avoided)”</td></tr><tr><td>Typed 37</td><td>clamped</td><td>clamped to 28.0, said so: “clamped: 37.0 mm does not fit, using 28.0 mm”</td></tr><tr><td>Grid / ChArUco, auto</td><td>from the box</td><td class="num">2 × 2 @ 12.0 mm · 3 × 3 @ 12.0 / 9.0 mm</td></tr></table></div><aside class="callout co-mini"><p>Why 28 and not 37: the square he sees is the <b>sticker</b>, and OpenCV needs the black square plus at least one module of white around it. 37.4 × 6/8 = 28.05, so 28.0 is the largest 0.5 mm step. A 37 mm <i>black</i> square does fit inside the disc (its diagonal is 52.3 mm), but its white border would fall off the rim at the corners. Size still means the black square; the dialog now shows both numbers.</p></aside><h2 id="how">How the default is found</h2><ol class="steps"><li><b>The face's loops</b>, outline and holes, stroked the way Fusion strokes an edge (0.05 mm chords).</li><li><b>The largest clear rectangle of a given aspect</b> is found exactly, not sampled. A w × h box centred at p is clear iff no boundary segment comes nearer than h/2 in the norm max(|dx|/a, |dy|), so the best box is twice the deepest point in that norm. A branch and bound over square cells finds that point with a proven bound (0.02 mm): a cell can do no better than its centre's distance plus its half-size, so most cells are dropped unseen (Mapbox's polylabel method, in the box norm).</li><li><b>The largest of all</b>: 33 aspects from 1:16 to 16:1, the best refined by golden section, then each side pushed out by bisection to a maximal clear rectangle (an L's leg comes out exactly 20 × 60).</li><li><b>Single</b>: the largest 0.5 mm marker whose sticker fits the largest clear square, never exactly flush (5 µm). A flush white tile makes Fusion merge its walls with the body's; the live test caught this on a 40 mm plate. The step above is tried and refused exactly: a “does it fit?” search dives toward the best centres, so a 50 mm tile in a 50 mm gap is found (50 nm contact tolerance).</li><li><b>Grid / ChArUco</b>: the doc's size-first rule (<code>default_layout</code>, 70 % of the short side) on that rectangle, the board centred in it. If the largest rectangle holds no valid board, the next largest is used.</li><li><b>A plain rectangle</b> is its own largest clear rectangle: the same rules on the box (<code>face_default</code>), and the same for a rectangular sketch area.</li><li><b>A typed size</b> is kept when any placement holds it, with as many markers as fit (count first). If none fits, it is clamped to the largest step that does, with a note.</li></ol><p>Every fit, auto or typed, takes 29 ms on average and 248 ms at worst (51 fits, pure Python, the same code Fusion runs). His disc: 24 ms single, 136 / 135 ms grid / ChArUco.</p><h2 id="gallery">The gallery</h2><p>Each card: offline on the left (face, holes, <span style="color:#2459b8">largest clear rectangle dashed</span>, <span style="color:#eb6834">sticker</span>, real black cells), Fusion on the right (the add-in's ArUco Extrude, black only, on a 3 mm body of that face). The badge compares the two labels.</p><figure class="sheet"><a href="../media/aruco/autosize/gallery_offline.png"><img src="../media/aruco/autosize/gallery_offline.png" alt="All ten faces, three layouts each, offline" loading="lazy"></a><figcaption>The whole offline sheet (click for full size).</figcaption></figure><h3 id="f-disc4">Zach&#x27;s disc: Ø53, four Ø2.85 holes</h3><div class="gal"><div class="card"><h4><span class="k">Single</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_disc4_single.png" alt="offline disc4 single" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_disc4_single.png" alt="Fusion disc4 single" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>single 28.0 mm</b><br>sticker 37.33 mm<br><span class="m">clear 37.41 × 37.41 mm · fill 36 % · 24 ms</span></div></div><div class="card"><h4><span class="k">Grid</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_disc4_grid.png" alt="offline disc4 grid" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_disc4_grid.png" alt="Fusion disc4 grid" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>2 × 2 @ 12.0 mm</b><br>sticker 30.4 mm<br><span class="m">clear 37.41 × 37.41 mm · fill 32 % · 136 ms</span></div></div><div class="card"><h4><span class="k">ChArUco</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_disc4_charuco.png" alt="offline disc4 charuco" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_disc4_charuco.png" alt="Fusion disc4 charuco" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>3 × 3 @ 12.0 / 9.0 mm</b><br>board 36.0 mm (no border)<br><span class="m">clear 37.41 × 37.41 mm · fill 60 % · 135 ms</span></div></div></div><h3 id="f-dshape">D-shape: Ø50 disc, flat 11 mm off centre</h3><div class="gal"><div class="card"><h4><span class="k">Single</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_dshape_single.png" alt="offline dshape single" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_dshape_single.png" alt="Fusion dshape single" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>single 23.0 mm</b><br>sticker 30.67 mm<br><span class="m">clear 30.7 × 30.7 mm · fill 35 % · 8 ms</span></div></div><div class="card"><h4><span class="k">Grid</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_dshape_grid.png" alt="offline dshape grid" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_dshape_grid.png" alt="Fusion dshape grid" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>3 × 2 @ 8.5 mm</b><br>sticker 31.73 × 21.53 mm<br><span class="m">clear 39.61 × 26.24 mm · fill 36 % · 51 ms</span></div></div><div class="card"><h4><span class="k">ChArUco</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_dshape_charuco.png" alt="offline dshape charuco" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_dshape_charuco.png" alt="Fusion dshape charuco" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>3 × 2 @ 10.0 / 7.5 mm</b><br>board 30.0 × 20.0 mm (no border)<br><span class="m">clear 39.61 × 26.24 mm · fill 40 % · 54 ms</span></div></div></div><h3 id="f-lshape">L-shape: 60 × 60, 20 mm legs</h3><div class="gal"><div class="card"><h4><span class="k">Single</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_lshape_single.png" alt="offline lshape single" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_lshape_single.png" alt="Fusion lshape single" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>single 14.5 mm</b><br>sticker 19.33 mm<br><span class="m">clear 19.99 × 19.99 mm · fill 11 % · 47 ms</span></div></div><div class="card"><h4><span class="k">Grid</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_lshape_grid.png" alt="offline lshape grid" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_lshape_grid.png" alt="Fusion lshape grid" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>1 × 3 @ 14.0 mm</b><br>sticker 18.67 × 52.27 mm<br><span class="m">clear 20.0 × 60.0 mm · fill 33 % · 18 ms</span></div></div><div class="card"><h4><span class="k">ChArUco</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_lshape_charuco.png" alt="offline lshape charuco" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_lshape_charuco.png" alt="Fusion lshape charuco" loading="lazy"><figcaption>Fusion (timeline group)</figcaption></figure></div><div class="nums"><b>2 × 6 @ 10.0 / 7.5 mm</b><br>board 20.0 × 60.0 mm (no border)<br><span class="m">clear 20.0 × 60.0 mm · fill 60 % · 21 ms</span></div></div></div><h3 id="f-plate_hole">Plate 80 × 50, Ø18 hole in the middle</h3><div class="gal"><div class="card"><h4><span class="k">Single</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_plate_hole_single.png" alt="offline plate_hole single" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_plate_hole_single.png" alt="Fusion plate_hole single" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>single 23.0 mm</b><br>sticker 30.67 mm<br><span class="m">clear 31 × 31 mm · fill 14 % · 34 ms</span></div></div><div class="card"><h4><span class="k">Grid</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_plate_hole_grid.png" alt="offline plate_hole grid" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_plate_hole_grid.png" alt="Fusion plate_hole grid" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>2 × 4 @ 10.0 mm</b><br>sticker 25.33 × 49.33 mm<br><span class="m">clear 31.0 × 50.0 mm · fill 27 % · 43 ms</span></div></div><div class="card"><h4><span class="k">ChArUco</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_plate_hole_charuco.png" alt="offline plate_hole charuco" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_plate_hole_charuco.png" alt="Fusion plate_hole charuco" loading="lazy"><figcaption>Fusion (timeline group)</figcaption></figure></div><div class="nums"><b>3 × 5 @ 10.0 / 7.5 mm</b><br>board 30.0 × 50.0 mm (no border)<br><span class="m">clear 31.0 × 50.0 mm · fill 40 % · 48 ms</span></div></div></div><h3 id="f-ring">Ring: Ø60 outside, Ø30 inside</h3><div class="gal"><div class="card"><h4><span class="k">Single</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_ring_single.png" alt="offline ring single" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_ring_single.png" alt="Fusion ring single" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>single 10.5 mm</b><br>sticker 14.0 mm<br><span class="m">clear 14.14 × 14.14 mm · fill 5 % · 38 ms</span></div></div><div class="card"><h4><span class="k">Grid</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_ring_grid.png" alt="offline ring grid" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_ring_grid.png" alt="Fusion ring grid" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>1 × 3 @ 7.5 mm</b><br>sticker 10.0 × 28.0 mm<br><span class="m">clear 10.42 × 31.85 mm · fill 9 % · 154 ms</span></div></div><div class="card"><h4><span class="k">ChArUco</span><span class="match na">nothing printable: refused in both</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_ring_charuco.png" alt="offline ring charuco" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_ring_charuco.png" alt="Fusion ring charuco" loading="lazy"><figcaption>Fusion (timeline group)</figcaption></figure></div><div class="nums"><b>2 × 4 @ 6.0 / 4.5 mm</b> <span class="match no">not printable</span><br>board 12.0 × 24.0 mm (no border)<br><span class="m">clear 12.35 × 24.71 mm · fill 14 % · 248 ms</span></div></div></div><h3 id="f-hexagon">Hexagon: 60 across corners</h3><div class="gal"><div class="card"><h4><span class="k">Single</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_hexagon_single.png" alt="offline hexagon single" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_hexagon_single.png" alt="Fusion hexagon single" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>single 28.5 mm</b><br>sticker 38.0 mm<br><span class="m">clear 38.03 × 38.03 mm · fill 35 % · 2 ms</span></div></div><div class="card"><h4><span class="k">Grid</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_hexagon_grid.png" alt="offline hexagon grid" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_hexagon_grid.png" alt="Fusion hexagon grid" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>2 × 4 @ 10.0 mm</b><br>sticker 25.33 × 49.33 mm<br><span class="m">clear 30.76 × 50.64 mm · fill 43 % · 12 ms</span></div></div><div class="card"><h4><span class="k">ChArUco</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_hexagon_charuco.png" alt="offline hexagon charuco" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_hexagon_charuco.png" alt="Fusion hexagon charuco" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>3 × 5 @ 10.0 / 7.5 mm</b><br>board 30.0 × 50.0 mm (no border)<br><span class="m">clear 30.76 × 50.64 mm · fill 64 % · 11 ms</span></div></div></div><h3 id="f-stadium">Stadium slot: 74 × 24</h3><div class="gal"><div class="card"><h4><span class="k">Single</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_stadium_single.png" alt="offline stadium single" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_stadium_single.png" alt="Fusion stadium single" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>single 17.5 mm</b><br>sticker 23.33 mm<br><span class="m">clear 24.0 × 24.0 mm · fill 19 % · 8 ms</span></div></div><div class="card"><h4><span class="k">Grid</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_stadium_grid.png" alt="offline stadium grid" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_stadium_grid.png" alt="Fusion stadium grid" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>6 × 2 @ 7.5 mm</b><br>sticker 55.0 × 19.0 mm<br><span class="m">clear 58.19 × 22.56 mm · fill 52 % · 32 ms</span></div></div><div class="card"><h4><span class="k">ChArUco</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_stadium_charuco.png" alt="offline stadium charuco" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_stadium_charuco.png" alt="Fusion stadium charuco" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>5 × 2 @ 10.0 / 7.5 mm</b><br>board 50.0 × 20.0 mm (no border)<br><span class="m">clear 58.19 × 22.56 mm · fill 61 % · 35 ms</span></div></div></div><h3 id="f-notch">Plate 70 × 45 with a 20 × 18 edge notch</h3><div class="gal"><div class="card"><h4><span class="k">Single</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_notch_single.png" alt="offline notch single" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_notch_single.png" alt="Fusion notch single" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>single 20.0 mm</b><br>sticker 26.67 mm<br><span class="m">clear 26.98 × 26.98 mm · fill 14 % · 13 ms</span></div></div><div class="card"><h4><span class="k">Grid</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_notch_grid.png" alt="offline notch grid" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_notch_grid.png" alt="Fusion notch grid" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>6 × 2 @ 8.5 mm</b><br>sticker 62.33 × 21.53 mm<br><span class="m">clear 70.0 × 27.0 mm · fill 40 % · 19 ms</span></div></div><div class="card"><h4><span class="k">ChArUco</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_notch_charuco.png" alt="offline notch charuco" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_notch_charuco.png" alt="Fusion notch charuco" loading="lazy"><figcaption>Fusion (timeline group)</figcaption></figure></div><div class="nums"><b>7 × 2 @ 10.0 / 7.5 mm</b><br>board 70.0 × 20.0 mm (no border)<br><span class="m">clear 70.0 × 27.0 mm · fill 50 % · 21 ms</span></div></div></div><h3 id="f-strip">Long thin strip: 150 × 14</h3><div class="gal"><div class="card"><h4><span class="k">Single</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_strip_single.png" alt="offline strip single" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_strip_single.png" alt="Fusion strip single" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>single 10.0 mm</b><br>sticker 13.33 mm<br><span class="m">clear 150.0 × 14.0 mm · fill 5 % · 0 ms</span></div></div><div class="card"><h4><span class="k">Grid</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_strip_grid.png" alt="offline strip grid" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_strip_grid.png" alt="Fusion strip grid" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>12 × 1 @ 10.0 mm</b><br>sticker 145.33 × 13.33 mm<br><span class="m">clear 150.0 × 14.0 mm · fill 68 % · 0 ms</span></div></div><div class="card"><h4><span class="k">ChArUco</span><span class="match na">nothing printable: refused in both</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_strip_charuco.png" alt="offline strip charuco" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_strip_charuco.png" alt="Fusion strip charuco" loading="lazy"><figcaption>Fusion (timeline group)</figcaption></figure></div><div class="nums"><b>21 × 2 @ 7.0 / 5.0 mm</b> <span class="match no">not printable</span><br>board 147.0 × 14.0 mm (no border)<br><span class="m">clear 150.0 × 14.0 mm · fill 98 % · 0 ms</span></div></div></div><h3 id="f-triangle">Equilateral triangle: 70 mm sides</h3><div class="gal"><div class="card"><h4><span class="k">Single</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_triangle_single.png" alt="offline triangle single" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_triangle_single.png" alt="Fusion triangle single" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>single 24.0 mm</b><br>sticker 32.0 mm<br><span class="m">clear 32.47 × 32.47 mm · fill 27 % · 2 ms</span></div></div><div class="card"><h4><span class="k">Grid</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_triangle_grid.png" alt="offline triangle grid" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_triangle_grid.png" alt="Fusion triangle grid" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>2 × 2 @ 9.5 mm</b><br>sticker 24.07 mm<br><span class="m">clear 34.86 × 30.43 mm · fill 21 % · 15 ms</span></div></div><div class="card"><h4><span class="k">ChArUco</span><span class="match ok">Fusion: same</span></h4><div class="pair"><figure><img src="../media/aruco/autosize/offline_triangle_charuco.png" alt="offline triangle charuco" loading="lazy"><figcaption>offline</figcaption></figure><figure><img src="../media/aruco/autosize/fusion_triangle_charuco.png" alt="Fusion triangle charuco" loading="lazy"><figcaption>Fusion</figcaption></figure></div><div class="nums"><b>3 × 3 @ 10.0 / 7.5 mm</b><br>board 30.0 mm (no border)<br><span class="m">clear 34.86 × 30.43 mm · fill 42 % · 16 ms</span></div></div></div><h2 id="typed">Typed sizes</h2><p>A size he types is kept when it fits anywhere, with as many markers as fit; when it does not, it is clamped to the largest step that does, with a note. 30.0 mm single and 8.0 mm grid on every face, plus the 37.0 he typed on his disc.</p><div class="tablewrap"><table class="md"><tr><th>Face</th><th>Typed</th><th>Result</th><th>Note</th></tr><tr><td>disc4</td><td class="num">single 37.0 mm</td><td class="num">single 28.0 mm</td><td>clamped: 37.0 mm does not fit, using 28.0 mm</td></tr><tr><td>disc4</td><td class="num">single 30.0 mm</td><td class="num">single 28.0 mm</td><td>clamped: 30.0 mm does not fit, using 28.0 mm</td></tr><tr><td>disc4</td><td class="num">grid 8.0 mm</td><td class="num">4 × 3 @ 8.0 mm</td><td>kept</td></tr><tr><td>dshape</td><td class="num">single 30.0 mm</td><td class="num">single 23.0 mm</td><td>clamped: 30.0 mm does not fit, using 23.0 mm</td></tr><tr><td>dshape</td><td class="num">grid 8.0 mm</td><td class="num">3 × 3 @ 8.0 mm</td><td>kept</td></tr><tr><td>lshape</td><td class="num">single 30.0 mm</td><td class="num">single 15.0 mm</td><td>clamped: 30.0 mm does not fit, using 15.0 mm</td></tr><tr><td>lshape</td><td class="num">grid 8.0 mm</td><td class="num">6 × 1 @ 8.0 mm</td><td>kept</td></tr><tr><td>plate_hole</td><td class="num">single 30.0 mm</td><td class="num">single 23.0 mm</td><td>clamped: 30.0 mm does not fit, using 23.0 mm</td></tr><tr><td>plate_hole</td><td class="num">grid 8.0 mm</td><td class="num">3 × 5 @ 8.0 mm</td><td>kept</td></tr><tr><td>ring</td><td class="num">single 30.0 mm</td><td class="num">single 10.5 mm</td><td>clamped: 30.0 mm does not fit, using 10.5 mm</td></tr><tr><td>ring</td><td class="num">grid 8.0 mm</td><td class="num">3 × 1 @ 8.0 mm</td><td>kept</td></tr><tr><td>hexagon</td><td class="num">single 30.0 mm</td><td class="num">single 28.5 mm</td><td>clamped: 30.0 mm does not fit, using 28.5 mm</td></tr><tr><td>hexagon</td><td class="num">grid 8.0 mm</td><td class="num">3 × 5 @ 8.0 mm</td><td>kept</td></tr><tr><td>stadium</td><td class="num">single 30.0 mm</td><td class="num">single 18.0 mm</td><td>clamped: 30.0 mm does not fit, using 18.0 mm</td></tr><tr><td>stadium</td><td class="num">grid 8.0 mm</td><td class="num">6 × 2 @ 8.0 mm</td><td>kept</td></tr><tr><td>notch</td><td class="num">single 30.0 mm</td><td class="num">single 20.0 mm</td><td>clamped: 30.0 mm does not fit, using 20.0 mm</td></tr><tr><td>notch</td><td class="num">grid 8.0 mm</td><td class="num">7 × 2 @ 8.0 mm</td><td>kept</td></tr><tr><td>strip</td><td class="num">single 30.0 mm</td><td class="num">single 10.5 mm</td><td>clamped: 30.0 mm does not fit, using 10.5 mm</td></tr><tr><td>strip</td><td class="num">grid 8.0 mm</td><td class="num">15 × 1 @ 8.0 mm</td><td>kept</td></tr><tr><td>triangle</td><td class="num">single 30.0 mm</td><td class="num">single 24.0 mm</td><td>clamped: 30.0 mm does not fit, using 24.0 mm</td></tr><tr><td>triangle</td><td class="num">grid 8.0 mm</td><td class="num">3 × 3 @ 8.0 mm</td><td>kept</td></tr></table></div><h2 id="check">Checked against a brute force</h2><p>The reference shares no code with the solver: each face is rasterised at 0.1 mm (pixel centres, even-odd over every loop), and every window of every size is tested with a summed-area table. It can be off by about a pixel, so it gives a band: “surely fits” (a window one pixel bigger all round is inside) to “may fit” (one pixel smaller). The test suite asserts that every auto and typed result lies in the band, which is within one 0.5 mm step. It also asserts that every tile is inside its face and clear of the holes (an independent dense-sample check), that the largest clear rectangle matches the raster's within 3 %, and that a face turned by 90°, 180° or 270° gets the same answer.</p><div class="tablewrap"><table class="md"><tr><th>Face</th><th>Single: ours</th><th>Brute force</th><th>Grid: clear rect (ours / raster)</th><th>ChArUco: clear rect (ours / raster)</th></tr><tr><td>disc4</td><td class="num">28.0</td><td class="num">27.5–28.0</td><td class="num">37.41 × 37.41 / 37.4 × 37.4</td><td class="num">37.41 × 37.41 / 37.4 × 37.4</td></tr><tr><td>dshape</td><td class="num">23.0</td><td class="num">22.5–23.0</td><td class="num">39.61 × 26.24 / 39.7 × 26.3</td><td class="num">39.61 × 26.24 / 39.7 × 26.3</td></tr><tr><td>lshape</td><td class="num">14.5</td><td class="num">14.5–15.0</td><td class="num">20.0 × 60.0 / 20.0 × 60.0</td><td class="num">20.0 × 60.0 / 20.0 × 60.0</td></tr><tr><td>plate_hole</td><td class="num">23.0</td><td class="num">23.0</td><td class="num">31.0 × 50.0 / 31.0 × 50.0</td><td class="num">31.0 × 50.0 / 31.0 × 50.0</td></tr><tr><td>ring</td><td class="num">10.5</td><td class="num">10.5</td><td class="num">10.42 × 31.85 / 10.4 × 31.9</td><td class="num">12.35 × 24.71 / 12.3 × 24.7</td></tr><tr><td>hexagon</td><td class="num">28.5</td><td class="num">28.0–28.5</td><td class="num">30.76 × 50.64 / 30.8 × 50.7</td><td class="num">30.76 × 50.64 / 30.8 × 50.7</td></tr><tr><td>stadium</td><td class="num">17.5</td><td class="num">17.5–18.0</td><td class="num">58.19 × 22.56 / 58.3 × 22.6</td><td class="num">58.19 × 22.56 / 58.3 × 22.6</td></tr><tr><td>notch</td><td class="num">20.0</td><td class="num">20.0</td><td class="num">70.0 × 27.0 / 70.0 × 27.0</td><td class="num">70.0 × 27.0 / 70.0 × 27.0</td></tr><tr><td>strip</td><td class="num">10.0</td><td class="num">10.0–10.5</td><td class="num">150.0 × 14.0 / 150.0 × 14.0</td><td class="num">150.0 × 14.0 / 150.0 × 14.0</td></tr><tr><td>triangle</td><td class="num">24.0</td><td class="num">24.0–24.5</td><td class="num">34.86 × 30.43 / 34.8 × 30.4</td><td class="num">34.86 × 30.43 / 34.8 × 30.4</td></tr></table></div><p class="meta">Rectangles (the strip) skip the search: the face is its own clear rectangle. Where the band is one step wide (a sticker that fits within a pixel), the exact answer is the solver's: its step above is refused by an exact containment test.</p><h2 id="fusion">In Fusion</h2><p>The bridge action <code>autosize_gallery</code> builds every face three times in a new document of its own, extrudes it 3 mm, makes an ArUco Extrude on the top face by the same path a click takes (<code>aruco_feature.create</code> with auto size, inside <code>in_command</code>), captures an orthographic top view with the joint, Joint Origin, sketch and origin folders hidden, then closes the document and puts the user's back.</p><ul><li><b>30 of 30</b> results equal the offline ones, counting the two faces where nothing printable fits a ChArUco board (the ring, the 14 mm strip): offline says ok = False, and Fusion refuses with the same note.</li><li><b>25</b> are live ArUco Extrude features. The others are ChArUco boards as wide as the face (the L's leg, the plate beside its hole, the notched plate): their inlay splits the top face, so the live feature cannot hold on to it and the tag is made as a timeline group. This was already true on rectangles (a 6 × 2 board on a 20 mm strip), where it used to fail outright. <code>create()</code> now reads the face's token before the cut, so the tag is still made.</li><li>The end-to-end <code>live_test</code> (ten tags across faces, sketches, a child component, parameter, upstream and structural edits, colours, Joint Origins) passes after these changes: 39 of 39 steps, Joint Origin verdict PASS. Its colour checks are what caught the flush sticker.</li></ul><h2 id="dialog">In the dialog</h2><ul><li><b>Info line</b>: “marker 28.0 mm · sticker 37.3 mm (white border 1 module = 4.67 mm)”. A board says “marker … · sticker W × H mm”; ChArUco says “marker … · checker … · board W × H mm (no outer border)”.</li><li><b>Size tooltip</b>: Size is the black square (OpenCV's marker length); the white border, the quiet zone in Advanced, comes on top: the sticker is Size + 2 modules. Size keeps its name and its meaning.</li><li><b>Auto size tooltip</b>: from the face's largest clear rectangle.</li><li><b>Reset</b> in Advanced: a short label (“Defaults”) and the button's own text (“Reset”), not the same words twice. Not yet seen in his Fusion.</li><li>The Black height arrow limit is left to the height rework that follows this.</li></ul><h2 id="changed">What changed</h2><ul><li><b>Non-rectangular faces</b>: the default comes from the largest clear rectangle instead of the bounding box; no “shrunk …” note for an auto default.</li><li><b>Single on any face or sketch area, rectangles too</b>: the sticker fills the clear square, so a 40 × 40 face gives 29.5 (sticker 39.3), not the doc's 28.0 (70 %). Boards keep the doc's rule; <code>default_layout</code> itself is unchanged, and so is its doc table.</li><li><b>Exact search</b>: the cell-sampled <code>largest_rect</code> (≈ 0.44 mm cells) is replaced, inside the fitter, by the branch and bound. A typed 8 mm grid on the L now gets 6 along the 60 mm leg; the sampling found 5.</li></ul><div class="foot">Generated 2026-10-08 by <code>docs/build_aruco_autosize_faces_report.py</code> from <code>reports/media/aruco/autosize/*.json</code>. Offline panels: <code>tools/render_autosize_gallery.py</code>. Fusion: bridge action <code>autosize_gallery</code> (<code>ArucoMarkers/aruco_autosize_gallery.py</code>).</div>
+</main></div></div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themebtn');
+  var modes=['auto','light','dark'], cur='auto';
+  try{ cur=localStorage.getItem('aruco-theme')||'auto'; }catch(e){}
+  function apply(m){ cur=m; if(m==='auto') root.removeAttribute('data-theme'); else root.setAttribute('data-theme',m);
+    if(btn) btn.textContent='Theme: '+m; try{ localStorage.setItem('aruco-theme',m);}catch(e){} }
+  apply(cur);
+  if(btn) btn.addEventListener('click',function(){ apply(modes[(modes.indexOf(cur)+1)%3]); });
+  // TOC: open on wide screens, scrollspy
+  var det=document.querySelector('.toc details'), mq=window.matchMedia('(min-width:1180px)');
+  function syncToc(){ if(det && mq.matches) det.open=true; }
+  syncToc(); if(mq.addEventListener) mq.addEventListener('change',syncToc);
+  var links={}; document.querySelectorAll('.toc a[href^="#"]').forEach(function(a){ links[a.getAttribute('href').slice(1)]=a; });
+  var heads=[].slice.call(document.querySelectorAll('main h2[id], main h3[id]'));
+  if('IntersectionObserver' in window && heads.length){
+    var vis={};
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ vis[e.target.id]=e.isIntersecting; });
+      var top=null; for(var i=0;i<heads.length;i++){ if(vis[heads[i].id]){ top=heads[i].id; break; } }
+      if(!top){ var y=window.scrollY+90; for(var j=0;j<heads.length;j++){ if(heads[j].offsetTop<=y) top=heads[j].id; } }
+      if(top){ for(var k in links) links[k].classList.toggle('on',k===top); }
+    },{rootMargin:'-60px 0px -60% 0px'});
+    heads.forEach(function(h){ io.observe(h); });
+  }
+  // variant toggles
+  document.querySelectorAll('[data-toggle]').forEach(function(group){
+    var name=group.getAttribute('data-toggle');
+    group.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click',function(){
+        group.querySelectorAll('button').forEach(function(x){ x.classList.toggle('on',x===b); });
+        document.querySelectorAll('[data-variant-of="'+name+'"]').forEach(function(el){
+          el.classList.toggle('hide', el.getAttribute('data-variant')!==b.getAttribute('data-v')); });
+      });
+    });
+  });
+  // hover tips for anything with data-tip
+  var tip=document.createElement('div'); tip.className='tip'; document.body.appendChild(tip);
+  document.addEventListener('mousemove',function(e){
+    var t=e.target.closest ? e.target.closest('[data-tip]') : null;
+    if(!t){ tip.style.opacity=0; return; }
+    tip.textContent=t.getAttribute('data-tip'); tip.style.opacity=1;
+    var x=e.clientX+14, y=e.clientY+14, w=tip.offsetWidth, h=tip.offsetHeight;
+    if(x+w>window.innerWidth-8) x=e.clientX-w-10; if(y+h>window.innerHeight-8) y=e.clientY-h-10;
+    tip.style.left=x+'px'; tip.style.top=y+'px';
+  });
+})();
+</script>
+</body></html>

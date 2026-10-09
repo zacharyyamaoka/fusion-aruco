@@ -1,0 +1,2122 @@
+{
+ "built": "2026-10-08 12:22",
+ "faces": [
+  {
+   "key": "disc4",
+   "title": "Zach's disc: Ø53, four Ø2.85 holes",
+   "bbox_mm": [
+    -26.5,
+    -26.5,
+    26.5,
+    26.5
+   ],
+   "area_mm2": 2176.45,
+   "auto": {
+    "single": {
+     "label": "single 28.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: the sticker fills the face's largest clear square, 37.4 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 28.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 4.6667,
+     "tile_mm": [
+      37.3333,
+      37.3333
+     ],
+     "margins_mm": [
+      4.7417,
+      4.7417
+     ],
+     "fill": 0.3602,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": 0.0,
+      "w": 37.3333,
+      "h": 37.3333,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 0.0,
+      "cy": 0.0,
+      "w": 37.4083,
+      "h": 37.4083
+     },
+     "fit_ms": 24.5,
+     "module_mm": 4.6667,
+     "png": "offline_disc4_single.png"
+    },
+    "grid": {
+     "label": "2 × 2 @ 12.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 37.4 × 37.4 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 12.0,
+     "square_mm": 0.0,
+     "cols": 2,
+     "rows": 2,
+     "count": 4,
+     "separation_mm": 2.4,
+     "quiet_mm": 2.0,
+     "tile_mm": [
+      30.4,
+      30.4
+     ],
+     "margins_mm": [
+      8.4946,
+      8.4946
+     ],
+     "fill": 0.3202,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": 0.0,
+      "w": 30.4,
+      "h": 30.4,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 0.0,
+      "cy": 0.0,
+      "w": 37.408,
+      "h": 37.408
+     },
+     "fit_ms": 135.9,
+     "module_mm": 2.0,
+     "png": "offline_disc4_grid.png"
+    },
+    "charuco": {
+     "label": "3 × 3 @ 12.0 / 9.0 mm",
+     "ok": true,
+     "kind": "charuco",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 37.4 × 37.4 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 9.0,
+     "square_mm": 12.0,
+     "cols": 3,
+     "rows": 3,
+     "count": 4,
+     "separation_mm": 0.0,
+     "quiet_mm": 0.0,
+     "tile_mm": [
+      36.0,
+      36.0
+     ],
+     "margins_mm": [
+      1.4084,
+      1.4084
+     ],
+     "fill": 0.5955,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": 0.0,
+      "w": 36.0,
+      "h": 36.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 0.0,
+      "cy": 0.0,
+      "w": 37.408,
+      "h": 37.408
+     },
+     "fit_ms": 135.4,
+     "module_mm": 1.5,
+     "png": "offline_disc4_charuco.png"
+    }
+   },
+   "typed": [
+    {
+     "label": "single 28.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)",
+      "clamped: 37.0 mm does not fit, using 28.0 mm"
+     ],
+     "marker_mm": 28.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 4.6667,
+     "tile_mm": [
+      37.3333,
+      37.3333
+     ],
+     "margins_mm": [
+      4.7417,
+      4.7417
+     ],
+     "fill": 0.3602,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": 0.0,
+      "w": 37.3333,
+      "h": 37.3333,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 14.3,
+     "module_mm": 4.6667,
+     "typed_mm": 37.0,
+     "kind_typed": "single",
+     "png": "offline_disc4_typed_single37.png"
+    },
+    {
+     "label": "single 28.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)",
+      "clamped: 30.0 mm does not fit, using 28.0 mm"
+     ],
+     "marker_mm": 28.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 4.6667,
+     "tile_mm": [
+      37.3333,
+      37.3333
+     ],
+     "margins_mm": [
+      4.7417,
+      4.7417
+     ],
+     "fill": 0.3602,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": 0.0,
+      "w": 37.3333,
+      "h": 37.3333,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 14.4,
+     "module_mm": 4.6667,
+     "typed_mm": 30.0,
+     "kind_typed": "single",
+     "png": "offline_disc4_typed_single30.png"
+    },
+    {
+     "label": "4 × 3 @ 8.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)"
+     ],
+     "marker_mm": 8.0,
+     "square_mm": 0.0,
+     "cols": 4,
+     "rows": 3,
+     "count": 12,
+     "separation_mm": 1.6,
+     "quiet_mm": 1.3333,
+     "tile_mm": [
+      39.4667,
+      29.8667
+     ],
+     "margins_mm": [
+      3.4819,
+      4.0751
+     ],
+     "fill": 0.4599,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": -0.0,
+      "w": 39.4667,
+      "h": 29.8667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 21.8,
+     "module_mm": 1.3333,
+     "typed_mm": 8.0,
+     "kind_typed": "grid",
+     "png": "offline_disc4_typed_grid8.png"
+    }
+   ]
+  },
+  {
+   "key": "dshape",
+   "title": "D-shape: Ø50 disc, flat 11 mm off centre",
+   "bbox_mm": [
+    -24.984,
+    -24.953,
+    24.984,
+    11.0
+   ],
+   "area_mm2": 1510.26,
+   "auto": {
+    "single": {
+     "label": "single 23.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: the sticker fills the face's largest clear square, 30.7 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 23.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 3.8333,
+     "tile_mm": [
+      30.6667,
+      30.6667
+     ],
+     "margins_mm": [
+      3.8788,
+      3.8553
+     ],
+     "fill": 0.3503,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": -4.3553,
+      "w": 30.6667,
+      "h": 30.6667,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 0.0,
+      "cy": -4.3553,
+      "w": 30.6952,
+      "h": 30.6952
+     },
+     "fit_ms": 7.8,
+     "module_mm": 3.8333,
+     "png": "offline_dshape_single.png"
+    },
+    "grid": {
+     "label": "3 × 2 @ 8.5 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 39.6 × 26.2 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 8.5,
+     "square_mm": 0.0,
+     "cols": 3,
+     "rows": 2,
+     "count": 6,
+     "separation_mm": 1.7,
+     "quiet_mm": 1.4167,
+     "tile_mm": [
+      31.7333,
+      21.5333
+     ],
+     "margins_mm": [
+      5.5958,
+      5.7986
+     ],
+     "fill": 0.3578,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": -4.1485,
+      "w": 31.7333,
+      "h": 21.5333,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": -0.0,
+      "cy": -2.1203,
+      "w": 39.612,
+      "h": 26.241
+     },
+     "fit_ms": 50.7,
+     "module_mm": 1.4167,
+     "png": "offline_dshape_grid.png"
+    },
+    "charuco": {
+     "label": "3 × 2 @ 10.0 / 7.5 mm",
+     "ok": true,
+     "kind": "charuco",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 39.6 × 26.2 mm (holes and notches avoided)",
+      "default raised to 7.5 mm: the smallest printable marker (module ≥ 1.2 mm)",
+      "2 inner corner(s): fine for a strip, weak for a pose board (≥ 4 advised)"
+     ],
+     "marker_mm": 7.5,
+     "square_mm": 10.0,
+     "cols": 3,
+     "rows": 2,
+     "count": 3,
+     "separation_mm": 0.0,
+     "quiet_mm": 0.0,
+     "tile_mm": [
+      30.0,
+      20.0
+     ],
+     "margins_mm": [
+      5.3376,
+      5.4779
+     ],
+     "fill": 0.3973,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": -4.4778,
+      "w": 30.0,
+      "h": 20.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": -0.0,
+      "cy": -2.1203,
+      "w": 39.612,
+      "h": 26.241
+     },
+     "fit_ms": 54.1,
+     "module_mm": 1.25,
+     "png": "offline_dshape_charuco.png"
+    }
+   },
+   "typed": [
+    {
+     "label": "single 23.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)",
+      "clamped: 30.0 mm does not fit, using 23.0 mm"
+     ],
+     "marker_mm": 23.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 3.8333,
+     "tile_mm": [
+      30.6667,
+      30.6667
+     ],
+     "margins_mm": [
+      3.8717,
+      3.8604
+     ],
+     "fill": 0.3503,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": -4.3603,
+      "w": 30.6667,
+      "h": 30.6667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 5.6,
+     "module_mm": 3.8333,
+     "typed_mm": 30.0,
+     "kind_typed": "single",
+     "png": "offline_dshape_typed_single30.png"
+    },
+    {
+     "label": "3 × 3 @ 8.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)"
+     ],
+     "marker_mm": 8.0,
+     "square_mm": 0.0,
+     "cols": 3,
+     "rows": 3,
+     "count": 9,
+     "separation_mm": 1.6,
+     "quiet_mm": 1.3333,
+     "tile_mm": [
+      29.8667,
+      29.8667
+     ],
+     "margins_mm": [
+      2.1151,
+      1.9014
+     ],
+     "fill": 0.4899,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": -4.5013,
+      "w": 29.8667,
+      "h": 29.8667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 6.6,
+     "module_mm": 1.3333,
+     "typed_mm": 8.0,
+     "kind_typed": "grid",
+     "png": "offline_dshape_typed_grid8.png"
+    }
+   ]
+  },
+  {
+   "key": "lshape",
+   "title": "L-shape: 60 × 60, 20 mm legs",
+   "bbox_mm": [
+    0.0,
+    0.0,
+    60.0,
+    60.0
+   ],
+   "area_mm2": 2000.0,
+   "auto": {
+    "single": {
+     "label": "single 14.5 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: the sticker fills the face's largest clear square, 20.0 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 14.5,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 2.4167,
+     "tile_mm": [
+      19.3333,
+      19.3333
+     ],
+     "margins_mm": [
+      22.75,
+      2.75
+     ],
+     "fill": 0.1051,
+     "placement_mm": {
+      "cx": 30.0,
+      "cy": 10.0,
+      "w": 19.3333,
+      "h": 19.3333,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 30.0,
+      "cy": 10.0,
+      "w": 19.9902,
+      "h": 19.9902
+     },
+     "fit_ms": 47.1,
+     "module_mm": 2.4167,
+     "png": "offline_lshape_single.png"
+    },
+    "grid": {
+     "label": "1 × 3 @ 14.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 20.0 × 60.0 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 14.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 3,
+     "count": 3,
+     "separation_mm": 2.8,
+     "quiet_mm": 2.3333,
+     "tile_mm": [
+      18.6667,
+      52.2667
+     ],
+     "margins_mm": [
+      3.0,
+      6.2
+     ],
+     "fill": 0.3332,
+     "placement_mm": {
+      "cx": 10.0,
+      "cy": 30.0,
+      "w": 18.6667,
+      "h": 52.2667,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 10.0,
+      "cy": 30.0,
+      "w": 20.0,
+      "h": 60.0
+     },
+     "fit_ms": 17.6,
+     "module_mm": 2.3333,
+     "png": "offline_lshape_grid.png"
+    },
+    "charuco": {
+     "label": "2 × 6 @ 10.0 / 7.5 mm",
+     "ok": true,
+     "kind": "charuco",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 20.0 × 60.0 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 7.5,
+     "square_mm": 10.0,
+     "cols": 2,
+     "rows": 6,
+     "count": 6,
+     "separation_mm": 0.0,
+     "quiet_mm": 0.0,
+     "tile_mm": [
+      20.0,
+      60.0
+     ],
+     "margins_mm": [
+      0.0,
+      0.0
+     ],
+     "fill": 0.6,
+     "placement_mm": {
+      "cx": 10.0,
+      "cy": 30.0,
+      "w": 20.0,
+      "h": 60.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 10.0,
+      "cy": 30.0,
+      "w": 20.0,
+      "h": 60.0
+     },
+     "fit_ms": 21.0,
+     "module_mm": 1.25,
+     "png": "offline_lshape_charuco.png"
+    }
+   },
+   "typed": [
+    {
+     "label": "single 15.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)",
+      "clamped: 30.0 mm does not fit, using 15.0 mm"
+     ],
+     "marker_mm": 15.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 2.5,
+     "tile_mm": [
+      20.0,
+      20.0
+     ],
+     "margins_mm": [
+      22.5,
+      2.5
+     ],
+     "fill": 0.1125,
+     "placement_mm": {
+      "cx": 30.0,
+      "cy": 10.0,
+      "w": 20.0,
+      "h": 20.0,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 28.6,
+     "module_mm": 2.5,
+     "typed_mm": 30.0,
+     "kind_typed": "single",
+     "png": "offline_lshape_typed_single30.png"
+    },
+    {
+     "label": "6 × 1 @ 8.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)"
+     ],
+     "marker_mm": 8.0,
+     "square_mm": 0.0,
+     "cols": 6,
+     "rows": 1,
+     "count": 6,
+     "separation_mm": 1.6,
+     "quiet_mm": 1.3333,
+     "tile_mm": [
+      58.6667,
+      10.6667
+     ],
+     "margins_mm": [
+      2.0,
+      6.0
+     ],
+     "fill": 0.224,
+     "placement_mm": {
+      "cx": 30.0,
+      "cy": 10.0,
+      "w": 58.6667,
+      "h": 10.6667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 7.5,
+     "module_mm": 1.3333,
+     "typed_mm": 8.0,
+     "kind_typed": "grid",
+     "png": "offline_lshape_typed_grid8.png"
+    }
+   ]
+  },
+  {
+   "key": "plate_hole",
+   "title": "Plate 80 × 50, Ø18 hole in the middle",
+   "bbox_mm": [
+    0.0,
+    0.0,
+    80.0,
+    50.0
+   ],
+   "area_mm2": 3747.39,
+   "auto": {
+    "single": {
+     "label": "single 23.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: the sticker fills the face's largest clear square, 31.0 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 23.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 3.8333,
+     "tile_mm": [
+      30.6667,
+      30.6667
+     ],
+     "margins_mm": [
+      4.0,
+      13.5
+     ],
+     "fill": 0.1412,
+     "placement_mm": {
+      "cx": 64.5,
+      "cy": 25.0,
+      "w": 30.6667,
+      "h": 30.6667,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 64.5,
+      "cy": 25.0,
+      "w": 30.9961,
+      "h": 30.9961
+     },
+     "fit_ms": 34.1,
+     "module_mm": 3.8333,
+     "png": "offline_plate_hole_single.png"
+    },
+    "grid": {
+     "label": "2 × 4 @ 10.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 31.0 × 50.0 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 10.0,
+     "square_mm": 0.0,
+     "cols": 2,
+     "rows": 4,
+     "count": 8,
+     "separation_mm": 2.0,
+     "quiet_mm": 1.6667,
+     "tile_mm": [
+      25.3333,
+      49.3333
+     ],
+     "margins_mm": [
+      4.5,
+      2.0
+     ],
+     "fill": 0.2701,
+     "placement_mm": {
+      "cx": 15.5,
+      "cy": 25.0,
+      "w": 25.3333,
+      "h": 49.3333,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 15.5,
+      "cy": 25.0,
+      "w": 31.0,
+      "h": 50.0
+     },
+     "fit_ms": 43.0,
+     "module_mm": 1.6667,
+     "png": "offline_plate_hole_grid.png"
+    },
+    "charuco": {
+     "label": "3 × 5 @ 10.0 / 7.5 mm",
+     "ok": true,
+     "kind": "charuco",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 31.0 × 50.0 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 7.5,
+     "square_mm": 10.0,
+     "cols": 3,
+     "rows": 5,
+     "count": 7,
+     "separation_mm": 0.0,
+     "quiet_mm": 0.0,
+     "tile_mm": [
+      30.0,
+      50.0
+     ],
+     "margins_mm": [
+      0.5,
+      0.0
+     ],
+     "fill": 0.4003,
+     "placement_mm": {
+      "cx": 15.5,
+      "cy": 25.0,
+      "w": 30.0,
+      "h": 50.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 15.5,
+      "cy": 25.0,
+      "w": 31.0,
+      "h": 50.0
+     },
+     "fit_ms": 48.0,
+     "module_mm": 1.25,
+     "png": "offline_plate_hole_charuco.png"
+    }
+   },
+   "typed": [
+    {
+     "label": "single 23.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)",
+      "clamped: 30.0 mm does not fit, using 23.0 mm"
+     ],
+     "marker_mm": 23.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 3.8333,
+     "tile_mm": [
+      30.6667,
+      30.6667
+     ],
+     "margins_mm": [
+      4.0,
+      13.5
+     ],
+     "fill": 0.1412,
+     "placement_mm": {
+      "cx": 64.5,
+      "cy": 25.0,
+      "w": 30.6667,
+      "h": 30.6667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 30.7,
+     "module_mm": 3.8333,
+     "typed_mm": 30.0,
+     "kind_typed": "single",
+     "png": "offline_plate_hole_typed_single30.png"
+    },
+    {
+     "label": "3 × 5 @ 8.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)"
+     ],
+     "marker_mm": 8.0,
+     "square_mm": 0.0,
+     "cols": 3,
+     "rows": 5,
+     "count": 15,
+     "separation_mm": 1.6,
+     "quiet_mm": 1.3333,
+     "tile_mm": [
+      29.8667,
+      49.0667
+     ],
+     "margins_mm": [
+      1.9,
+      1.8
+     ],
+     "fill": 0.3368,
+     "placement_mm": {
+      "cx": 15.5,
+      "cy": 25.0,
+      "w": 29.8667,
+      "h": 49.0667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 7.9,
+     "module_mm": 1.3333,
+     "typed_mm": 8.0,
+     "kind_typed": "grid",
+     "png": "offline_plate_hole_typed_grid8.png"
+    }
+   ]
+  },
+  {
+   "key": "ring",
+   "title": "Ring: Ø60 outside, Ø30 inside",
+   "bbox_mm": [
+    -29.951,
+    -29.988,
+    30.0,
+    29.988
+   ],
+   "area_mm2": 2117.48,
+   "auto": {
+    "single": {
+     "label": "single 10.5 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: the sticker fills the face's largest clear square, 14.1 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 10.5,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 1.75,
+     "tile_mm": [
+      14.0,
+      14.0
+     ],
+     "margins_mm": [
+      1.8269,
+      2.1554
+     ],
+     "fill": 0.0521,
+     "placement_mm": {
+      "cx": -22.0282,
+      "cy": 0.0,
+      "w": 14.0,
+      "h": 14.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": -22.0282,
+      "cy": 0.0,
+      "w": 14.1446,
+      "h": 14.1446
+     },
+     "fit_ms": 37.8,
+     "module_mm": 1.75,
+     "png": "offline_ring_single.png"
+    },
+    "grid": {
+     "label": "1 × 3 @ 7.5 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 10.4 × 31.9 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 7.5,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 3,
+     "count": 3,
+     "separation_mm": 1.5,
+     "quiet_mm": 1.25,
+     "tile_mm": [
+      10.0,
+      28.0
+     ],
+     "margins_mm": [
+      2.0204,
+      2.6255
+     ],
+     "fill": 0.0903,
+     "placement_mm": {
+      "cx": -20.7217,
+      "cy": 0.0,
+      "w": 10.0,
+      "h": 28.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": -20.1599,
+      "cy": 0.0,
+      "w": 10.417,
+      "h": 31.851
+     },
+     "fit_ms": 153.6,
+     "module_mm": 1.25,
+     "png": "offline_ring_grid.png"
+    },
+    "charuco": {
+     "label": "2 × 4 @ 6.0 / 4.5 mm",
+     "ok": false,
+     "kind": "charuco",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 12.3 × 24.7 mm (holes and notches avoided)",
+      "3 inner corner(s): fine for a strip, weak for a pose board (≥ 4 advised)",
+      "nothing printable fits (a module ≥ 1.2 mm needs a ≥ 7.2 mm marker): 2 × 4 @ 6.0 / 4.5 mm is the largest that fits, module 0.75 mm"
+     ],
+     "marker_mm": 4.5,
+     "square_mm": 6.0,
+     "cols": 2,
+     "rows": 4,
+     "count": 4,
+     "separation_mm": 0.0,
+     "quiet_mm": 0.0,
+     "tile_mm": [
+      12.0,
+      24.0
+     ],
+     "margins_mm": [
+      0.2621,
+      0.5331
+     ],
+     "fill": 0.136,
+     "placement_mm": {
+      "cx": -21.2134,
+      "cy": 0.0,
+      "w": 12.0,
+      "h": 24.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": -21.1257,
+      "cy": 0.0,
+      "w": 12.349,
+      "h": 24.713
+     },
+     "fit_ms": 248.2,
+     "module_mm": 0.75,
+     "png": "offline_ring_charuco.png"
+    }
+   },
+   "typed": [
+    {
+     "label": "single 10.5 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)",
+      "clamped: 30.0 mm does not fit, using 10.5 mm"
+     ],
+     "marker_mm": 10.5,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 1.75,
+     "tile_mm": [
+      14.0,
+      14.0
+     ],
+     "margins_mm": [
+      1.8353,
+      2.1193
+     ],
+     "fill": 0.0521,
+     "placement_mm": {
+      "cx": -22.0366,
+      "cy": 0.0,
+      "w": 14.0,
+      "h": 14.0,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 23.0,
+     "module_mm": 1.75,
+     "typed_mm": 30.0,
+     "kind_typed": "single",
+     "png": "offline_ring_typed_single30.png"
+    },
+    {
+     "label": "3 × 1 @ 8.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)"
+     ],
+     "marker_mm": 8.0,
+     "square_mm": 0.0,
+     "cols": 3,
+     "rows": 1,
+     "count": 3,
+     "separation_mm": 1.6,
+     "quiet_mm": 1.3333,
+     "tile_mm": [
+      29.8667,
+      10.6667
+     ],
+     "margins_mm": [
+      1.6234,
+      1.4864
+     ],
+     "fill": 0.1028,
+     "placement_mm": {
+      "cx": 0.0468,
+      "cy": 20.4742,
+      "w": 29.8667,
+      "h": 10.6667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 22.7,
+     "module_mm": 1.3333,
+     "typed_mm": 8.0,
+     "kind_typed": "grid",
+     "png": "offline_ring_typed_grid8.png"
+    }
+   ]
+  },
+  {
+   "key": "hexagon",
+   "title": "Hexagon: 60 across corners",
+   "bbox_mm": [
+    -30.0,
+    -25.981,
+    30.0,
+    25.981
+   ],
+   "area_mm2": 2338.27,
+   "auto": {
+    "single": {
+     "label": "single 28.5 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: the sticker fills the face's largest clear square, 38.0 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 28.5,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 4.75,
+     "tile_mm": [
+      38.0,
+      38.0
+     ],
+     "margins_mm": [
+      4.7804,
+      4.8027
+     ],
+     "fill": 0.3474,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": 0.0,
+      "w": 38.0,
+      "h": 38.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": -0.0,
+      "cy": 0.0,
+      "w": 38.0264,
+      "h": 38.0264
+     },
+     "fit_ms": 2.5,
+     "module_mm": 4.75,
+     "png": "offline_hexagon_single.png"
+    },
+    "grid": {
+     "label": "2 × 4 @ 10.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 30.8 × 50.6 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 10.0,
+     "square_mm": 0.0,
+     "cols": 2,
+     "rows": 4,
+     "count": 8,
+     "separation_mm": 2.0,
+     "quiet_mm": 1.6667,
+     "tile_mm": [
+      25.3333,
+      49.3333
+     ],
+     "margins_mm": [
+      4.7588,
+      2.9808
+     ],
+     "fill": 0.4328,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": -0.0,
+      "w": 25.3333,
+      "h": 49.3333,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 0.0,
+      "cy": -0.0,
+      "w": 30.764,
+      "h": 50.638
+     },
+     "fit_ms": 11.7,
+     "module_mm": 1.6667,
+     "png": "offline_hexagon_grid.png"
+    },
+    "charuco": {
+     "label": "3 × 5 @ 10.0 / 7.5 mm",
+     "ok": true,
+     "kind": "charuco",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 30.8 × 50.6 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 7.5,
+     "square_mm": 10.0,
+     "cols": 3,
+     "rows": 5,
+     "count": 7,
+     "separation_mm": 0.0,
+     "quiet_mm": 0.0,
+     "tile_mm": [
+      30.0,
+      50.0
+     ],
+     "margins_mm": [
+      0.5663,
+      0.9808
+     ],
+     "fill": 0.6415,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": -0.0,
+      "w": 30.0,
+      "h": 50.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 0.0,
+      "cy": -0.0,
+      "w": 30.764,
+      "h": 50.638
+     },
+     "fit_ms": 11.3,
+     "module_mm": 1.25,
+     "png": "offline_hexagon_charuco.png"
+    }
+   },
+   "typed": [
+    {
+     "label": "single 28.5 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)",
+      "clamped: 30.0 mm does not fit, using 28.5 mm"
+     ],
+     "marker_mm": 28.5,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 4.75,
+     "tile_mm": [
+      38.0,
+      38.0
+     ],
+     "margins_mm": [
+      4.7804,
+      4.8027
+     ],
+     "fill": 0.3474,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": 0.0,
+      "w": 38.0,
+      "h": 38.0,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 2.1,
+     "module_mm": 4.75,
+     "typed_mm": 30.0,
+     "kind_typed": "single",
+     "png": "offline_hexagon_typed_single30.png"
+    },
+    {
+     "label": "3 × 5 @ 8.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)"
+     ],
+     "marker_mm": 8.0,
+     "square_mm": 0.0,
+     "cols": 3,
+     "rows": 5,
+     "count": 15,
+     "separation_mm": 1.6,
+     "quiet_mm": 1.3333,
+     "tile_mm": [
+      29.8667,
+      49.0667
+     ],
+     "margins_mm": [
+      2.2358,
+      2.7808
+     ],
+     "fill": 0.5397,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": -0.0,
+      "w": 29.8667,
+      "h": 49.0667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 3.0,
+     "module_mm": 1.3333,
+     "typed_mm": 8.0,
+     "kind_typed": "grid",
+     "png": "offline_hexagon_typed_grid8.png"
+    }
+   ]
+  },
+  {
+   "key": "stadium",
+   "title": "Stadium slot: 74 × 24",
+   "bbox_mm": [
+    -37.0,
+    -12.0,
+    37.0,
+    12.0
+   ],
+   "area_mm2": 1650.1,
+   "auto": {
+    "single": {
+     "label": "single 17.5 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: the sticker fills the face's largest clear square, 24.0 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 17.5,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 2.9167,
+     "tile_mm": [
+      23.3333,
+      23.3333
+     ],
+     "margins_mm": [
+      18.8977,
+      3.25
+     ],
+     "fill": 0.1856,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": 0.0,
+      "w": 23.3333,
+      "h": 23.3333,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": -0.0,
+      "cy": 0.0,
+      "w": 24.0,
+      "h": 24.0
+     },
+     "fit_ms": 8.2,
+     "module_mm": 2.9167,
+     "png": "offline_stadium_single.png"
+    },
+    "grid": {
+     "label": "6 × 2 @ 7.5 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 58.2 × 22.6 mm (holes and notches avoided)",
+      "default raised to 7.5 mm: the smallest printable marker (module ≥ 1.2 mm)"
+     ],
+     "marker_mm": 7.5,
+     "square_mm": 0.0,
+     "cols": 6,
+     "rows": 2,
+     "count": 12,
+     "separation_mm": 1.5,
+     "quiet_mm": 1.25,
+     "tile_mm": [
+      55.0,
+      19.0
+     ],
+     "margins_mm": [
+      6.0245,
+      3.4562
+     ],
+     "fill": 0.525,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": -0.0,
+      "w": 55.0,
+      "h": 19.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 0.0,
+      "cy": -0.0,
+      "w": 58.188,
+      "h": 22.558
+     },
+     "fit_ms": 31.9,
+     "module_mm": 1.25,
+     "png": "offline_stadium_grid.png"
+    },
+    "charuco": {
+     "label": "5 × 2 @ 10.0 / 7.5 mm",
+     "ok": true,
+     "kind": "charuco",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 58.2 × 22.6 mm (holes and notches avoided)",
+      "default raised to 7.5 mm: the smallest printable marker (module ≥ 1.2 mm)"
+     ],
+     "marker_mm": 7.5,
+     "square_mm": 10.0,
+     "cols": 5,
+     "rows": 2,
+     "count": 5,
+     "separation_mm": 0.0,
+     "quiet_mm": 0.0,
+     "tile_mm": [
+      50.0,
+      20.0
+     ],
+     "margins_mm": [
+      6.5604,
+      2.0
+     ],
+     "fill": 0.606,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": -0.0,
+      "w": 50.0,
+      "h": 20.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 0.0,
+      "cy": -0.0,
+      "w": 58.188,
+      "h": 22.558
+     },
+     "fit_ms": 35.1,
+     "module_mm": 1.25,
+     "png": "offline_stadium_charuco.png"
+    }
+   },
+   "typed": [
+    {
+     "label": "single 18.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)",
+      "clamped: 30.0 mm does not fit, using 18.0 mm"
+     ],
+     "marker_mm": 18.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 3.0,
+     "tile_mm": [
+      24.0,
+      24.0
+     ],
+     "margins_mm": [
+      16.0006,
+      3.0
+     ],
+     "fill": 0.1964,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": 0.0,
+      "w": 24.0,
+      "h": 24.0,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 4.9,
+     "module_mm": 3.0,
+     "typed_mm": 30.0,
+     "kind_typed": "single",
+     "png": "offline_stadium_typed_single30.png"
+    },
+    {
+     "label": "6 × 2 @ 8.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)"
+     ],
+     "marker_mm": 8.0,
+     "square_mm": 0.0,
+     "cols": 6,
+     "rows": 2,
+     "count": 12,
+     "separation_mm": 1.6,
+     "quiet_mm": 1.3333,
+     "tile_mm": [
+      58.6667,
+      20.2667
+     ],
+     "margins_mm": [
+      3.37,
+      2.3696
+     ],
+     "fill": 0.5973,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": 0.0,
+      "w": 58.6667,
+      "h": 20.2667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 10.2,
+     "module_mm": 1.3333,
+     "typed_mm": 8.0,
+     "kind_typed": "grid",
+     "png": "offline_stadium_typed_grid8.png"
+    }
+   ]
+  },
+  {
+   "key": "notch",
+   "title": "Plate 70 × 45 with a 20 × 18 edge notch",
+   "bbox_mm": [
+    0.0,
+    0.0,
+    70.0,
+    45.0
+   ],
+   "area_mm2": 2790.0,
+   "auto": {
+    "single": {
+     "label": "single 20.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: the sticker fills the face's largest clear square, 27.0 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 20.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 3.3333,
+     "tile_mm": [
+      26.6667,
+      26.6667
+     ],
+     "margins_mm": [
+      25.0,
+      3.5
+     ],
+     "fill": 0.1434,
+     "placement_mm": {
+      "cx": 35.0,
+      "cy": 13.5,
+      "w": 26.6667,
+      "h": 26.6667,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 35.0,
+      "cy": 13.5,
+      "w": 26.9824,
+      "h": 26.9824
+     },
+     "fit_ms": 13.2,
+     "module_mm": 3.3333,
+     "png": "offline_notch_single.png"
+    },
+    "grid": {
+     "label": "6 × 2 @ 8.5 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 70.0 × 27.0 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 8.5,
+     "square_mm": 0.0,
+     "cols": 6,
+     "rows": 2,
+     "count": 12,
+     "separation_mm": 1.7,
+     "quiet_mm": 1.4167,
+     "tile_mm": [
+      62.3333,
+      21.5333
+     ],
+     "margins_mm": [
+      5.25,
+      4.15
+     ],
+     "fill": 0.3988,
+     "placement_mm": {
+      "cx": 35.0,
+      "cy": 13.5,
+      "w": 62.3333,
+      "h": 21.5333,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 35.0,
+      "cy": 13.5,
+      "w": 70.0,
+      "h": 27.0
+     },
+     "fit_ms": 18.9,
+     "module_mm": 1.4167,
+     "png": "offline_notch_grid.png"
+    },
+    "charuco": {
+     "label": "7 × 2 @ 10.0 / 7.5 mm",
+     "ok": true,
+     "kind": "charuco",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 70.0 × 27.0 mm (holes and notches avoided)",
+      "default raised to 7.5 mm: the smallest printable marker (module ≥ 1.2 mm)"
+     ],
+     "marker_mm": 7.5,
+     "square_mm": 10.0,
+     "cols": 7,
+     "rows": 2,
+     "count": 7,
+     "separation_mm": 0.0,
+     "quiet_mm": 0.0,
+     "tile_mm": [
+      70.0,
+      20.0
+     ],
+     "margins_mm": [
+      0.0,
+      3.5
+     ],
+     "fill": 0.5018,
+     "placement_mm": {
+      "cx": 35.0,
+      "cy": 13.5,
+      "w": 70.0,
+      "h": 20.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 35.0,
+      "cy": 13.5,
+      "w": 70.0,
+      "h": 27.0
+     },
+     "fit_ms": 21.2,
+     "module_mm": 1.25,
+     "png": "offline_notch_charuco.png"
+    }
+   },
+   "typed": [
+    {
+     "label": "single 20.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)",
+      "clamped: 30.0 mm does not fit, using 20.0 mm"
+     ],
+     "marker_mm": 20.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 3.3333,
+     "tile_mm": [
+      26.6667,
+      26.6667
+     ],
+     "margins_mm": [
+      25.0,
+      3.5
+     ],
+     "fill": 0.1434,
+     "placement_mm": {
+      "cx": 35.0,
+      "cy": 13.5,
+      "w": 26.6667,
+      "h": 26.6667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 17.4,
+     "module_mm": 3.3333,
+     "typed_mm": 30.0,
+     "kind_typed": "single",
+     "png": "offline_notch_typed_single30.png"
+    },
+    {
+     "label": "7 × 2 @ 8.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)"
+     ],
+     "marker_mm": 8.0,
+     "square_mm": 0.0,
+     "cols": 7,
+     "rows": 2,
+     "count": 14,
+     "separation_mm": 1.6,
+     "quiet_mm": 1.3333,
+     "tile_mm": [
+      68.2667,
+      20.2667
+     ],
+     "margins_mm": [
+      2.2,
+      4.7
+     ],
+     "fill": 0.4138,
+     "placement_mm": {
+      "cx": 35.0,
+      "cy": 13.5,
+      "w": 68.2667,
+      "h": 20.2667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 3.3,
+     "module_mm": 1.3333,
+     "typed_mm": 8.0,
+     "kind_typed": "grid",
+     "png": "offline_notch_typed_grid8.png"
+    }
+   ]
+  },
+  {
+   "key": "strip",
+   "title": "Long thin strip: 150 × 14",
+   "bbox_mm": [
+    0.0,
+    0.0,
+    150.0,
+    14.0
+   ],
+   "area_mm2": 2100.0,
+   "auto": {
+    "single": {
+     "label": "single 10.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [],
+     "marker_mm": 10.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 1.6667,
+     "tile_mm": [
+      13.3333,
+      13.3333
+     ],
+     "margins_mm": [
+      70.0,
+      2.0
+     ],
+     "fill": 0.0476,
+     "placement_mm": {
+      "cx": 75.0,
+      "cy": 7.0,
+      "w": 13.3333,
+      "h": 13.3333,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 75.0,
+      "cy": 7.0,
+      "w": 150.0,
+      "h": 14.0
+     },
+     "fit_ms": 0.2,
+     "module_mm": 1.6667,
+     "png": "offline_strip_single.png"
+    },
+    "grid": {
+     "label": "12 × 1 @ 10.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [],
+     "marker_mm": 10.0,
+     "square_mm": 0.0,
+     "cols": 12,
+     "rows": 1,
+     "count": 12,
+     "separation_mm": 2.0,
+     "quiet_mm": 1.6667,
+     "tile_mm": [
+      145.3333,
+      13.3333
+     ],
+     "margins_mm": [
+      4.0,
+      2.0
+     ],
+     "fill": 0.6762,
+     "placement_mm": {
+      "cx": 75.0,
+      "cy": 7.0,
+      "w": 145.3333,
+      "h": 13.3333,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 75.0,
+      "cy": 7.0,
+      "w": 150.0,
+      "h": 14.0
+     },
+     "fit_ms": 0.2,
+     "module_mm": 1.6667,
+     "png": "offline_strip_grid.png"
+    },
+    "charuco": {
+     "label": "21 × 2 @ 7.0 / 5.0 mm",
+     "ok": false,
+     "kind": "charuco",
+     "notes": [
+      "nothing printable fits (a module ≥ 1.2 mm needs a ≥ 7.2 mm marker): 21 × 2 @ 7.0 / 5.0 mm is the largest that fits, module 0.83 mm"
+     ],
+     "marker_mm": 5.0,
+     "square_mm": 7.0,
+     "cols": 21,
+     "rows": 2,
+     "count": 21,
+     "separation_mm": 0.0,
+     "quiet_mm": 0.0,
+     "tile_mm": [
+      147.0,
+      14.0
+     ],
+     "margins_mm": [
+      1.5,
+      0.0
+     ],
+     "fill": 0.98,
+     "placement_mm": {
+      "cx": 75.0,
+      "cy": 7.0,
+      "w": 147.0,
+      "h": 14.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": 75.0,
+      "cy": 7.0,
+      "w": 150.0,
+      "h": 14.0
+     },
+     "fit_ms": 0.2,
+     "module_mm": 0.8333,
+     "png": "offline_strip_charuco.png"
+    }
+   },
+   "typed": [
+    {
+     "label": "single 10.5 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "clamped: 30.0 mm does not fit, using 10.5 mm"
+     ],
+     "marker_mm": 10.5,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 1.75,
+     "tile_mm": [
+      14.0,
+      14.0
+     ],
+     "margins_mm": [
+      69.75,
+      1.75
+     ],
+     "fill": 0.0525,
+     "placement_mm": {
+      "cx": 75.0,
+      "cy": 7.0,
+      "w": 14.0,
+      "h": 14.0,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 0.1,
+     "module_mm": 1.75,
+     "typed_mm": 30.0,
+     "kind_typed": "single",
+     "png": "offline_strip_typed_single30.png"
+    },
+    {
+     "label": "15 × 1 @ 8.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [],
+     "marker_mm": 8.0,
+     "square_mm": 0.0,
+     "cols": 15,
+     "rows": 1,
+     "count": 15,
+     "separation_mm": 1.6,
+     "quiet_mm": 1.3333,
+     "tile_mm": [
+      145.0667,
+      10.6667
+     ],
+     "margins_mm": [
+      3.8,
+      3.0
+     ],
+     "fill": 0.5425,
+     "placement_mm": {
+      "cx": 75.0,
+      "cy": 7.0,
+      "w": 145.0667,
+      "h": 10.6667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 0.1,
+     "module_mm": 1.3333,
+     "typed_mm": 8.0,
+     "kind_typed": "grid",
+     "png": "offline_strip_typed_grid8.png"
+    }
+   ]
+  },
+  {
+   "key": "triangle",
+   "title": "Equilateral triangle: 70 mm sides",
+   "bbox_mm": [
+    -35.0,
+    -20.207,
+    35.0,
+    40.415
+   ],
+   "area_mm2": 2121.76,
+   "auto": {
+    "single": {
+     "label": "single 24.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: the sticker fills the face's largest clear square, 32.5 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 24.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 4.0,
+     "tile_mm": [
+      32.0,
+      32.0
+     ],
+     "margins_mm": [
+      4.3804,
+      4.2503
+     ],
+     "fill": 0.2715,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": -3.957,
+      "w": 32.0,
+      "h": 32.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": -0.0,
+      "cy": -3.957,
+      "w": 32.4717,
+      "h": 32.4717
+     },
+     "fit_ms": 2.5,
+     "module_mm": 4.0,
+     "png": "offline_triangle_single.png"
+    },
+    "grid": {
+     "label": "2 × 2 @ 9.5 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 34.9 × 30.4 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 9.5,
+     "square_mm": 0.0,
+     "cols": 2,
+     "rows": 2,
+     "count": 4,
+     "separation_mm": 1.9,
+     "quiet_mm": 1.5833,
+     "tile_mm": [
+      24.0667,
+      24.0667
+     ],
+     "margins_mm": [
+      8.8184,
+      4.7649
+     ],
+     "fill": 0.2059,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": -4.9924,
+      "w": 24.0667,
+      "h": 24.0667,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": -0.0,
+      "cy": -4.9924,
+      "w": 34.863,
+      "h": 30.429
+     },
+     "fit_ms": 15.1,
+     "module_mm": 1.5833,
+     "png": "offline_triangle_grid.png"
+    },
+    "charuco": {
+     "label": "3 × 3 @ 10.0 / 7.5 mm",
+     "ok": true,
+     "kind": "charuco",
+     "notes": [
+      "not a rectangle: sized in the face's largest clear rectangle, 34.9 × 30.4 mm (holes and notches avoided)"
+     ],
+     "marker_mm": 7.5,
+     "square_mm": 10.0,
+     "cols": 3,
+     "rows": 3,
+     "count": 4,
+     "separation_mm": 0.0,
+     "quiet_mm": 0.0,
+     "tile_mm": [
+      30.0,
+      30.0
+     ],
+     "margins_mm": [
+      2.5555,
+      0.2149
+     ],
+     "fill": 0.4242,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": -4.9924,
+      "w": 30.0,
+      "h": 30.0,
+      "angle_deg": 0.0
+     },
+     "clear_mm": {
+      "cx": -0.0,
+      "cy": -4.9924,
+      "w": 34.863,
+      "h": 30.429
+     },
+     "fit_ms": 16.5,
+     "module_mm": 1.25,
+     "png": "offline_triangle_charuco.png"
+    }
+   },
+   "typed": [
+    {
+     "label": "single 24.0 mm",
+     "ok": true,
+     "kind": "single",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)",
+      "clamped: 30.0 mm does not fit, using 24.0 mm"
+     ],
+     "marker_mm": 24.0,
+     "square_mm": 0.0,
+     "cols": 1,
+     "rows": 1,
+     "count": 1,
+     "separation_mm": 0.0,
+     "quiet_mm": 4.0,
+     "tile_mm": [
+      32.0,
+      32.0
+     ],
+     "margins_mm": [
+      4.2624,
+      4.4546
+     ],
+     "fill": 0.2715,
+     "placement_mm": {
+      "cx": -0.0,
+      "cy": -3.7527,
+      "w": 32.0,
+      "h": 32.0,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 1.9,
+     "module_mm": 4.0,
+     "typed_mm": 30.0,
+     "kind_typed": "single",
+     "png": "offline_triangle_typed_single30.png"
+    },
+    {
+     "label": "3 × 3 @ 8.0 mm",
+     "ok": true,
+     "kind": "grid",
+     "notes": [
+      "not a rectangle: fitted to the face's own outline (holes and notches avoided)"
+     ],
+     "marker_mm": 8.0,
+     "square_mm": 0.0,
+     "cols": 3,
+     "rows": 3,
+     "count": 9,
+     "separation_mm": 1.6,
+     "quiet_mm": 1.3333,
+     "tile_mm": [
+      29.8667,
+      29.8667
+     ],
+     "margins_mm": [
+      2.745,
+      3.7783
+     ],
+     "fill": 0.3487,
+     "placement_mm": {
+      "cx": 0.0,
+      "cy": -2.829,
+      "w": 29.8667,
+      "h": 29.8667,
+      "angle_deg": 0.0
+     },
+     "fit_ms": 3.9,
+     "module_mm": 1.3333,
+     "typed_mm": 8.0,
+     "kind_typed": "grid",
+     "png": "offline_triangle_typed_grid8.png"
+    }
+   ]
+  }
+ ]
+}

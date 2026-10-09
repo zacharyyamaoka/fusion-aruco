@@ -1,0 +1,77 @@
+{
+ "urdf_view0_1_0.png": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "urdf_view0_m1_0.png": [
+  0,
+  1,
+  2,
+  6,
+  7,
+  8
+ ],
+ "urdf_view0m6_1_0.png": [
+  2,
+  3,
+  4,
+  5,
+  8,
+  9,
+  10,
+  11
+ ],
+ "urdf_view1_0_0.png": [
+  1,
+  2,
+  3,
+  4
+ ],
+ "urdf_view1_m0m6_0.png": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  6,
+  7,
+  8
+ ],
+ "urdf_viewm0m6_m1_0.png": [
+  0,
+  1,
+  6,
+  7
+ ],
+ "urdf_viewm1_0_0.png": [],
+ "urdf_viewm1_0m6_0.png": [
+  5,
+  11
+ ],
+ "chain_01_before_front.png": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "chain_01_before_iso.png": [
+  0
+ ],
+ "chain_02_after_front.png": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "chain_02_after_iso.png": [
+  5
+ ]
+}

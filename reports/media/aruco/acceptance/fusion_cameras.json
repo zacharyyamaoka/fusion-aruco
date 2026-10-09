@@ -1,0 +1,106 @@
+{
+ "A": {
+  "ok": true,
+  "path": "%USERPROFILE%\\Documents\\cad-exporter\\.claude\\worktrees\\aruco-fusion-plugin-0e9bcb\\reports\\media\\aruco\\acceptance\\fusion_A.png",
+  "width": 2400,
+  "height": 1800,
+  "eye_cm": [
+   5.0,
+   40.0,
+   8.0
+  ],
+  "target_cm": [
+   5.0,
+   0.0,
+   8.0
+  ],
+  "up": [
+   0.0,
+   0.0,
+   1.0
+  ],
+  "perspective_angle_rad": 0.6981317007977318,
+  "viewport_px": [
+   2160,
+   1100
+  ]
+ },
+ "B": {
+  "ok": true,
+  "path": "%USERPROFILE%\\Documents\\cad-exporter\\.claude\\worktrees\\aruco-fusion-plugin-0e9bcb\\reports\\media\\aruco\\acceptance\\fusion_B.png",
+  "width": 2400,
+  "height": 1800,
+  "eye_cm": [
+   5.0,
+   -40.0,
+   8.0
+  ],
+  "target_cm": [
+   5.0,
+   0.0,
+   8.0
+  ],
+  "up": [
+   0.0,
+   0.0,
+   1.0
+  ],
+  "perspective_angle_rad": 0.6981317007977318,
+  "viewport_px": [
+   2160,
+   1100
+  ]
+ },
+ "C": {
+  "ok": true,
+  "path": "%USERPROFILE%\\Documents\\cad-exporter\\.claude\\worktrees\\aruco-fusion-plugin-0e9bcb\\reports\\media\\aruco\\acceptance\\fusion_C.png",
+  "width": 2400,
+  "height": 1800,
+  "eye_cm": [
+   5.0,
+   40.0,
+   22.0
+  ],
+  "target_cm": [
+   5.0,
+   0.0,
+   22.0
+  ],
+  "up": [
+   0.0,
+   0.0,
+   1.0
+  ],
+  "perspective_angle_rad": 0.6981317007977318,
+  "viewport_px": [
+   2160,
+   1100
+  ]
+ },
+ "D": {
+  "ok": true,
+  "path": "%USERPROFILE%\\Documents\\cad-exporter\\.claude\\worktrees\\aruco-fusion-plugin-0e9bcb\\reports\\media\\aruco\\acceptance\\fusion_D.png",
+  "width": 2400,
+  "height": 1800,
+  "eye_cm": [
+   5.0,
+   -40.0,
+   22.0
+  ],
+  "target_cm": [
+   5.0,
+   0.0,
+   22.0
+  ],
+  "up": [
+   0.0,
+   0.0,
+   1.0
+  ],
+  "perspective_angle_rad": 0.6981317007977318,
+  "viewport_px": [
+   2160,
+   1100
+  ]
+ }
+}

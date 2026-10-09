@@ -1,0 +1,966 @@
+{
+ "document": "Untitled",
+ "faces": {
+  "disc4": {
+   "single": {
+    "centre_mm": [
+     0.0,
+     0.0
+    ],
+    "face_area_mm2": 2180.666,
+    "evaluate_s": 0.028,
+    "notes": [
+     "not a rectangle: the sticker fills the face's largest clear square, 37.4 mm (holes and notches avoided)"
+    ],
+    "label": "single 28.0 mm",
+    "tile_mm": [
+     37.3333,
+     37.3333
+    ],
+    "create_s": 0.34,
+    "layout": "single",
+    "cols": null,
+    "rows": null,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 28.0,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     -0.0,
+     0.0
+    ],
+    "shot": "fusion_disc4_single.png",
+    "shot_extent_mm": 59.36
+   },
+   "grid": {
+    "centre_mm": [
+     180.0,
+     0.0
+    ],
+    "face_area_mm2": 2180.666,
+    "evaluate_s": 0.117,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 37.4 \u00d7 37.4 mm (holes and notches avoided)"
+    ],
+    "label": "2 \u00d7 2 @ 12.0 mm",
+    "tile_mm": [
+     30.4,
+     30.4
+    ],
+    "create_s": 0.399,
+    "layout": "grid",
+    "cols": 2,
+    "rows": 2,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 12.0,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     0.0,
+     0.0
+    ],
+    "shot": "fusion_disc4_grid.png",
+    "shot_extent_mm": 59.36
+   },
+   "charuco": {
+    "centre_mm": [
+     360.0,
+     0.0
+    ],
+    "face_area_mm2": 2180.666,
+    "evaluate_s": 0.114,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 37.4 \u00d7 37.4 mm (holes and notches avoided)"
+    ],
+    "label": "3 \u00d7 3 @ 12.0 / 9.0 mm",
+    "tile_mm": [
+     36.0,
+     36.0
+    ],
+    "create_s": 0.478,
+    "layout": "charuco",
+    "cols": 3,
+    "rows": 3,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 0.0,
+    "marker_mm": 9.0,
+    "square_mm": 12.0,
+    "live": true,
+    "tile_centre_mm": [
+     0.0,
+     0.0
+    ],
+    "shot": "fusion_disc4_charuco.png",
+    "shot_extent_mm": 59.36
+   }
+  },
+  "dshape": {
+   "single": {
+    "centre_mm": [
+     0.0,
+     -100.0
+    ],
+    "face_area_mm2": 1513.446,
+    "evaluate_s": 0.007,
+    "notes": [
+     "not a rectangle: the sticker fills the face's largest clear square, 30.7 mm (holes and notches avoided)"
+    ],
+    "label": "single 23.0 mm",
+    "tile_mm": [
+     30.6667,
+     30.6667
+    ],
+    "create_s": 0.387,
+    "layout": "single",
+    "cols": null,
+    "rows": null,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 23.0,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     -0.0,
+     -4.355
+    ],
+    "shot": "fusion_dshape_single.png",
+    "shot_extent_mm": 55.964
+   },
+   "grid": {
+    "centre_mm": [
+     180.0,
+     -100.0
+    ],
+    "face_area_mm2": 1513.446,
+    "evaluate_s": 0.057,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 39.4 \u00d7 26.4 mm (holes and notches avoided)"
+    ],
+    "label": "3 \u00d7 2 @ 8.5 mm",
+    "tile_mm": [
+     31.7333,
+     21.5333
+    ],
+    "create_s": 0.56,
+    "layout": "grid",
+    "cols": 3,
+    "rows": 2,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 8.5,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     0.0,
+     -2.195
+    ],
+    "shot": "fusion_dshape_grid.png",
+    "shot_extent_mm": 55.964
+   },
+   "charuco": {
+    "centre_mm": [
+     360.0,
+     -100.0
+    ],
+    "face_area_mm2": 1513.446,
+    "evaluate_s": 0.066,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 39.4 \u00d7 26.4 mm (holes and notches avoided)",
+     "default raised to 7.5 mm: the smallest printable marker (module \u2265 1.2 mm)",
+     "2 inner corner(s): fine for a strip, weak for a pose board (\u2265 4 advised)"
+    ],
+    "label": "3 \u00d7 2 @ 10.0 / 7.5 mm",
+    "tile_mm": [
+     30.0,
+     20.0
+    ],
+    "create_s": 0.558,
+    "layout": "charuco",
+    "cols": 3,
+    "rows": 2,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 0.0,
+    "marker_mm": 7.5,
+    "square_mm": 10.0,
+    "live": true,
+    "tile_centre_mm": [
+     0.0,
+     -2.195
+    ],
+    "shot": "fusion_dshape_charuco.png",
+    "shot_extent_mm": 55.964
+   }
+  },
+  "lshape": {
+   "single": {
+    "centre_mm": [
+     0.0,
+     -200.0
+    ],
+    "face_area_mm2": 2000.0,
+    "evaluate_s": 0.055,
+    "notes": [
+     "not a rectangle: the sticker fills the face's largest clear square, 20.0 mm (holes and notches avoided)"
+    ],
+    "label": "single 14.5 mm",
+    "tile_mm": [
+     19.3333,
+     19.3333
+    ],
+    "create_s": 0.534,
+    "layout": "single",
+    "cols": null,
+    "rows": null,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 14.5,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     10.0,
+     30.0
+    ],
+    "shot": "fusion_lshape_single.png",
+    "shot_extent_mm": 67.2
+   },
+   "grid": {
+    "centre_mm": [
+     180.0,
+     -200.0
+    ],
+    "face_area_mm2": 2000.0,
+    "evaluate_s": 0.027,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 20.0 \u00d7 60.0 mm (holes and notches avoided)"
+    ],
+    "label": "1 \u00d7 3 @ 14.0 mm",
+    "tile_mm": [
+     18.6667,
+     52.2667
+    ],
+    "create_s": 0.594,
+    "layout": "grid",
+    "cols": 1,
+    "rows": 3,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 14.0,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     30.0,
+     10.0
+    ],
+    "shot": "fusion_lshape_grid.png",
+    "shot_extent_mm": 67.2
+   },
+   "charuco": {
+    "centre_mm": [
+     360.0,
+     -200.0
+    ],
+    "face_area_mm2": 2000.0,
+    "evaluate_s": 0.027,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 20.0 \u00d7 60.0 mm (holes and notches avoided)"
+    ],
+    "label": "2 \u00d7 6 @ 10.0 / 7.5 mm",
+    "tile_mm": [
+     20.0,
+     60.0
+    ],
+    "create_s": 0.566,
+    "layout": "charuco",
+    "cols": 2,
+    "rows": 6,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 0.0,
+    "marker_mm": 7.5,
+    "square_mm": 10.0,
+    "live": false,
+    "live_error": "RuntimeError: 2 : InternalValidationError : face",
+    "tile_centre_mm": [
+     30.0,
+     10.0
+    ],
+    "shot": "fusion_lshape_charuco.png",
+    "shot_extent_mm": 67.2
+   }
+  },
+  "plate_hole": {
+   "single": {
+    "centre_mm": [
+     0.0,
+     -300.0
+    ],
+    "face_area_mm2": 3745.531,
+    "evaluate_s": 0.044,
+    "notes": [
+     "not a rectangle: the sticker fills the face's largest clear square, 31.0 mm (holes and notches avoided)"
+    ],
+    "label": "single 23.0 mm",
+    "tile_mm": [
+     30.6667,
+     30.6667
+    ],
+    "create_s": 0.693,
+    "layout": "single",
+    "cols": null,
+    "rows": null,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 23.0,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     64.5,
+     25.0
+    ],
+    "shot": "fusion_plate_hole_single.png",
+    "shot_extent_mm": 89.6
+   },
+   "grid": {
+    "centre_mm": [
+     180.0,
+     -300.0
+    ],
+    "face_area_mm2": 3745.531,
+    "evaluate_s": 0.056,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 31.0 \u00d7 50.0 mm (holes and notches avoided)"
+    ],
+    "label": "2 \u00d7 4 @ 10.0 mm",
+    "tile_mm": [
+     25.3333,
+     49.3333
+    ],
+    "create_s": 0.902,
+    "layout": "grid",
+    "cols": 2,
+    "rows": 4,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 10.0,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     15.5,
+     25.0
+    ],
+    "shot": "fusion_plate_hole_grid.png",
+    "shot_extent_mm": 89.6
+   },
+   "charuco": {
+    "centre_mm": [
+     360.0,
+     -300.0
+    ],
+    "face_area_mm2": 3745.531,
+    "evaluate_s": 0.057,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 31.0 \u00d7 50.0 mm (holes and notches avoided)"
+    ],
+    "label": "3 \u00d7 5 @ 10.0 / 7.5 mm",
+    "tile_mm": [
+     30.0,
+     50.0
+    ],
+    "create_s": 0.643,
+    "layout": "charuco",
+    "cols": 3,
+    "rows": 5,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 0.0,
+    "marker_mm": 7.5,
+    "square_mm": 10.0,
+    "live": false,
+    "live_error": "RuntimeError: 2 : InternalValidationError : face",
+    "tile_centre_mm": [
+     15.5,
+     25.0
+    ],
+    "shot": "fusion_plate_hole_charuco.png",
+    "shot_extent_mm": 89.6
+   }
+  },
+  "ring": {
+   "single": {
+    "centre_mm": [
+     0.0,
+     -400.0
+    ],
+    "face_area_mm2": 2120.575,
+    "evaluate_s": 0.024,
+    "notes": [
+     "not a rectangle: the sticker fills the face's largest clear square, 14.1 mm (holes and notches avoided)"
+    ],
+    "label": "single 10.5 mm",
+    "tile_mm": [
+     14.0,
+     14.0
+    ],
+    "create_s": 0.881,
+    "layout": "single",
+    "cols": null,
+    "rows": null,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 10.5,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     22.028,
+     0.0
+    ],
+    "shot": "fusion_ring_single.png",
+    "shot_extent_mm": 67.173
+   },
+   "grid": {
+    "centre_mm": [
+     180.0,
+     -400.0
+    ],
+    "face_area_mm2": 2120.575,
+    "evaluate_s": 0.13,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 10.1 \u00d7 32.7 mm (holes and notches avoided)",
+     "default raised to 7.5 mm: the smallest printable marker (module \u2265 1.2 mm)"
+    ],
+    "label": "1 \u00d7 3 @ 7.5 mm",
+    "tile_mm": [
+     10.0,
+     28.0
+    ],
+    "create_s": 1.02,
+    "layout": "grid",
+    "cols": 1,
+    "rows": 3,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 7.5,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     20.016,
+     -0.0
+    ],
+    "shot": "fusion_ring_grid.png",
+    "shot_extent_mm": 67.173
+   },
+   "charuco": {
+    "centre_mm": [
+     360.0,
+     -400.0
+    ],
+    "face_area_mm2": 2120.575,
+    "error": "ValueError: no marker fits here: not a rectangle: sized in the face's largest clear rectangle, 12.3 \u00d7 24.7 mm (holes and notches avoided); 3 inner corner(s): fine for a strip, weak for a pose board (\u2265 4 advised); nothing printable fits (a module \u2265 1.2 mm needs a \u2265 7.2 mm marker): 2 \u00d7 4 @ 6.0 / 4.5 mm is the largest that fits, module 0.75 mm",
+    "where": "as_body=True), n)\n  File \"%USERPROFILE%\\Documents\\cad-exporter\\.claude\\worktrees\\aruco-fusion-plugin-0e9bcb\\ArucoMarkers\\aruco_feature.py\", line 736, in evaluate\n    raise ValueError(\"no marker fits here: \" + (\"; \".join(notes) or \"the target is too small\"))\nValueError: no marker fits here: not a rectangle: sized in the face's largest clear rectangle, 12.3 \u00d7 24.7 mm (holes and notches avoided); 3 inner corner(s): fine for a strip, weak for a pose board (\u2265 4 advised); nothing printable fits (a module \u2265 1.2 mm needs a \u2265 7.2 mm marker): 2 \u00d7 4 @ 6.0 / 4.5 mm is the largest that fits, module 0.75 mm\n",
+    "shot": "fusion_ring_charuco.png",
+    "shot_extent_mm": 67.173
+   }
+  },
+  "hexagon": {
+   "single": {
+    "centre_mm": [
+     0.0,
+     -500.0
+    ],
+    "face_area_mm2": 2338.269,
+    "evaluate_s": 0.004,
+    "notes": [
+     "not a rectangle: the sticker fills the face's largest clear square, 38.0 mm (holes and notches avoided)"
+    ],
+    "label": "single 28.5 mm",
+    "tile_mm": [
+     38.0,
+     38.0
+    ],
+    "create_s": 0.949,
+    "layout": "single",
+    "cols": null,
+    "rows": null,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 28.5,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     -0.0,
+     0.0
+    ],
+    "shot": "fusion_hexagon_single.png",
+    "shot_extent_mm": 67.2
+   },
+   "grid": {
+    "centre_mm": [
+     180.0,
+     -500.0
+    ],
+    "face_area_mm2": 2338.269,
+    "evaluate_s": 0.012,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 30.8 \u00d7 50.6 mm (holes and notches avoided)"
+    ],
+    "label": "2 \u00d7 4 @ 10.0 mm",
+    "tile_mm": [
+     25.3333,
+     49.3333
+    ],
+    "create_s": 1.162,
+    "layout": "grid",
+    "cols": 2,
+    "rows": 4,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 10.0,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     0.0,
+     -0.0
+    ],
+    "shot": "fusion_hexagon_grid.png",
+    "shot_extent_mm": 67.2
+   },
+   "charuco": {
+    "centre_mm": [
+     360.0,
+     -500.0
+    ],
+    "face_area_mm2": 2338.269,
+    "evaluate_s": 0.015,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 30.8 \u00d7 50.6 mm (holes and notches avoided)"
+    ],
+    "label": "3 \u00d7 5 @ 10.0 / 7.5 mm",
+    "tile_mm": [
+     30.0,
+     50.0
+    ],
+    "create_s": 1.292,
+    "layout": "charuco",
+    "cols": 3,
+    "rows": 5,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 0.0,
+    "marker_mm": 7.5,
+    "square_mm": 10.0,
+    "live": true,
+    "tile_centre_mm": [
+     0.0,
+     -0.0
+    ],
+    "shot": "fusion_hexagon_charuco.png",
+    "shot_extent_mm": 67.2
+   }
+  },
+  "stadium": {
+   "single": {
+    "centre_mm": [
+     0.0,
+     -600.0
+    ],
+    "face_area_mm2": 1652.389,
+    "evaluate_s": 0.008,
+    "notes": [
+     "not a rectangle: the sticker fills the face's largest clear square, 24.0 mm (holes and notches avoided)"
+    ],
+    "label": "single 17.5 mm",
+    "tile_mm": [
+     23.3333,
+     23.3333
+    ],
+    "create_s": 1.143,
+    "layout": "single",
+    "cols": null,
+    "rows": null,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 17.5,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     -0.0,
+     0.0
+    ],
+    "shot": "fusion_stadium_single.png",
+    "shot_extent_mm": 82.88
+   },
+   "grid": {
+    "centre_mm": [
+     180.0,
+     -600.0
+    ],
+    "face_area_mm2": 1652.389,
+    "evaluate_s": 0.032,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 58.2 \u00d7 22.6 mm (holes and notches avoided)",
+     "default raised to 7.5 mm: the smallest printable marker (module \u2265 1.2 mm)"
+    ],
+    "label": "6 \u00d7 2 @ 7.5 mm",
+    "tile_mm": [
+     55.0,
+     19.0
+    ],
+    "create_s": 1.482,
+    "layout": "grid",
+    "cols": 6,
+    "rows": 2,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 7.5,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     0.0,
+     -0.0
+    ],
+    "shot": "fusion_stadium_grid.png",
+    "shot_extent_mm": 82.88
+   },
+   "charuco": {
+    "centre_mm": [
+     360.0,
+     -600.0
+    ],
+    "face_area_mm2": 1652.389,
+    "evaluate_s": 0.031,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 58.2 \u00d7 22.6 mm (holes and notches avoided)",
+     "default raised to 7.5 mm: the smallest printable marker (module \u2265 1.2 mm)"
+    ],
+    "label": "5 \u00d7 2 @ 10.0 / 7.5 mm",
+    "tile_mm": [
+     50.0,
+     20.0
+    ],
+    "create_s": 1.509,
+    "layout": "charuco",
+    "cols": 5,
+    "rows": 2,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 0.0,
+    "marker_mm": 7.5,
+    "square_mm": 10.0,
+    "live": true,
+    "tile_centre_mm": [
+     0.0,
+     -0.0
+    ],
+    "shot": "fusion_stadium_charuco.png",
+    "shot_extent_mm": 82.88
+   }
+  },
+  "notch": {
+   "single": {
+    "centre_mm": [
+     0.0,
+     -700.0
+    ],
+    "face_area_mm2": 2790.0,
+    "evaluate_s": 0.019,
+    "notes": [
+     "not a rectangle: the sticker fills the face's largest clear square, 27.0 mm (holes and notches avoided)"
+    ],
+    "label": "single 20.0 mm",
+    "tile_mm": [
+     26.6667,
+     26.6667
+    ],
+    "create_s": 1.354,
+    "layout": "single",
+    "cols": null,
+    "rows": null,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 20.0,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     35.0,
+     13.5
+    ],
+    "shot": "fusion_notch_single.png",
+    "shot_extent_mm": 78.4
+   },
+   "grid": {
+    "centre_mm": [
+     180.0,
+     -700.0
+    ],
+    "face_area_mm2": 2790.0,
+    "evaluate_s": 0.02,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 70.0 \u00d7 27.0 mm (holes and notches avoided)"
+    ],
+    "label": "6 \u00d7 2 @ 8.5 mm",
+    "tile_mm": [
+     62.3333,
+     21.5333
+    ],
+    "create_s": 1.723,
+    "layout": "grid",
+    "cols": 6,
+    "rows": 2,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 8.5,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     35.0,
+     13.5
+    ],
+    "shot": "fusion_notch_grid.png",
+    "shot_extent_mm": 78.4
+   },
+   "charuco": {
+    "centre_mm": [
+     360.0,
+     -700.0
+    ],
+    "face_area_mm2": 2790.0,
+    "evaluate_s": 0.02,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 70.0 \u00d7 27.0 mm (holes and notches avoided)",
+     "default raised to 7.5 mm: the smallest printable marker (module \u2265 1.2 mm)"
+    ],
+    "label": "7 \u00d7 2 @ 10.0 / 7.5 mm",
+    "tile_mm": [
+     70.0,
+     20.0
+    ],
+    "create_s": 0.759,
+    "layout": "charuco",
+    "cols": 7,
+    "rows": 2,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 0.0,
+    "marker_mm": 7.5,
+    "square_mm": 10.0,
+    "live": false,
+    "live_error": "RuntimeError: 2 : InternalValidationError : face",
+    "tile_centre_mm": [
+     35.0,
+     13.5
+    ],
+    "shot": "fusion_notch_charuco.png",
+    "shot_extent_mm": 78.4
+   }
+  },
+  "strip": {
+   "single": {
+    "centre_mm": [
+     0.0,
+     -800.0
+    ],
+    "face_area_mm2": 2100.0,
+    "evaluate_s": 0.002,
+    "notes": [],
+    "label": "single 10.0 mm",
+    "tile_mm": [
+     13.3333,
+     13.3333
+    ],
+    "create_s": 1.638,
+    "layout": "single",
+    "cols": null,
+    "rows": null,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 10.0,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     75.0,
+     7.0
+    ],
+    "shot": "fusion_strip_single.png",
+    "shot_extent_mm": 168.0
+   },
+   "grid": {
+    "centre_mm": [
+     180.0,
+     -800.0
+    ],
+    "face_area_mm2": 2100.0,
+    "evaluate_s": 0.002,
+    "notes": [],
+    "label": "12 \u00d7 1 @ 10.0 mm",
+    "tile_mm": [
+     145.3333,
+     13.3333
+    ],
+    "create_s": 1.975,
+    "layout": "grid",
+    "cols": 12,
+    "rows": 1,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 10.0,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     75.0,
+     7.0
+    ],
+    "shot": "fusion_strip_grid.png",
+    "shot_extent_mm": 168.0
+   },
+   "charuco": {
+    "centre_mm": [
+     360.0,
+     -800.0
+    ],
+    "face_area_mm2": 2100.0,
+    "error": "ValueError: no marker fits here: nothing printable fits (a module \u2265 1.2 mm needs a \u2265 7.2 mm marker): 21 \u00d7 2 @ 7.0 / 5.0 mm is the largest that fits, module 0.83 mm",
+    "where": "Documents\\cad-exporter\\.claude\\worktrees\\aruco-fusion-plugin-0e9bcb\\ArucoMarkers\\aruco_autosize_gallery.py\", line 304, in run_fusion\n    ev = aruco_feature.evaluate(top, dict(s, has_body=True), n)\n  File \"%USERPROFILE%\\Documents\\cad-exporter\\.claude\\worktrees\\aruco-fusion-plugin-0e9bcb\\ArucoMarkers\\aruco_feature.py\", line 736, in evaluate\n    raise ValueError(\"no marker fits here: \" + (\"; \".join(notes) or \"the target is too small\"))\nValueError: no marker fits here: nothing printable fits (a module \u2265 1.2 mm needs a \u2265 7.2 mm marker): 21 \u00d7 2 @ 7.0 / 5.0 mm is the largest that fits, module 0.83 mm\n",
+    "shot": "fusion_strip_charuco.png",
+    "shot_extent_mm": 168.0
+   }
+  },
+  "triangle": {
+   "single": {
+    "centre_mm": [
+     0.0,
+     -900.0
+    ],
+    "face_area_mm2": 2121.762,
+    "evaluate_s": 0.004,
+    "notes": [
+     "not a rectangle: the sticker fills the face's largest clear square, 32.5 mm (holes and notches avoided)"
+    ],
+    "label": "single 24.0 mm",
+    "tile_mm": [
+     32.0,
+     32.0
+    ],
+    "create_s": 1.727,
+    "layout": "single",
+    "cols": null,
+    "rows": null,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 24.0,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     -0.0,
+     -3.957
+    ],
+    "shot": "fusion_triangle_single.png",
+    "shot_extent_mm": 78.4
+   },
+   "grid": {
+    "centre_mm": [
+     180.0,
+     -900.0
+    ],
+    "face_area_mm2": 2121.762,
+    "evaluate_s": 0.013,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 34.9 \u00d7 30.4 mm (holes and notches avoided)"
+    ],
+    "label": "2 \u00d7 2 @ 9.5 mm",
+    "tile_mm": [
+     24.0667,
+     24.0667
+    ],
+    "create_s": 1.801,
+    "layout": "grid",
+    "cols": 2,
+    "rows": 2,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 1.0,
+    "marker_mm": 9.5,
+    "square_mm": 0.0,
+    "live": true,
+    "tile_centre_mm": [
+     -0.0,
+     -4.992
+    ],
+    "shot": "fusion_triangle_grid.png",
+    "shot_extent_mm": 78.4
+   },
+   "charuco": {
+    "centre_mm": [
+     360.0,
+     -900.0
+    ],
+    "face_area_mm2": 2121.762,
+    "evaluate_s": 0.012,
+    "notes": [
+     "not a rectangle: sized in the face's largest clear rectangle, 34.9 \u00d7 30.4 mm (holes and notches avoided)"
+    ],
+    "label": "3 \u00d7 3 @ 10.0 / 7.5 mm",
+    "tile_mm": [
+     30.0,
+     30.0
+    ],
+    "create_s": 1.945,
+    "layout": "charuco",
+    "cols": 3,
+    "rows": 3,
+    "dictionary": "DICT_4X4_50",
+    "marker_id": 0,
+    "quiet_modules": 0.0,
+    "marker_mm": 7.5,
+    "square_mm": 10.0,
+    "live": true,
+    "tile_centre_mm": [
+     -0.0,
+     -4.992
+    ],
+    "shot": "fusion_triangle_charuco.png",
+    "shot_extent_mm": 78.4
+   }
+  }
+ },
+ "registered": true,
+ "unhealthy": [
+  {
+   "i": 34,
+   "name": null,
+   "msg": ""
+  },
+  {
+   "i": 46,
+   "name": null,
+   "msg": ""
+  },
+  {
+   "i": 92,
+   "name": null,
+   "msg": ""
+  }
+ ]
+}

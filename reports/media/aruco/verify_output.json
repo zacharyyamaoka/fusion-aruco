@@ -1,0 +1,2732 @@
+{
+ "generated": "2026-10-07T18:59:45",
+ "opencv": "5.0.0",
+ "numpy": "2.4.6",
+ "pdfium": "156.0.8076.0",
+ "dpi": 600,
+ "tolerances_mm": {
+  "side": 0.15,
+  "corner": 0.2,
+  "ruler": 0.15
+ },
+ "grids": {
+  "markers_compared": 9596,
+  "mismatches": [],
+  "per_dictionary": {
+   "DICT_4X4_50": {
+    "ids": 50,
+    "mismatches": 0
+   },
+   "DICT_4X4_100": {
+    "ids": 100,
+    "mismatches": 0
+   },
+   "DICT_4X4_250": {
+    "ids": 250,
+    "mismatches": 0
+   },
+   "DICT_4X4_1000": {
+    "ids": 1000,
+    "mismatches": 0
+   },
+   "DICT_5X5_50": {
+    "ids": 50,
+    "mismatches": 0
+   },
+   "DICT_5X5_100": {
+    "ids": 100,
+    "mismatches": 0
+   },
+   "DICT_5X5_250": {
+    "ids": 250,
+    "mismatches": 0
+   },
+   "DICT_5X5_1000": {
+    "ids": 1000,
+    "mismatches": 0
+   },
+   "DICT_6X6_50": {
+    "ids": 50,
+    "mismatches": 0
+   },
+   "DICT_6X6_100": {
+    "ids": 100,
+    "mismatches": 0
+   },
+   "DICT_6X6_250": {
+    "ids": 250,
+    "mismatches": 0
+   },
+   "DICT_6X6_1000": {
+    "ids": 1000,
+    "mismatches": 0
+   },
+   "DICT_7X7_50": {
+    "ids": 50,
+    "mismatches": 0
+   },
+   "DICT_7X7_100": {
+    "ids": 100,
+    "mismatches": 0
+   },
+   "DICT_7X7_250": {
+    "ids": 250,
+    "mismatches": 0
+   },
+   "DICT_7X7_1000": {
+    "ids": 1000,
+    "mismatches": 0
+   },
+   "DICT_ARUCO_ORIGINAL": {
+    "ids": 1024,
+    "mismatches": 0
+   },
+   "DICT_APRILTAG_16h5": {
+    "ids": 30,
+    "mismatches": 0
+   },
+   "DICT_APRILTAG_25h9": {
+    "ids": 35,
+    "mismatches": 0
+   },
+   "DICT_APRILTAG_36h10": {
+    "ids": 2320,
+    "mismatches": 0
+   },
+   "DICT_APRILTAG_36h11": {
+    "ids": 587,
+    "mismatches": 0
+   }
+  },
+  "pass": true
+ },
+ "roundtrip": {
+  "module_px": 8,
+  "quiet_modules": 1,
+  "tested": 9596,
+  "failures": [],
+  "per_dictionary": {
+   "DICT_4X4_50": {
+    "detected_ok": 50,
+    "tested": 50
+   },
+   "DICT_4X4_100": {
+    "detected_ok": 100,
+    "tested": 100
+   },
+   "DICT_4X4_250": {
+    "detected_ok": 250,
+    "tested": 250
+   },
+   "DICT_4X4_1000": {
+    "detected_ok": 1000,
+    "tested": 1000
+   },
+   "DICT_5X5_50": {
+    "detected_ok": 50,
+    "tested": 50
+   },
+   "DICT_5X5_100": {
+    "detected_ok": 100,
+    "tested": 100
+   },
+   "DICT_5X5_250": {
+    "detected_ok": 250,
+    "tested": 250
+   },
+   "DICT_5X5_1000": {
+    "detected_ok": 1000,
+    "tested": 1000
+   },
+   "DICT_6X6_50": {
+    "detected_ok": 50,
+    "tested": 50
+   },
+   "DICT_6X6_100": {
+    "detected_ok": 100,
+    "tested": 100
+   },
+   "DICT_6X6_250": {
+    "detected_ok": 250,
+    "tested": 250
+   },
+   "DICT_6X6_1000": {
+    "detected_ok": 1000,
+    "tested": 1000
+   },
+   "DICT_7X7_50": {
+    "detected_ok": 50,
+    "tested": 50
+   },
+   "DICT_7X7_100": {
+    "detected_ok": 100,
+    "tested": 100
+   },
+   "DICT_7X7_250": {
+    "detected_ok": 250,
+    "tested": 250
+   },
+   "DICT_7X7_1000": {
+    "detected_ok": 1000,
+    "tested": 1000
+   },
+   "DICT_ARUCO_ORIGINAL": {
+    "detected_ok": 1024,
+    "tested": 1024
+   },
+   "DICT_APRILTAG_16h5": {
+    "detected_ok": 30,
+    "tested": 30
+   },
+   "DICT_APRILTAG_25h9": {
+    "detected_ok": 35,
+    "tested": 35
+   },
+   "DICT_APRILTAG_36h10": {
+    "detected_ok": 2320,
+    "tested": 2320
+   },
+   "DICT_APRILTAG_36h11": {
+    "detected_ok": 587,
+    "tested": 587
+   }
+  },
+  "pass": true
+ },
+ "sheets": {
+  "letter": {
+   "page": "letter",
+   "pages": 2,
+   "pdf_pages": 2,
+   "rejected": [],
+   "items": [
+    {
+     "key": "s00",
+     "dictionary": "DICT_4X4_50",
+     "id": 0,
+     "page": 1,
+     "marker_mm": 60.0,
+     "found": 1,
+     "scan_w_mm": 60.0003,
+     "scan_h_mm": 60.0002,
+     "side_mm": 59.9948,
+     "side_err_mm": -0.0052,
+     "edge_spread_mm": 0.0081,
+     "corner_err_mm": 0.0054
+    },
+    {
+     "key": "s14",
+     "dictionary": "DICT_7X7_50",
+     "id": 9,
+     "page": 1,
+     "marker_mm": 58.0,
+     "found": 1,
+     "scan_w_mm": 58.0002,
+     "scan_h_mm": 58.0003,
+     "side_mm": 57.9944,
+     "side_err_mm": -0.0056,
+     "edge_spread_mm": 0.0048,
+     "corner_err_mm": 0.0075
+    },
+    {
+     "key": "s02",
+     "dictionary": "DICT_4X4_50",
+     "id": 49,
+     "page": 1,
+     "marker_mm": 27.1,
+     "found": 1,
+     "scan_w_mm": 27.1003,
+     "scan_h_mm": 27.1,
+     "side_mm": 27.0922,
+     "side_err_mm": -0.0078,
+     "edge_spread_mm": 0.0051,
+     "corner_err_mm": 0.0085
+    },
+    {
+     "key": "s07",
+     "dictionary": "DICT_5X5_100",
+     "id": 7,
+     "page": 1,
+     "marker_mm": 45.0,
+     "found": 1,
+     "scan_w_mm": 45.0002,
+     "scan_h_mm": 45.0002,
+     "side_mm": 44.9952,
+     "side_err_mm": -0.0048,
+     "edge_spread_mm": 0.002,
+     "corner_err_mm": 0.0049
+    },
+    {
+     "key": "s16",
+     "dictionary": "DICT_7X7_1000",
+     "id": 999,
+     "page": 1,
+     "marker_mm": 55.0,
+     "found": 1,
+     "scan_w_mm": 55.0001,
+     "scan_h_mm": 55.0003,
+     "side_mm": 54.9955,
+     "side_err_mm": -0.0045,
+     "edge_spread_mm": 0.0026,
+     "corner_err_mm": 0.0052
+    },
+    {
+     "key": "s04",
+     "dictionary": "DICT_4X4_1000",
+     "id": 999,
+     "page": 1,
+     "marker_mm": 36.0,
+     "found": 1,
+     "scan_w_mm": 36.0003,
+     "scan_h_mm": 36.0,
+     "side_mm": 35.9964,
+     "side_err_mm": -0.0036,
+     "edge_spread_mm": 0.008,
+     "corner_err_mm": 0.0044
+    },
+    {
+     "key": "s22",
+     "dictionary": "DICT_APRILTAG_36h11",
+     "id": 0,
+     "page": 1,
+     "marker_mm": 38.0,
+     "found": 1,
+     "scan_w_mm": 38.0001,
+     "scan_h_mm": 38.0004,
+     "side_mm": 37.9961,
+     "side_err_mm": -0.0039,
+     "edge_spread_mm": 0.0056,
+     "corner_err_mm": 0.0045
+    },
+    {
+     "key": "s06",
+     "dictionary": "DICT_5X5_50",
+     "id": 13,
+     "page": 1,
+     "marker_mm": 35.0,
+     "found": 1,
+     "scan_w_mm": 35.0002,
+     "scan_h_mm": 35.0,
+     "side_mm": 34.9949,
+     "side_err_mm": -0.0051,
+     "edge_spread_mm": 0.0034,
+     "corner_err_mm": 0.0061
+    },
+    {
+     "key": "s19",
+     "dictionary": "DICT_APRILTAG_16h5",
+     "id": 29,
+     "page": 1,
+     "marker_mm": 32.0,
+     "found": 1,
+     "scan_w_mm": 32.0002,
+     "scan_h_mm": 32.0001,
+     "side_mm": 31.9943,
+     "side_err_mm": -0.0057,
+     "edge_spread_mm": 0.0032,
+     "corner_err_mm": 0.0074
+    },
+    {
+     "key": "s10",
+     "dictionary": "DICT_6X6_50",
+     "id": 3,
+     "page": 1,
+     "marker_mm": 33.0,
+     "found": 1,
+     "scan_w_mm": 33.0002,
+     "scan_h_mm": 33.0004,
+     "side_mm": 32.9972,
+     "side_err_mm": -0.0028,
+     "edge_spread_mm": 0.0047,
+     "corner_err_mm": 0.0029
+    },
+    {
+     "key": "s11",
+     "dictionary": "DICT_6X6_250",
+     "id": 23,
+     "page": 2,
+     "marker_mm": 50.0,
+     "found": 1,
+     "scan_w_mm": 50.0001,
+     "scan_h_mm": 50.0,
+     "side_mm": 49.9916,
+     "side_err_mm": -0.0084,
+     "edge_spread_mm": 0.0042,
+     "corner_err_mm": 0.0076
+    },
+    {
+     "key": "s21",
+     "dictionary": "DICT_APRILTAG_36h10",
+     "id": 2319,
+     "page": 2,
+     "marker_mm": 42.0,
+     "found": 1,
+     "scan_w_mm": 42.0001,
+     "scan_h_mm": 42.0003,
+     "side_mm": 41.9952,
+     "side_err_mm": -0.0048,
+     "edge_spread_mm": 0.0074,
+     "corner_err_mm": 0.0071
+    },
+    {
+     "key": "s17",
+     "dictionary": "DICT_ARUCO_ORIGINAL",
+     "id": 1023,
+     "page": 2,
+     "marker_mm": 40.0,
+     "found": 1,
+     "scan_w_mm": 40.0,
+     "scan_h_mm": 40.0003,
+     "side_mm": 39.9927,
+     "side_err_mm": -0.0073,
+     "edge_spread_mm": 0.0043,
+     "corner_err_mm": 0.0088
+    },
+    {
+     "key": "s09",
+     "dictionary": "DICT_5X5_1000",
+     "id": 640,
+     "page": 2,
+     "marker_mm": 30.0,
+     "found": 1,
+     "scan_w_mm": 30.0001,
+     "scan_h_mm": 30.0002,
+     "side_mm": 29.9908,
+     "side_err_mm": -0.0092,
+     "edge_spread_mm": 0.0048,
+     "corner_err_mm": 0.0079
+    },
+    {
+     "key": "s20",
+     "dictionary": "DICT_APRILTAG_25h9",
+     "id": 34,
+     "page": 2,
+     "marker_mm": 28.0,
+     "found": 1,
+     "scan_w_mm": 28.0003,
+     "scan_h_mm": 28.0,
+     "side_mm": 27.9934,
+     "side_err_mm": -0.0066,
+     "edge_spread_mm": 0.0158,
+     "corner_err_mm": 0.0077
+    },
+    {
+     "key": "s13",
+     "dictionary": "DICT_6X6_1000",
+     "id": 777,
+     "page": 2,
+     "marker_mm": 26.0,
+     "found": 1,
+     "scan_w_mm": 26.0001,
+     "scan_h_mm": 26.0002,
+     "side_mm": 25.9938,
+     "side_err_mm": -0.0062,
+     "edge_spread_mm": 0.0058,
+     "corner_err_mm": 0.0074
+    },
+    {
+     "key": "s15",
+     "dictionary": "DICT_7X7_100",
+     "id": 42,
+     "page": 2,
+     "marker_mm": 25.0,
+     "found": 1,
+     "scan_w_mm": 25.0001,
+     "scan_h_mm": 25.0003,
+     "side_mm": 24.9919,
+     "side_err_mm": -0.0081,
+     "edge_spread_mm": 0.0031,
+     "corner_err_mm": 0.0064
+    },
+    {
+     "key": "s05",
+     "dictionary": "DICT_4X4_1000",
+     "id": 500,
+     "page": 2,
+     "marker_mm": 22.5,
+     "found": 1,
+     "scan_w_mm": 22.5001,
+     "scan_h_mm": 22.5,
+     "side_mm": 22.4891,
+     "side_err_mm": -0.0109,
+     "edge_spread_mm": 0.0027,
+     "corner_err_mm": 0.0081
+    },
+    {
+     "key": "s23",
+     "dictionary": "DICT_APRILTAG_36h11",
+     "id": 586,
+     "page": 2,
+     "marker_mm": 24.0,
+     "found": 1,
+     "scan_w_mm": 24.0002,
+     "scan_h_mm": 24.0002,
+     "side_mm": 23.995,
+     "side_err_mm": -0.005,
+     "edge_spread_mm": 0.0031,
+     "corner_err_mm": 0.006
+    },
+    {
+     "key": "s03",
+     "dictionary": "DICT_4X4_250",
+     "id": 123,
+     "page": 2,
+     "marker_mm": 19.0,
+     "found": 1,
+     "scan_w_mm": 19.0,
+     "scan_h_mm": 19.0003,
+     "side_mm": 18.9921,
+     "side_err_mm": -0.0079,
+     "edge_spread_mm": 0.011,
+     "corner_err_mm": 0.0073
+    },
+    {
+     "key": "s12",
+     "dictionary": "DICT_6X6_250",
+     "id": 249,
+     "page": 2,
+     "marker_mm": 20.0,
+     "found": 1,
+     "scan_w_mm": 20.0003,
+     "scan_h_mm": 20.0002,
+     "side_mm": 19.9962,
+     "side_err_mm": -0.0038,
+     "edge_spread_mm": 0.0039,
+     "corner_err_mm": 0.0038
+    },
+    {
+     "key": "s08",
+     "dictionary": "DICT_5X5_100",
+     "id": 99,
+     "page": 2,
+     "marker_mm": 18.0,
+     "found": 1,
+     "scan_w_mm": 18.0,
+     "scan_h_mm": 18.0002,
+     "side_mm": 17.9915,
+     "side_err_mm": -0.0085,
+     "edge_spread_mm": 0.0011,
+     "corner_err_mm": 0.0079
+    },
+    {
+     "key": "s18",
+     "dictionary": "DICT_ARUCO_ORIGINAL",
+     "id": 0,
+     "page": 2,
+     "marker_mm": 16.5,
+     "found": 1,
+     "scan_w_mm": 16.5,
+     "scan_h_mm": 16.5002,
+     "side_mm": 16.4927,
+     "side_err_mm": -0.0073,
+     "edge_spread_mm": 0.0107,
+     "corner_err_mm": 0.0074
+    },
+    {
+     "key": "s01",
+     "dictionary": "DICT_4X4_50",
+     "id": 17,
+     "page": 2,
+     "marker_mm": 15.0,
+     "found": 1,
+     "scan_w_mm": 15.0003,
+     "scan_h_mm": 15.0002,
+     "side_mm": 14.9929,
+     "side_err_mm": -0.0071,
+     "edge_spread_mm": 0.0035,
+     "corner_err_mm": 0.0079
+    },
+    {
+     "key": "s24",
+     "dictionary": "DICT_APRILTAG_36h11",
+     "id": 300,
+     "page": 2,
+     "marker_mm": 15.0,
+     "found": 1,
+     "scan_w_mm": 15.0001,
+     "scan_h_mm": 15.0002,
+     "side_mm": 14.9908,
+     "side_err_mm": -0.0092,
+     "edge_spread_mm": 0.0018,
+     "corner_err_mm": 0.0088
+    }
+   ],
+   "misreads": [],
+   "spurious": [],
+   "aliases": [
+    {
+     "detector": "DICT_4X4_1000",
+     "id": 0,
+     "page": 1,
+     "centre_mm": [
+      50.0,
+      50.0
+     ],
+     "on": "DICT_4X4_50 #0",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_1000",
+     "id": 49,
+     "page": 1,
+     "centre_mm": [
+      186.95,
+      28.07
+     ],
+     "on": "DICT_4X4_50 #49",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_250",
+     "id": 0,
+     "page": 1,
+     "centre_mm": [
+      50.0,
+      50.0
+     ],
+     "on": "DICT_4X4_50 #0",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_250",
+     "id": 49,
+     "page": 1,
+     "centre_mm": [
+      186.95,
+      28.07
+     ],
+     "on": "DICT_4X4_50 #49",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_5X5_100",
+     "id": 13,
+     "page": 1,
+     "centre_mm": [
+      84.0,
+      200.44
+     ],
+     "on": "DICT_5X5_50 #13",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_5X5_1000",
+     "id": 7,
+     "page": 1,
+     "centre_mm": [
+      45.36,
+      135.24
+     ],
+     "on": "DICT_5X5_100 #7",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_5X5_1000",
+     "id": 13,
+     "page": 1,
+     "centre_mm": [
+      84.0,
+      200.44
+     ],
+     "on": "DICT_5X5_50 #13",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_5X5_50",
+     "id": 7,
+     "page": 1,
+     "centre_mm": [
+      45.36,
+      135.24
+     ],
+     "on": "DICT_5X5_100 #7",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_6X6_1000",
+     "id": 3,
+     "page": 1,
+     "centre_mm": [
+      177.79,
+      198.56
+     ],
+     "on": "DICT_6X6_50 #3",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_6X6_250",
+     "id": 3,
+     "page": 1,
+     "centre_mm": [
+      177.79,
+      198.56
+     ],
+     "on": "DICT_6X6_50 #3",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_7X7_100",
+     "id": 9,
+     "page": 1,
+     "centre_mm": [
+      129.45,
+      45.45
+     ],
+     "on": "DICT_7X7_50 #9",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_7X7_1000",
+     "id": 9,
+     "page": 1,
+     "centre_mm": [
+      129.45,
+      45.45
+     ],
+     "on": "DICT_7X7_50 #9",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_1000",
+     "id": 123,
+     "page": 2,
+     "centre_mm": [
+      58.25,
+      142.54
+     ],
+     "on": "DICT_4X4_250 #123",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_1000",
+     "id": 17,
+     "page": 2,
+     "centre_mm": [
+      175.46,
+      138.29
+     ],
+     "on": "DICT_4X4_50 #17",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_250",
+     "id": 17,
+     "page": 2,
+     "centre_mm": [
+      175.46,
+      138.29
+     ],
+     "on": "DICT_4X4_50 #17",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_5X5_1000",
+     "id": 99,
+     "page": 2,
+     "centre_mm": [
+      117.07,
+      139.87
+     ],
+     "on": "DICT_5X5_100 #99",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_6X6_1000",
+     "id": 23,
+     "page": 2,
+     "centre_mm": [
+      41.25,
+      41.25
+     ],
+     "on": "DICT_6X6_250 #23",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_6X6_1000",
+     "id": 249,
+     "page": 2,
+     "centre_mm": [
+      89.0,
+      140.79
+     ],
+     "on": "DICT_6X6_250 #249",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_6X6_50",
+     "id": 23,
+     "page": 2,
+     "centre_mm": [
+      41.25,
+      41.25
+     ],
+     "on": "DICT_6X6_250 #23",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_7X7_1000",
+     "id": 42,
+     "page": 2,
+     "centre_mm": [
+      144.35,
+      97.66
+     ],
+     "on": "DICT_7X7_100 #42",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_7X7_50",
+     "id": 42,
+     "page": 2,
+     "centre_mm": [
+      144.35,
+      97.66
+     ],
+     "on": "DICT_7X7_100 #42",
+     "same_pattern": true
+    }
+   ],
+   "rulers": [
+    {
+     "page": 1,
+     "mm_bar_mm": 100.0003,
+     "in_bar_mm": 101.6002
+    },
+    {
+     "page": 2,
+     "mm_bar_mm": 100.0003,
+     "in_bar_mm": 101.6002
+    }
+   ],
+   "raster_px_per_mm": [
+    23.622047,
+    23.625626
+   ],
+   "worst_side_err_mm": 0.0109,
+   "worst_corner_err_mm": 0.0088,
+   "worst_scan_err_mm": 0.0004,
+   "aliases_same_pattern": 21,
+   "aliases_cross_family": 0,
+   "checks": {
+    "two_or_more_pages": true,
+    "pdf_pages_match_layout": true,
+    "nothing_rejected": true,
+    "every_item_once_in_place_and_size": true,
+    "no_misreads": true,
+    "no_spurious": true,
+    "scanline_sides": true,
+    "rulers": true,
+    "all_items_measured": true
+   },
+   "pass": true,
+   "layout": {
+    "page": "letter",
+    "page_mm": [
+     215.9,
+     279.4
+    ],
+    "landscape": false,
+    "printable_mm": {
+     "x": 10.0,
+     "y": 10.0,
+     "w": 195.9,
+     "h": 233.4
+    },
+    "origin": "page top-left, y down, millimetres",
+    "scale": 1.0,
+    "pages": 2,
+    "placed": [
+     {
+      "key": "s00",
+      "dictionary": "DICT_4X4_50",
+      "marker_id": 0,
+      "marker_length_mm": 60.0,
+      "module_mm": 10.0,
+      "quiet_modules": 1.0,
+      "sticker_mm": 80.0,
+      "sticker_w_mm": 80.0,
+      "sticker_h_mm": 80.0,
+      "layout": "single",
+      "extent_mm": [
+       60.0,
+       60.0
+      ],
+      "page_number": 1,
+      "x_mm": 10.0,
+      "y_mm": 10.0,
+      "marker_x_mm": 20.0,
+      "marker_y_mm": 20.0,
+      "label_lines": [
+       "DICT_4X4_50 #0 \u00b7 60.0 mm",
+       "Base:1 \u00b7 top"
+      ]
+     },
+     {
+      "key": "s14",
+      "dictionary": "DICT_7X7_50",
+      "marker_id": 9,
+      "marker_length_mm": 58.0,
+      "module_mm": 6.4444,
+      "quiet_modules": 1.0,
+      "sticker_mm": 70.8889,
+      "sticker_w_mm": 70.8889,
+      "sticker_h_mm": 70.8889,
+      "layout": "single",
+      "extent_mm": [
+       58.0,
+       58.0
+      ],
+      "page_number": 1,
+      "x_mm": 94.0,
+      "y_mm": 10.0,
+      "marker_x_mm": 100.4444,
+      "marker_y_mm": 16.4444,
+      "label_lines": [
+       "DICT_7X7_50 #9 \u00b7 58.0 mm"
+      ]
+     },
+     {
+      "key": "s02",
+      "dictionary": "DICT_4X4_50",
+      "marker_id": 49,
+      "marker_length_mm": 27.1,
+      "module_mm": 4.5167,
+      "quiet_modules": 1.0,
+      "sticker_mm": 36.1333,
+      "sticker_w_mm": 36.1333,
+      "sticker_h_mm": 36.1333,
+      "layout": "single",
+      "extent_mm": [
+       27.1,
+       27.1
+      ],
+      "page_number": 1,
+      "x_mm": 168.8889,
+      "y_mm": 10.0,
+      "marker_x_mm": 173.4056,
+      "marker_y_mm": 14.5167,
+      "label_lines": [
+       "DICT_4X4_50 #49 \u00b7 27.1 mm",
+       "Arm/Actuator:3 \u00b7 front"
+      ]
+     },
+     {
+      "key": "s07",
+      "dictionary": "DICT_5X5_100",
+      "marker_id": 7,
+      "marker_length_mm": 45.0,
+      "module_mm": 6.4286,
+      "quiet_modules": 2.0,
+      "sticker_mm": 70.7143,
+      "sticker_w_mm": 70.7143,
+      "sticker_h_mm": 70.7143,
+      "layout": "single",
+      "extent_mm": [
+       45.0,
+       45.0
+      ],
+      "page_number": 1,
+      "x_mm": 10.0,
+      "y_mm": 99.88,
+      "marker_x_mm": 22.8571,
+      "marker_y_mm": 112.7371,
+      "label_lines": [
+       "DICT_5X5_100 #7 \u00b7 45.0 mm"
+      ]
+     },
+     {
+      "key": "s16",
+      "dictionary": "DICT_7X7_1000",
+      "marker_id": 999,
+      "marker_length_mm": 55.0,
+      "module_mm": 6.1111,
+      "quiet_modules": 1.0,
+      "sticker_mm": 67.2222,
+      "sticker_w_mm": 67.2222,
+      "sticker_h_mm": 67.2222,
+      "layout": "single",
+      "extent_mm": [
+       55.0,
+       55.0
+      ],
+      "page_number": 1,
+      "x_mm": 84.7143,
+      "y_mm": 99.88,
+      "marker_x_mm": 90.8254,
+      "marker_y_mm": 105.9911,
+      "label_lines": [
+       "DICT_7X7_1000 #999 \u00b7 55.0 mm"
+      ]
+     },
+     {
+      "key": "s04",
+      "dictionary": "DICT_4X4_1000",
+      "marker_id": 999,
+      "marker_length_mm": 36.0,
+      "module_mm": 6.0,
+      "quiet_modules": 1.0,
+      "sticker_mm": 48.0,
+      "sticker_w_mm": 48.0,
+      "sticker_h_mm": 48.0,
+      "layout": "single",
+      "extent_mm": [
+       36.0,
+       36.0
+      ],
+      "page_number": 1,
+      "x_mm": 155.9365,
+      "y_mm": 99.88,
+      "marker_x_mm": 161.9365,
+      "marker_y_mm": 105.88,
+      "label_lines": [
+       "DICT_4X4_1000 #999 \u00b7 36.0 mm",
+       "Forearm (L2) \\ outer"
+      ]
+     },
+     {
+      "key": "s22",
+      "dictionary": "DICT_APRILTAG_36h11",
+      "marker_id": 0,
+      "marker_length_mm": 38.0,
+      "module_mm": 4.75,
+      "quiet_modules": 1.0,
+      "sticker_mm": 47.5,
+      "sticker_w_mm": 47.5,
+      "sticker_h_mm": 47.5,
+      "layout": "single",
+      "extent_mm": [
+       38.0,
+       38.0
+      ],
+      "page_number": 1,
+      "x_mm": 10.0,
+      "y_mm": 177.9343,
+      "marker_x_mm": 14.75,
+      "marker_y_mm": 182.6843,
+      "label_lines": [
+       "DICT_APRILTAG_36h11 #0 \u00b7 38.0 mm"
+      ]
+     },
+     {
+      "key": "s06",
+      "dictionary": "DICT_5X5_50",
+      "marker_id": 13,
+      "marker_length_mm": 35.0,
+      "module_mm": 5.0,
+      "quiet_modules": 1.0,
+      "sticker_mm": 45.0,
+      "sticker_w_mm": 45.0,
+      "sticker_h_mm": 45.0,
+      "layout": "single",
+      "extent_mm": [
+       35.0,
+       35.0
+      ],
+      "page_number": 1,
+      "x_mm": 61.5,
+      "y_mm": 177.9343,
+      "marker_x_mm": 66.5,
+      "marker_y_mm": 182.9343,
+      "label_lines": [
+       "DICT_5X5_50 #13 \u00b7 35.0 mm"
+      ]
+     },
+     {
+      "key": "s19",
+      "dictionary": "DICT_APRILTAG_16h5",
+      "marker_id": 29,
+      "marker_length_mm": 32.0,
+      "module_mm": 5.3333,
+      "quiet_modules": 1.0,
+      "sticker_mm": 42.6667,
+      "sticker_w_mm": 42.6667,
+      "sticker_h_mm": 42.6667,
+      "layout": "single",
+      "extent_mm": [
+       32.0,
+       32.0
+      ],
+      "page_number": 1,
+      "x_mm": 110.5,
+      "y_mm": 177.9343,
+      "marker_x_mm": 115.8333,
+      "marker_y_mm": 183.2676,
+      "label_lines": [
+       "DICT_APRILTAG_16h5 #29 \u00b7 32.0 mm"
+      ]
+     },
+     {
+      "key": "s10",
+      "dictionary": "DICT_6X6_50",
+      "marker_id": 3,
+      "marker_length_mm": 33.0,
+      "module_mm": 4.125,
+      "quiet_modules": 1.0,
+      "sticker_mm": 41.25,
+      "sticker_w_mm": 41.25,
+      "sticker_h_mm": 41.25,
+      "layout": "single",
+      "extent_mm": [
+       33.0,
+       33.0
+      ],
+      "page_number": 1,
+      "x_mm": 157.1667,
+      "y_mm": 177.9343,
+      "marker_x_mm": 161.2917,
+      "marker_y_mm": 182.0593,
+      "label_lines": [
+       "DICT_6X6_50 #3 \u00b7 33.0 mm"
+      ]
+     },
+     {
+      "key": "s11",
+      "dictionary": "DICT_6X6_250",
+      "marker_id": 23,
+      "marker_length_mm": 50.0,
+      "module_mm": 6.25,
+      "quiet_modules": 1.0,
+      "sticker_mm": 62.5,
+      "sticker_w_mm": 62.5,
+      "sticker_h_mm": 62.5,
+      "layout": "single",
+      "extent_mm": [
+       50.0,
+       50.0
+      ],
+      "page_number": 2,
+      "x_mm": 10.0,
+      "y_mm": 10.0,
+      "marker_x_mm": 16.25,
+      "marker_y_mm": 16.25,
+      "label_lines": [
+       "DICT_6X6_250 #23 \u00b7 50.0 mm",
+       "Wrist:1 \u00b7 side"
+      ]
+     },
+     {
+      "key": "s21",
+      "dictionary": "DICT_APRILTAG_36h10",
+      "marker_id": 2319,
+      "marker_length_mm": 42.0,
+      "module_mm": 5.25,
+      "quiet_modules": 1.0,
+      "sticker_mm": 52.5,
+      "sticker_w_mm": 52.5,
+      "sticker_h_mm": 52.5,
+      "layout": "single",
+      "extent_mm": [
+       42.0,
+       42.0
+      ],
+      "page_number": 2,
+      "x_mm": 76.5,
+      "y_mm": 10.0,
+      "marker_x_mm": 81.75,
+      "marker_y_mm": 15.25,
+      "label_lines": [
+       "DICT_APRILTAG_36h10 #2319 \u00b7 42.0 mm"
+      ]
+     },
+     {
+      "key": "s17",
+      "dictionary": "DICT_ARUCO_ORIGINAL",
+      "marker_id": 1023,
+      "marker_length_mm": 40.0,
+      "module_mm": 5.7143,
+      "quiet_modules": 1.0,
+      "sticker_mm": 51.4286,
+      "sticker_w_mm": 51.4286,
+      "sticker_h_mm": 51.4286,
+      "layout": "single",
+      "extent_mm": [
+       40.0,
+       40.0
+      ],
+      "page_number": 2,
+      "x_mm": 133.0,
+      "y_mm": 10.0,
+      "marker_x_mm": 138.7143,
+      "marker_y_mm": 15.7143,
+      "label_lines": [
+       "DICT_ARUCO_ORIGINAL #1023 \u00b7 40.0 mm"
+      ]
+     },
+     {
+      "key": "s09",
+      "dictionary": "DICT_5X5_1000",
+      "marker_id": 640,
+      "marker_length_mm": 30.0,
+      "module_mm": 4.2857,
+      "quiet_modules": 1.0,
+      "sticker_mm": 38.5714,
+      "sticker_w_mm": 38.5714,
+      "sticker_h_mm": 38.5714,
+      "layout": "single",
+      "extent_mm": [
+       30.0,
+       30.0
+      ],
+      "page_number": 2,
+      "x_mm": 10.0,
+      "y_mm": 82.38,
+      "marker_x_mm": 14.2857,
+      "marker_y_mm": 86.6657,
+      "label_lines": [
+       "DICT_5X5_1000 #640 \u00b7 30.0 mm"
+      ]
+     },
+     {
+      "key": "s20",
+      "dictionary": "DICT_APRILTAG_25h9",
+      "marker_id": 34,
+      "marker_length_mm": 28.0,
+      "module_mm": 4.0,
+      "quiet_modules": 1.0,
+      "sticker_mm": 36.0,
+      "sticker_w_mm": 36.0,
+      "sticker_h_mm": 36.0,
+      "layout": "single",
+      "extent_mm": [
+       28.0,
+       28.0
+      ],
+      "page_number": 2,
+      "x_mm": 52.5714,
+      "y_mm": 82.38,
+      "marker_x_mm": 56.5714,
+      "marker_y_mm": 86.38,
+      "label_lines": [
+       "DICT_APRILTAG_25h9 #34 \u00b7 28.0 mm"
+      ]
+     },
+     {
+      "key": "s13",
+      "dictionary": "DICT_6X6_1000",
+      "marker_id": 777,
+      "marker_length_mm": 26.0,
+      "module_mm": 3.25,
+      "quiet_modules": 1.0,
+      "sticker_mm": 32.5,
+      "sticker_w_mm": 32.5,
+      "sticker_h_mm": 32.5,
+      "layout": "single",
+      "extent_mm": [
+       26.0,
+       26.0
+      ],
+      "page_number": 2,
+      "x_mm": 92.5714,
+      "y_mm": 82.38,
+      "marker_x_mm": 95.8214,
+      "marker_y_mm": 85.63,
+      "label_lines": [
+       "DICT_6X6_1000 #777 \u00b7 26.0 mm"
+      ]
+     },
+     {
+      "key": "s15",
+      "dictionary": "DICT_7X7_100",
+      "marker_id": 42,
+      "marker_length_mm": 25.0,
+      "module_mm": 2.7778,
+      "quiet_modules": 1.0,
+      "sticker_mm": 30.5556,
+      "sticker_w_mm": 30.5556,
+      "sticker_h_mm": 30.5556,
+      "layout": "single",
+      "extent_mm": [
+       25.0,
+       25.0
+      ],
+      "page_number": 2,
+      "x_mm": 129.0714,
+      "y_mm": 82.38,
+      "marker_x_mm": 131.8492,
+      "marker_y_mm": 85.1578,
+      "label_lines": [
+       "DICT_7X7_100 #42 \u00b7 25.0 mm"
+      ]
+     },
+     {
+      "key": "s05",
+      "dictionary": "DICT_4X4_1000",
+      "marker_id": 500,
+      "marker_length_mm": 22.5,
+      "module_mm": 3.75,
+      "quiet_modules": 1.0,
+      "sticker_mm": 30.0,
+      "sticker_w_mm": 30.0,
+      "sticker_h_mm": 30.0,
+      "layout": "single",
+      "extent_mm": [
+       22.5,
+       22.5
+      ],
+      "page_number": 2,
+      "x_mm": 163.627,
+      "y_mm": 82.38,
+      "marker_x_mm": 167.377,
+      "marker_y_mm": 86.13,
+      "label_lines": [
+       "DICT_4X4_1000 #500 \u00b7 22.5 mm"
+      ]
+     },
+     {
+      "key": "s23",
+      "dictionary": "DICT_APRILTAG_36h11",
+      "marker_id": 586,
+      "marker_length_mm": 24.0,
+      "module_mm": 3.0,
+      "quiet_modules": 1.0,
+      "sticker_mm": 30.0,
+      "sticker_w_mm": 30.0,
+      "sticker_h_mm": 30.0,
+      "layout": "single",
+      "extent_mm": [
+       24.0,
+       24.0
+      ],
+      "page_number": 2,
+      "x_mm": 10.0,
+      "y_mm": 128.2914,
+      "marker_x_mm": 13.0,
+      "marker_y_mm": 131.2914,
+      "label_lines": [
+       "DICT_APRILTAG_36h11 #586 \u00b7 24.0 mm"
+      ]
+     },
+     {
+      "key": "s03",
+      "dictionary": "DICT_4X4_250",
+      "marker_id": 123,
+      "marker_length_mm": 19.0,
+      "module_mm": 3.1667,
+      "quiet_modules": 1.5,
+      "sticker_mm": 28.5,
+      "sticker_w_mm": 28.5,
+      "sticker_h_mm": 28.5,
+      "layout": "single",
+      "extent_mm": [
+       19.0,
+       19.0
+      ],
+      "page_number": 2,
+      "x_mm": 44.0,
+      "y_mm": 128.2914,
+      "marker_x_mm": 48.75,
+      "marker_y_mm": 133.0414,
+      "label_lines": [
+       "DICT_4X4_250 #123 \u00b7 19.0 mm"
+      ]
+     },
+     {
+      "key": "s12",
+      "dictionary": "DICT_6X6_250",
+      "marker_id": 249,
+      "marker_length_mm": 20.0,
+      "module_mm": 2.5,
+      "quiet_modules": 1.0,
+      "sticker_mm": 25.0,
+      "sticker_w_mm": 25.0,
+      "sticker_h_mm": 25.0,
+      "layout": "single",
+      "extent_mm": [
+       20.0,
+       20.0
+      ],
+      "page_number": 2,
+      "x_mm": 76.5,
+      "y_mm": 128.2914,
+      "marker_x_mm": 79.0,
+      "marker_y_mm": 130.7914,
+      "label_lines": [
+       "DICT_6X6_250 #249 \u00b7 20.0 mm"
+      ]
+     },
+     {
+      "key": "s08",
+      "dictionary": "DICT_5X5_100",
+      "marker_id": 99,
+      "marker_length_mm": 18.0,
+      "module_mm": 2.5714,
+      "quiet_modules": 1.0,
+      "sticker_mm": 23.1429,
+      "sticker_w_mm": 23.1429,
+      "sticker_h_mm": 23.1429,
+      "layout": "single",
+      "extent_mm": [
+       18.0,
+       18.0
+      ],
+      "page_number": 2,
+      "x_mm": 105.5,
+      "y_mm": 128.2914,
+      "marker_x_mm": 108.0714,
+      "marker_y_mm": 130.8629,
+      "label_lines": [
+       "DICT_5X5_100 #99 \u00b7 18.0 mm"
+      ]
+     },
+     {
+      "key": "s18",
+      "dictionary": "DICT_ARUCO_ORIGINAL",
+      "marker_id": 0,
+      "marker_length_mm": 16.5,
+      "module_mm": 2.3571,
+      "quiet_modules": 1.0,
+      "sticker_mm": 21.2143,
+      "sticker_w_mm": 21.2143,
+      "sticker_h_mm": 21.2143,
+      "layout": "single",
+      "extent_mm": [
+       16.5,
+       16.5
+      ],
+      "page_number": 2,
+      "x_mm": 136.2827,
+      "y_mm": 128.2914,
+      "marker_x_mm": 138.6399,
+      "marker_y_mm": 130.6486,
+      "label_lines": [
+       "DICT_ARUCO_ORIGINAL #0 \u00b7 16.5 mm"
+      ]
+     },
+     {
+      "key": "s01",
+      "dictionary": "DICT_4X4_50",
+      "marker_id": 17,
+      "marker_length_mm": 15.0,
+      "module_mm": 2.5,
+      "quiet_modules": 1.0,
+      "sticker_mm": 20.0,
+      "sticker_w_mm": 20.0,
+      "sticker_h_mm": 20.0,
+      "layout": "single",
+      "extent_mm": [
+       15.0,
+       15.0
+      ],
+      "page_number": 2,
+      "x_mm": 165.4604,
+      "y_mm": 128.2914,
+      "marker_x_mm": 167.9604,
+      "marker_y_mm": 130.7914,
+      "label_lines": [
+       "DICT_4X4_50 #17 \u00b7 15.0 mm"
+      ]
+     },
+     {
+      "key": "s24",
+      "dictionary": "DICT_APRILTAG_36h11",
+      "marker_id": 300,
+      "marker_length_mm": 15.0,
+      "module_mm": 1.875,
+      "quiet_modules": 1.0,
+      "sticker_mm": 18.75,
+      "sticker_w_mm": 18.75,
+      "sticker_h_mm": 18.75,
+      "layout": "single",
+      "extent_mm": [
+       15.0,
+       15.0
+      ],
+      "page_number": 2,
+      "x_mm": 15.2276,
+      "y_mm": 165.0483,
+      "marker_x_mm": 17.1026,
+      "marker_y_mm": 166.9233,
+      "label_lines": [
+       "DICT_APRILTAG_36h11 #300 \u00b7 15.0 mm"
+      ]
+     }
+    ],
+    "rejected": [],
+    "ruler": {
+     "top": 246.4,
+     "mm_bar": [
+      10.0,
+      256.9,
+      100.0,
+      1.2
+     ],
+     "in_bar": [
+      10.0,
+      259.7,
+      101.6,
+      1.2
+     ]
+    },
+    "warnings": []
+   }
+  },
+  "a4": {
+   "page": "a4",
+   "pages": 2,
+   "pdf_pages": 2,
+   "rejected": [],
+   "items": [
+    {
+     "key": "s00",
+     "dictionary": "DICT_4X4_50",
+     "id": 0,
+     "page": 1,
+     "marker_mm": 60.0,
+     "found": 1,
+     "scan_w_mm": 60.0003,
+     "scan_h_mm": 60.0003,
+     "side_mm": 59.9963,
+     "side_err_mm": -0.0037,
+     "edge_spread_mm": 0.0031,
+     "corner_err_mm": 0.004
+    },
+    {
+     "key": "s14",
+     "dictionary": "DICT_7X7_50",
+     "id": 9,
+     "page": 1,
+     "marker_mm": 58.0,
+     "found": 1,
+     "scan_w_mm": 58.0,
+     "scan_h_mm": 58.0002,
+     "side_mm": 57.9937,
+     "side_err_mm": -0.0063,
+     "edge_spread_mm": 0.0056,
+     "corner_err_mm": 0.0054
+    },
+    {
+     "key": "s15",
+     "dictionary": "DICT_7X7_100",
+     "id": 42,
+     "page": 1,
+     "marker_mm": 25.0,
+     "found": 1,
+     "scan_w_mm": 25.0002,
+     "scan_h_mm": 25.0,
+     "side_mm": 24.9923,
+     "side_err_mm": -0.0077,
+     "edge_spread_mm": 0.0086,
+     "corner_err_mm": 0.0066
+    },
+    {
+     "key": "s07",
+     "dictionary": "DICT_5X5_100",
+     "id": 7,
+     "page": 1,
+     "marker_mm": 45.0,
+     "found": 1,
+     "scan_w_mm": 45.0,
+     "scan_h_mm": 45.0002,
+     "side_mm": 44.9936,
+     "side_err_mm": -0.0064,
+     "edge_spread_mm": 0.0019,
+     "corner_err_mm": 0.0068
+    },
+    {
+     "key": "s16",
+     "dictionary": "DICT_7X7_1000",
+     "id": 999,
+     "page": 1,
+     "marker_mm": 55.0,
+     "found": 1,
+     "scan_w_mm": 55.0002,
+     "scan_h_mm": 55.0,
+     "side_mm": 54.9913,
+     "side_err_mm": -0.0087,
+     "edge_spread_mm": 0.0028,
+     "corner_err_mm": 0.0082
+    },
+    {
+     "key": "s19",
+     "dictionary": "DICT_APRILTAG_16h5",
+     "id": 29,
+     "page": 1,
+     "marker_mm": 32.0,
+     "found": 1,
+     "scan_w_mm": 32.0003,
+     "scan_h_mm": 32.0002,
+     "side_mm": 31.9929,
+     "side_err_mm": -0.0071,
+     "edge_spread_mm": 0.0058,
+     "corner_err_mm": 0.0082
+    },
+    {
+     "key": "s11",
+     "dictionary": "DICT_6X6_250",
+     "id": 23,
+     "page": 1,
+     "marker_mm": 50.0,
+     "found": 1,
+     "scan_w_mm": 49.9999,
+     "scan_h_mm": 50.0,
+     "side_mm": 49.9918,
+     "side_err_mm": -0.0082,
+     "edge_spread_mm": 0.0012,
+     "corner_err_mm": 0.0065
+    },
+    {
+     "key": "s21",
+     "dictionary": "DICT_APRILTAG_36h10",
+     "id": 2319,
+     "page": 1,
+     "marker_mm": 42.0,
+     "found": 1,
+     "scan_w_mm": 42.0002,
+     "scan_h_mm": 42.0001,
+     "side_mm": 41.9947,
+     "side_err_mm": -0.0053,
+     "edge_spread_mm": 0.0029,
+     "corner_err_mm": 0.0067
+    },
+    {
+     "key": "s17",
+     "dictionary": "DICT_ARUCO_ORIGINAL",
+     "id": 1023,
+     "page": 1,
+     "marker_mm": 40.0,
+     "found": 1,
+     "scan_w_mm": 40.0002,
+     "scan_h_mm": 40.0002,
+     "side_mm": 39.9945,
+     "side_err_mm": -0.0055,
+     "edge_spread_mm": 0.0032,
+     "corner_err_mm": 0.0069
+    },
+    {
+     "key": "s04",
+     "dictionary": "DICT_4X4_1000",
+     "id": 999,
+     "page": 2,
+     "marker_mm": 36.0,
+     "found": 1,
+     "scan_w_mm": 36.0001,
+     "scan_h_mm": 36.0001,
+     "side_mm": 35.9914,
+     "side_err_mm": -0.0086,
+     "edge_spread_mm": 0.0018,
+     "corner_err_mm": 0.008
+    },
+    {
+     "key": "s22",
+     "dictionary": "DICT_APRILTAG_36h11",
+     "id": 0,
+     "page": 2,
+     "marker_mm": 38.0,
+     "found": 1,
+     "scan_w_mm": 38.0002,
+     "scan_h_mm": 38.0,
+     "side_mm": 37.9935,
+     "side_err_mm": -0.0065,
+     "edge_spread_mm": 0.0018,
+     "corner_err_mm": 0.0064
+    },
+    {
+     "key": "s06",
+     "dictionary": "DICT_5X5_50",
+     "id": 13,
+     "page": 2,
+     "marker_mm": 35.0,
+     "found": 1,
+     "scan_w_mm": 35.0002,
+     "scan_h_mm": 35.0003,
+     "side_mm": 34.9933,
+     "side_err_mm": -0.0067,
+     "edge_spread_mm": 0.0047,
+     "corner_err_mm": 0.008
+    },
+    {
+     "key": "s02",
+     "dictionary": "DICT_4X4_50",
+     "id": 49,
+     "page": 2,
+     "marker_mm": 27.1,
+     "found": 1,
+     "scan_w_mm": 27.1003,
+     "scan_h_mm": 27.1,
+     "side_mm": 27.0931,
+     "side_err_mm": -0.0069,
+     "edge_spread_mm": 0.0052,
+     "corner_err_mm": 0.0068
+    },
+    {
+     "key": "s10",
+     "dictionary": "DICT_6X6_50",
+     "id": 3,
+     "page": 2,
+     "marker_mm": 33.0,
+     "found": 1,
+     "scan_w_mm": 33.0001,
+     "scan_h_mm": 33.0001,
+     "side_mm": 32.9904,
+     "side_err_mm": -0.0096,
+     "edge_spread_mm": 0.0072,
+     "corner_err_mm": 0.0075
+    },
+    {
+     "key": "s09",
+     "dictionary": "DICT_5X5_1000",
+     "id": 640,
+     "page": 2,
+     "marker_mm": 30.0,
+     "found": 1,
+     "scan_w_mm": 30.0001,
+     "scan_h_mm": 30.0001,
+     "side_mm": 29.9905,
+     "side_err_mm": -0.0095,
+     "edge_spread_mm": 0.0044,
+     "corner_err_mm": 0.0082
+    },
+    {
+     "key": "s20",
+     "dictionary": "DICT_APRILTAG_25h9",
+     "id": 34,
+     "page": 2,
+     "marker_mm": 28.0,
+     "found": 1,
+     "scan_w_mm": 28.0002,
+     "scan_h_mm": 28.0003,
+     "side_mm": 27.995,
+     "side_err_mm": -0.005,
+     "edge_spread_mm": 0.0074,
+     "corner_err_mm": 0.0061
+    },
+    {
+     "key": "s13",
+     "dictionary": "DICT_6X6_1000",
+     "id": 777,
+     "page": 2,
+     "marker_mm": 26.0,
+     "found": 1,
+     "scan_w_mm": 26.0002,
+     "scan_h_mm": 26.0002,
+     "side_mm": 25.994,
+     "side_err_mm": -0.006,
+     "edge_spread_mm": 0.0046,
+     "corner_err_mm": 0.0077
+    },
+    {
+     "key": "s12",
+     "dictionary": "DICT_6X6_250",
+     "id": 249,
+     "page": 2,
+     "marker_mm": 20.0,
+     "found": 1,
+     "scan_w_mm": 20.0003,
+     "scan_h_mm": 20.0,
+     "side_mm": 19.995,
+     "side_err_mm": -0.005,
+     "edge_spread_mm": 0.0115,
+     "corner_err_mm": 0.0067
+    },
+    {
+     "key": "s05",
+     "dictionary": "DICT_4X4_1000",
+     "id": 500,
+     "page": 2,
+     "marker_mm": 22.5,
+     "found": 1,
+     "scan_w_mm": 22.5001,
+     "scan_h_mm": 22.5001,
+     "side_mm": 22.49,
+     "side_err_mm": -0.01,
+     "edge_spread_mm": 0.0041,
+     "corner_err_mm": 0.008
+    },
+    {
+     "key": "s23",
+     "dictionary": "DICT_APRILTAG_36h11",
+     "id": 586,
+     "page": 2,
+     "marker_mm": 24.0,
+     "found": 1,
+     "scan_w_mm": 24.0002,
+     "scan_h_mm": 24.0001,
+     "side_mm": 23.9937,
+     "side_err_mm": -0.0063,
+     "edge_spread_mm": 0.0035,
+     "corner_err_mm": 0.0084
+    },
+    {
+     "key": "s03",
+     "dictionary": "DICT_4X4_250",
+     "id": 123,
+     "page": 2,
+     "marker_mm": 19.0,
+     "found": 1,
+     "scan_w_mm": 19.0003,
+     "scan_h_mm": 19.0002,
+     "side_mm": 18.9919,
+     "side_err_mm": -0.0081,
+     "edge_spread_mm": 0.0097,
+     "corner_err_mm": 0.0074
+    },
+    {
+     "key": "s08",
+     "dictionary": "DICT_5X5_100",
+     "id": 99,
+     "page": 2,
+     "marker_mm": 18.0,
+     "found": 1,
+     "scan_w_mm": 18.0001,
+     "scan_h_mm": 18.0002,
+     "side_mm": 17.9929,
+     "side_err_mm": -0.0071,
+     "edge_spread_mm": 0.0033,
+     "corner_err_mm": 0.0089
+    },
+    {
+     "key": "s18",
+     "dictionary": "DICT_ARUCO_ORIGINAL",
+     "id": 0,
+     "page": 2,
+     "marker_mm": 16.5,
+     "found": 1,
+     "scan_w_mm": 16.5001,
+     "scan_h_mm": 16.5003,
+     "side_mm": 16.4962,
+     "side_err_mm": -0.0038,
+     "edge_spread_mm": 0.0049,
+     "corner_err_mm": 0.0054
+    },
+    {
+     "key": "s01",
+     "dictionary": "DICT_4X4_50",
+     "id": 17,
+     "page": 2,
+     "marker_mm": 15.0,
+     "found": 1,
+     "scan_w_mm": 15.0002,
+     "scan_h_mm": 15.0002,
+     "side_mm": 14.9944,
+     "side_err_mm": -0.0056,
+     "edge_spread_mm": 0.0102,
+     "corner_err_mm": 0.0076
+    },
+    {
+     "key": "s24",
+     "dictionary": "DICT_APRILTAG_36h11",
+     "id": 300,
+     "page": 2,
+     "marker_mm": 15.0,
+     "found": 1,
+     "scan_w_mm": 15.0002,
+     "scan_h_mm": 15.0001,
+     "side_mm": 14.9914,
+     "side_err_mm": -0.0086,
+     "edge_spread_mm": 0.0026,
+     "corner_err_mm": 0.0086
+    }
+   ],
+   "misreads": [],
+   "spurious": [],
+   "aliases": [
+    {
+     "detector": "DICT_4X4_1000",
+     "id": 0,
+     "page": 1,
+     "centre_mm": [
+      50.0,
+      50.0
+     ],
+     "on": "DICT_4X4_50 #0",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_250",
+     "id": 0,
+     "page": 1,
+     "centre_mm": [
+      50.0,
+      50.0
+     ],
+     "on": "DICT_4X4_50 #0",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_5X5_1000",
+     "id": 7,
+     "page": 1,
+     "centre_mm": [
+      45.36,
+      135.23
+     ],
+     "on": "DICT_5X5_100 #7",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_5X5_50",
+     "id": 7,
+     "page": 1,
+     "centre_mm": [
+      45.36,
+      135.23
+     ],
+     "on": "DICT_5X5_100 #7",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_6X6_1000",
+     "id": 23,
+     "page": 1,
+     "centre_mm": [
+      41.25,
+      209.18
+     ],
+     "on": "DICT_6X6_250 #23",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_6X6_50",
+     "id": 23,
+     "page": 1,
+     "centre_mm": [
+      41.25,
+      209.18
+     ],
+     "on": "DICT_6X6_250 #23",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_7X7_100",
+     "id": 9,
+     "page": 1,
+     "centre_mm": [
+      129.44,
+      45.45
+     ],
+     "on": "DICT_7X7_50 #9",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_7X7_1000",
+     "id": 9,
+     "page": 1,
+     "centre_mm": [
+      129.44,
+      45.45
+     ],
+     "on": "DICT_7X7_50 #9",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_7X7_1000",
+     "id": 42,
+     "page": 1,
+     "centre_mm": [
+      184.17,
+      25.28
+     ],
+     "on": "DICT_7X7_100 #42",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_7X7_50",
+     "id": 42,
+     "page": 1,
+     "centre_mm": [
+      184.17,
+      25.28
+     ],
+     "on": "DICT_7X7_100 #42",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_1000",
+     "id": 49,
+     "page": 2,
+     "centre_mm": [
+      180.57,
+      28.07
+     ],
+     "on": "DICT_4X4_50 #49",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_1000",
+     "id": 123,
+     "page": 2,
+     "centre_mm": [
+      92.25,
+      130.72
+     ],
+     "on": "DICT_4X4_250 #123",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_1000",
+     "id": 17,
+     "page": 2,
+     "centre_mm": [
+      180.46,
+      126.47
+     ],
+     "on": "DICT_4X4_50 #17",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_250",
+     "id": 49,
+     "page": 2,
+     "centre_mm": [
+      180.57,
+      28.07
+     ],
+     "on": "DICT_4X4_50 #49",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_4X4_250",
+     "id": 17,
+     "page": 2,
+     "centre_mm": [
+      180.46,
+      126.47
+     ],
+     "on": "DICT_4X4_50 #17",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_5X5_100",
+     "id": 13,
+     "page": 2,
+     "centre_mm": [
+      136.0,
+      32.5
+     ],
+     "on": "DICT_5X5_50 #13",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_5X5_1000",
+     "id": 13,
+     "page": 2,
+     "centre_mm": [
+      136.0,
+      32.5
+     ],
+     "on": "DICT_5X5_50 #13",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_5X5_1000",
+     "id": 99,
+     "page": 2,
+     "centre_mm": [
+      122.07,
+      128.04
+     ],
+     "on": "DICT_5X5_100 #99",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_6X6_1000",
+     "id": 3,
+     "page": 2,
+     "centre_mm": [
+      30.62,
+      88.5
+     ],
+     "on": "DICT_6X6_50 #3",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_6X6_1000",
+     "id": 249,
+     "page": 2,
+     "centre_mm": [
+      186.82,
+      80.38
+     ],
+     "on": "DICT_6X6_250 #249",
+     "same_pattern": true
+    },
+    {
+     "detector": "DICT_6X6_250",
+     "id": 3,
+     "page": 2,
+     "centre_mm": [
+      30.62,
+      88.5
+     ],
+     "on": "DICT_6X6_50 #3",
+     "same_pattern": true
+    }
+   ],
+   "rulers": [
+    {
+     "page": 1,
+     "mm_bar_mm": 100.0001,
+     "in_bar_mm": 101.6001
+    },
+    {
+     "page": 2,
+     "mm_bar_mm": 100.0001,
+     "in_bar_mm": 101.6001
+    }
+   ],
+   "raster_px_per_mm": [
+    23.62381,
+    23.622896
+   ],
+   "worst_side_err_mm": 0.01,
+   "worst_corner_err_mm": 0.0089,
+   "worst_scan_err_mm": 0.0003,
+   "aliases_same_pattern": 21,
+   "aliases_cross_family": 0,
+   "checks": {
+    "two_or_more_pages": true,
+    "pdf_pages_match_layout": true,
+    "nothing_rejected": true,
+    "every_item_once_in_place_and_size": true,
+    "no_misreads": true,
+    "no_spurious": true,
+    "scanline_sides": true,
+    "rulers": true,
+    "all_items_measured": true
+   },
+   "pass": true,
+   "layout": {
+    "page": "a4",
+    "page_mm": [
+     210.0,
+     297.0
+    ],
+    "landscape": false,
+    "printable_mm": {
+     "x": 10.0,
+     "y": 10.0,
+     "w": 190.0,
+     "h": 251.0
+    },
+    "origin": "page top-left, y down, millimetres",
+    "scale": 1.0,
+    "pages": 2,
+    "placed": [
+     {
+      "key": "s00",
+      "dictionary": "DICT_4X4_50",
+      "marker_id": 0,
+      "marker_length_mm": 60.0,
+      "module_mm": 10.0,
+      "quiet_modules": 1.0,
+      "sticker_mm": 80.0,
+      "sticker_w_mm": 80.0,
+      "sticker_h_mm": 80.0,
+      "layout": "single",
+      "extent_mm": [
+       60.0,
+       60.0
+      ],
+      "page_number": 1,
+      "x_mm": 10.0,
+      "y_mm": 10.0,
+      "marker_x_mm": 20.0,
+      "marker_y_mm": 20.0,
+      "label_lines": [
+       "DICT_4X4_50 #0 \u00b7 60.0 mm",
+       "Base:1 \u00b7 top"
+      ]
+     },
+     {
+      "key": "s14",
+      "dictionary": "DICT_7X7_50",
+      "marker_id": 9,
+      "marker_length_mm": 58.0,
+      "module_mm": 6.4444,
+      "quiet_modules": 1.0,
+      "sticker_mm": 70.8889,
+      "sticker_w_mm": 70.8889,
+      "sticker_h_mm": 70.8889,
+      "layout": "single",
+      "extent_mm": [
+       58.0,
+       58.0
+      ],
+      "page_number": 1,
+      "x_mm": 94.0,
+      "y_mm": 10.0,
+      "marker_x_mm": 100.4444,
+      "marker_y_mm": 16.4444,
+      "label_lines": [
+       "DICT_7X7_50 #9 \u00b7 58.0 mm"
+      ]
+     },
+     {
+      "key": "s15",
+      "dictionary": "DICT_7X7_100",
+      "marker_id": 42,
+      "marker_length_mm": 25.0,
+      "module_mm": 2.7778,
+      "quiet_modules": 1.0,
+      "sticker_mm": 30.5556,
+      "sticker_w_mm": 30.5556,
+      "sticker_h_mm": 30.5556,
+      "layout": "single",
+      "extent_mm": [
+       25.0,
+       25.0
+      ],
+      "page_number": 1,
+      "x_mm": 168.8889,
+      "y_mm": 10.0,
+      "marker_x_mm": 171.6667,
+      "marker_y_mm": 12.7778,
+      "label_lines": [
+       "DICT_7X7_100 #42 \u00b7 25.0 mm"
+      ]
+     },
+     {
+      "key": "s07",
+      "dictionary": "DICT_5X5_100",
+      "marker_id": 7,
+      "marker_length_mm": 45.0,
+      "module_mm": 6.4286,
+      "quiet_modules": 2.0,
+      "sticker_mm": 70.7143,
+      "sticker_w_mm": 70.7143,
+      "sticker_h_mm": 70.7143,
+      "layout": "single",
+      "extent_mm": [
+       45.0,
+       45.0
+      ],
+      "page_number": 1,
+      "x_mm": 10.0,
+      "y_mm": 99.88,
+      "marker_x_mm": 22.8571,
+      "marker_y_mm": 112.7371,
+      "label_lines": [
+       "DICT_5X5_100 #7 \u00b7 45.0 mm"
+      ]
+     },
+     {
+      "key": "s16",
+      "dictionary": "DICT_7X7_1000",
+      "marker_id": 999,
+      "marker_length_mm": 55.0,
+      "module_mm": 6.1111,
+      "quiet_modules": 1.0,
+      "sticker_mm": 67.2222,
+      "sticker_w_mm": 67.2222,
+      "sticker_h_mm": 67.2222,
+      "layout": "single",
+      "extent_mm": [
+       55.0,
+       55.0
+      ],
+      "page_number": 1,
+      "x_mm": 84.7143,
+      "y_mm": 99.88,
+      "marker_x_mm": 90.8254,
+      "marker_y_mm": 105.9911,
+      "label_lines": [
+       "DICT_7X7_1000 #999 \u00b7 55.0 mm"
+      ]
+     },
+     {
+      "key": "s19",
+      "dictionary": "DICT_APRILTAG_16h5",
+      "marker_id": 29,
+      "marker_length_mm": 32.0,
+      "module_mm": 5.3333,
+      "quiet_modules": 1.0,
+      "sticker_mm": 42.6667,
+      "sticker_w_mm": 42.6667,
+      "sticker_h_mm": 42.6667,
+      "layout": "single",
+      "extent_mm": [
+       32.0,
+       32.0
+      ],
+      "page_number": 1,
+      "x_mm": 155.9365,
+      "y_mm": 99.88,
+      "marker_x_mm": 161.2698,
+      "marker_y_mm": 105.2133,
+      "label_lines": [
+       "DICT_APRILTAG_16h5 #29 \u00b7 32.0 mm"
+      ]
+     },
+     {
+      "key": "s11",
+      "dictionary": "DICT_6X6_250",
+      "marker_id": 23,
+      "marker_length_mm": 50.0,
+      "module_mm": 6.25,
+      "quiet_modules": 1.0,
+      "sticker_mm": 62.5,
+      "sticker_w_mm": 62.5,
+      "sticker_h_mm": 62.5,
+      "layout": "single",
+      "extent_mm": [
+       50.0,
+       50.0
+      ],
+      "page_number": 1,
+      "x_mm": 10.0,
+      "y_mm": 177.9343,
+      "marker_x_mm": 16.25,
+      "marker_y_mm": 184.1843,
+      "label_lines": [
+       "DICT_6X6_250 #23 \u00b7 50.0 mm",
+       "Wrist:1 \u00b7 side"
+      ]
+     },
+     {
+      "key": "s21",
+      "dictionary": "DICT_APRILTAG_36h10",
+      "marker_id": 2319,
+      "marker_length_mm": 42.0,
+      "module_mm": 5.25,
+      "quiet_modules": 1.0,
+      "sticker_mm": 52.5,
+      "sticker_w_mm": 52.5,
+      "sticker_h_mm": 52.5,
+      "layout": "single",
+      "extent_mm": [
+       42.0,
+       42.0
+      ],
+      "page_number": 1,
+      "x_mm": 76.5,
+      "y_mm": 177.9343,
+      "marker_x_mm": 81.75,
+      "marker_y_mm": 183.1843,
+      "label_lines": [
+       "DICT_APRILTAG_36h10 #2319 \u00b7 42.0 mm"
+      ]
+     },
+     {
+      "key": "s17",
+      "dictionary": "DICT_ARUCO_ORIGINAL",
+      "marker_id": 1023,
+      "marker_length_mm": 40.0,
+      "module_mm": 5.7143,
+      "quiet_modules": 1.0,
+      "sticker_mm": 51.4286,
+      "sticker_w_mm": 51.4286,
+      "sticker_h_mm": 51.4286,
+      "layout": "single",
+      "extent_mm": [
+       40.0,
+       40.0
+      ],
+      "page_number": 1,
+      "x_mm": 133.0,
+      "y_mm": 177.9343,
+      "marker_x_mm": 138.7143,
+      "marker_y_mm": 183.6486,
+      "label_lines": [
+       "DICT_ARUCO_ORIGINAL #1023 \u00b7 40.0 mm"
+      ]
+     },
+     {
+      "key": "s04",
+      "dictionary": "DICT_4X4_1000",
+      "marker_id": 999,
+      "marker_length_mm": 36.0,
+      "module_mm": 6.0,
+      "quiet_modules": 1.0,
+      "sticker_mm": 48.0,
+      "sticker_w_mm": 48.0,
+      "sticker_h_mm": 48.0,
+      "layout": "single",
+      "extent_mm": [
+       36.0,
+       36.0
+      ],
+      "page_number": 2,
+      "x_mm": 10.0,
+      "y_mm": 10.0,
+      "marker_x_mm": 16.0,
+      "marker_y_mm": 16.0,
+      "label_lines": [
+       "DICT_4X4_1000 #999 \u00b7 36.0 mm",
+       "Forearm (L2) \\ outer"
+      ]
+     },
+     {
+      "key": "s22",
+      "dictionary": "DICT_APRILTAG_36h11",
+      "marker_id": 0,
+      "marker_length_mm": 38.0,
+      "module_mm": 4.75,
+      "quiet_modules": 1.0,
+      "sticker_mm": 47.5,
+      "sticker_w_mm": 47.5,
+      "sticker_h_mm": 47.5,
+      "layout": "single",
+      "extent_mm": [
+       38.0,
+       38.0
+      ],
+      "page_number": 2,
+      "x_mm": 62.0,
+      "y_mm": 10.0,
+      "marker_x_mm": 66.75,
+      "marker_y_mm": 14.75,
+      "label_lines": [
+       "DICT_APRILTAG_36h11 #0 \u00b7 38.0 mm"
+      ]
+     },
+     {
+      "key": "s06",
+      "dictionary": "DICT_5X5_50",
+      "marker_id": 13,
+      "marker_length_mm": 35.0,
+      "module_mm": 5.0,
+      "quiet_modules": 1.0,
+      "sticker_mm": 45.0,
+      "sticker_w_mm": 45.0,
+      "sticker_h_mm": 45.0,
+      "layout": "single",
+      "extent_mm": [
+       35.0,
+       35.0
+      ],
+      "page_number": 2,
+      "x_mm": 113.5,
+      "y_mm": 10.0,
+      "marker_x_mm": 118.5,
+      "marker_y_mm": 15.0,
+      "label_lines": [
+       "DICT_5X5_50 #13 \u00b7 35.0 mm"
+      ]
+     },
+     {
+      "key": "s02",
+      "dictionary": "DICT_4X4_50",
+      "marker_id": 49,
+      "marker_length_mm": 27.1,
+      "module_mm": 4.5167,
+      "quiet_modules": 1.0,
+      "sticker_mm": 36.1333,
+      "sticker_w_mm": 36.1333,
+      "sticker_h_mm": 36.1333,
+      "layout": "single",
+      "extent_mm": [
+       27.1,
+       27.1
+      ],
+      "page_number": 2,
+      "x_mm": 162.5,
+      "y_mm": 10.0,
+      "marker_x_mm": 167.0167,
+      "marker_y_mm": 14.5167,
+      "label_lines": [
+       "DICT_4X4_50 #49 \u00b7 27.1 mm",
+       "Arm/Actuator:3 \u00b7 front"
+      ]
+     },
+     {
+      "key": "s10",
+      "dictionary": "DICT_6X6_50",
+      "marker_id": 3,
+      "marker_length_mm": 33.0,
+      "module_mm": 4.125,
+      "quiet_modules": 1.0,
+      "sticker_mm": 41.25,
+      "sticker_w_mm": 41.25,
+      "sticker_h_mm": 41.25,
+      "layout": "single",
+      "extent_mm": [
+       33.0,
+       33.0
+      ],
+      "page_number": 2,
+      "x_mm": 10.0,
+      "y_mm": 67.88,
+      "marker_x_mm": 14.125,
+      "marker_y_mm": 72.005,
+      "label_lines": [
+       "DICT_6X6_50 #3 \u00b7 33.0 mm"
+      ]
+     },
+     {
+      "key": "s09",
+      "dictionary": "DICT_5X5_1000",
+      "marker_id": 640,
+      "marker_length_mm": 30.0,
+      "module_mm": 4.2857,
+      "quiet_modules": 1.0,
+      "sticker_mm": 38.5714,
+      "sticker_w_mm": 38.5714,
+      "sticker_h_mm": 38.5714,
+      "layout": "single",
+      "extent_mm": [
+       30.0,
+       30.0
+      ],
+      "page_number": 2,
+      "x_mm": 55.25,
+      "y_mm": 67.88,
+      "marker_x_mm": 59.5357,
+      "marker_y_mm": 72.1657,
+      "label_lines": [
+       "DICT_5X5_1000 #640 \u00b7 30.0 mm"
+      ]
+     },
+     {
+      "key": "s20",
+      "dictionary": "DICT_APRILTAG_25h9",
+      "marker_id": 34,
+      "marker_length_mm": 28.0,
+      "module_mm": 4.0,
+      "quiet_modules": 1.0,
+      "sticker_mm": 36.0,
+      "sticker_w_mm": 36.0,
+      "sticker_h_mm": 36.0,
+      "layout": "single",
+      "extent_mm": [
+       28.0,
+       28.0
+      ],
+      "page_number": 2,
+      "x_mm": 97.8214,
+      "y_mm": 67.88,
+      "marker_x_mm": 101.8214,
+      "marker_y_mm": 71.88,
+      "label_lines": [
+       "DICT_APRILTAG_25h9 #34 \u00b7 28.0 mm"
+      ]
+     },
+     {
+      "key": "s13",
+      "dictionary": "DICT_6X6_1000",
+      "marker_id": 777,
+      "marker_length_mm": 26.0,
+      "module_mm": 3.25,
+      "quiet_modules": 1.0,
+      "sticker_mm": 32.5,
+      "sticker_w_mm": 32.5,
+      "sticker_h_mm": 32.5,
+      "layout": "single",
+      "extent_mm": [
+       26.0,
+       26.0
+      ],
+      "page_number": 2,
+      "x_mm": 137.8214,
+      "y_mm": 67.88,
+      "marker_x_mm": 141.0714,
+      "marker_y_mm": 71.13,
+      "label_lines": [
+       "DICT_6X6_1000 #777 \u00b7 26.0 mm"
+      ]
+     },
+     {
+      "key": "s12",
+      "dictionary": "DICT_6X6_250",
+      "marker_id": 249,
+      "marker_length_mm": 20.0,
+      "module_mm": 2.5,
+      "quiet_modules": 1.0,
+      "sticker_mm": 25.0,
+      "sticker_w_mm": 25.0,
+      "sticker_h_mm": 25.0,
+      "layout": "single",
+      "extent_mm": [
+       20.0,
+       20.0
+      ],
+      "page_number": 2,
+      "x_mm": 174.3214,
+      "y_mm": 67.88,
+      "marker_x_mm": 176.8214,
+      "marker_y_mm": 70.38,
+      "label_lines": [
+       "DICT_6X6_250 #249 \u00b7 20.0 mm"
+      ]
+     },
+     {
+      "key": "s05",
+      "dictionary": "DICT_4X4_1000",
+      "marker_id": 500,
+      "marker_length_mm": 22.5,
+      "module_mm": 3.75,
+      "quiet_modules": 1.0,
+      "sticker_mm": 30.0,
+      "sticker_w_mm": 30.0,
+      "sticker_h_mm": 30.0,
+      "layout": "single",
+      "extent_mm": [
+       22.5,
+       22.5
+      ],
+      "page_number": 2,
+      "x_mm": 10.0,
+      "y_mm": 116.47,
+      "marker_x_mm": 13.75,
+      "marker_y_mm": 120.22,
+      "label_lines": [
+       "DICT_4X4_1000 #500 \u00b7 22.5 mm"
+      ]
+     },
+     {
+      "key": "s23",
+      "dictionary": "DICT_APRILTAG_36h11",
+      "marker_id": 586,
+      "marker_length_mm": 24.0,
+      "module_mm": 3.0,
+      "quiet_modules": 1.0,
+      "sticker_mm": 30.0,
+      "sticker_w_mm": 30.0,
+      "sticker_h_mm": 30.0,
+      "layout": "single",
+      "extent_mm": [
+       24.0,
+       24.0
+      ],
+      "page_number": 2,
+      "x_mm": 44.0,
+      "y_mm": 116.47,
+      "marker_x_mm": 47.0,
+      "marker_y_mm": 119.47,
+      "label_lines": [
+       "DICT_APRILTAG_36h11 #586 \u00b7 24.0 mm"
+      ]
+     },
+     {
+      "key": "s03",
+      "dictionary": "DICT_4X4_250",
+      "marker_id": 123,
+      "marker_length_mm": 19.0,
+      "module_mm": 3.1667,
+      "quiet_modules": 1.5,
+      "sticker_mm": 28.5,
+      "sticker_w_mm": 28.5,
+      "sticker_h_mm": 28.5,
+      "layout": "single",
+      "extent_mm": [
+       19.0,
+       19.0
+      ],
+      "page_number": 2,
+      "x_mm": 78.0,
+      "y_mm": 116.47,
+      "marker_x_mm": 82.75,
+      "marker_y_mm": 121.22,
+      "label_lines": [
+       "DICT_4X4_250 #123 \u00b7 19.0 mm"
+      ]
+     },
+     {
+      "key": "s08",
+      "dictionary": "DICT_5X5_100",
+      "marker_id": 99,
+      "marker_length_mm": 18.0,
+      "module_mm": 2.5714,
+      "quiet_modules": 1.0,
+      "sticker_mm": 23.1429,
+      "sticker_w_mm": 23.1429,
+      "sticker_h_mm": 23.1429,
+      "layout": "single",
+      "extent_mm": [
+       18.0,
+       18.0
+      ],
+      "page_number": 2,
+      "x_mm": 110.5,
+      "y_mm": 116.47,
+      "marker_x_mm": 113.0714,
+      "marker_y_mm": 119.0414,
+      "label_lines": [
+       "DICT_5X5_100 #99 \u00b7 18.0 mm"
+      ]
+     },
+     {
+      "key": "s18",
+      "dictionary": "DICT_ARUCO_ORIGINAL",
+      "marker_id": 0,
+      "marker_length_mm": 16.5,
+      "module_mm": 2.3571,
+      "quiet_modules": 1.0,
+      "sticker_mm": 21.2143,
+      "sticker_w_mm": 21.2143,
+      "sticker_h_mm": 21.2143,
+      "layout": "single",
+      "extent_mm": [
+       16.5,
+       16.5
+      ],
+      "page_number": 2,
+      "x_mm": 141.2827,
+      "y_mm": 116.47,
+      "marker_x_mm": 143.6399,
+      "marker_y_mm": 118.8271,
+      "label_lines": [
+       "DICT_ARUCO_ORIGINAL #0 \u00b7 16.5 mm"
+      ]
+     },
+     {
+      "key": "s01",
+      "dictionary": "DICT_4X4_50",
+      "marker_id": 17,
+      "marker_length_mm": 15.0,
+      "module_mm": 2.5,
+      "quiet_modules": 1.0,
+      "sticker_mm": 20.0,
+      "sticker_w_mm": 20.0,
+      "sticker_h_mm": 20.0,
+      "layout": "single",
+      "extent_mm": [
+       15.0,
+       15.0
+      ],
+      "page_number": 2,
+      "x_mm": 170.4604,
+      "y_mm": 116.47,
+      "marker_x_mm": 172.9604,
+      "marker_y_mm": 118.97,
+      "label_lines": [
+       "DICT_4X4_50 #17 \u00b7 15.0 mm"
+      ]
+     },
+     {
+      "key": "s24",
+      "dictionary": "DICT_APRILTAG_36h11",
+      "marker_id": 300,
+      "marker_length_mm": 15.0,
+      "module_mm": 1.875,
+      "quiet_modules": 1.0,
+      "sticker_mm": 18.75,
+      "sticker_w_mm": 18.75,
+      "sticker_h_mm": 18.75,
+      "layout": "single",
+      "extent_mm": [
+       15.0,
+       15.0
+      ],
+      "page_number": 2,
+      "x_mm": 15.2276,
+      "y_mm": 153.7233,
+      "marker_x_mm": 17.1026,
+      "marker_y_mm": 155.5983,
+      "label_lines": [
+       "DICT_APRILTAG_36h11 #300 \u00b7 15.0 mm"
+      ]
+     }
+    ],
+    "rejected": [],
+    "ruler": {
+     "top": 264.0,
+     "mm_bar": [
+      10.0,
+      274.5,
+      100.0,
+      1.2
+     ],
+     "in_bar": [
+      10.0,
+      277.3,
+      101.6,
+      1.2
+     ]
+    },
+    "warnings": []
+   }
+  }
+ },
+ "elapsed_s": 66.0,
+ "pass": true
+}

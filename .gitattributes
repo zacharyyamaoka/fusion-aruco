@@ -1,0 +1,9 @@
+# Same bytes on every machine: text is LF in the repo and in checkouts
+# (as in the CAD Exporter repo this is synced from).
+* text=auto eol=lf
+
+*.png   binary
+*.jpg   binary
+*.pdf   binary
+*.stl   binary
+*.3mf   binary
